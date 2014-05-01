@@ -1,0 +1,167 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (2.4ms)[0m  select table_name from information_schema.views where table_schema = 'epicswap_test'
+  [1m[36m (10.0ms)[0m  [1mTRUNCATE TABLE "categories", "interests", "skills", "user_interests", "user_skills", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.4ms)[0m  select table_name from information_schema.views where table_schema = 'epicswap_test'
+  [1m[36m (8.6ms)[0m  [1mTRUNCATE TABLE "user_skills", "categories", "interests", "skills", "user_interests", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.1ms)[0m  select table_name from information_schema.views where table_schema = 'epicswap_test'
+  [1m[36m (26.6ms)[0m  [1mTRUNCATE TABLE "user_skills", "categories", "interests", "skills", "user_interests", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (85.7ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "state", "street", "tagline", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["city", "Gusikowskishire"], ["created_at", Thu, 01 May 2014 20:50:57 UTC +00:00], ["description", "Beatae ratione tenetur sint. Sed unde itaque modi est et. Consequatur quia soluta ad dicta doloribus voluptas. Distinctio saepe dolorum assumenda iure qui."], ["email", "miracle.skiles@shanahanschneider.net"], ["latitude", nil], ["longitude", nil], ["name", "Mrs. Germaine Swaniawski"], ["state", "South Dakota"], ["street", "1244 Hartmann Ports"], ["tagline", "Officia eos et recusandae ut voluptates incidunt dignissimos."], ["updated_at", Thu, 01 May 2014 20:50:57 UTC +00:00], ["zip", "77688"]]
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.3ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (8.1ms)[0m  TRUNCATE TABLE "user_skills", "categories", "interests", "skills", "user_interests", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.5ms)[0m  select table_name from information_schema.views where table_schema = 'epicswap_test'
+  [1m[36m (25.9ms)[0m  [1mTRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL[0m
+  [1m[35m (7.6ms)[0m  TRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 500 Internal Server Error in 44ms
+  [1m[35m (0.5ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (25.2ms)[0m  TRUNCATE TABLE "user_skills", "users", "user_interests", "categories", "interests", "skills" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL[0m
+  [1m[35m (8.5ms)[0m  TRUNCATE TABLE "user_skills", "users", "user_interests", "categories", "interests", "skills" RESTART IDENTITY CASCADE;
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 6.3ms)
+  [1m[35m (0.5ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL
+  [1m[36m (1.8ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (17.0ms)[0m  TRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (7.6ms)[0m  [1mTRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.9ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "state", "street", "tagline", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["city", "Port Kennedyfurt"], ["created_at", Thu, 01 May 2014 20:57:49 UTC +00:00], ["description", "Neque tenetur nostrum excepturi quis adipisci facere qui. Ipsa tenetur eius veniam rerum molestias. Iure quod iste aspernatur."], ["email", "natalie.kub@romaguera.name"], ["latitude", nil], ["longitude", nil], ["name", "Adell Wintheiser"], ["state", "Vermont"], ["street", "6453 Kuhic Throughway"], ["tagline", "Earum harum voluptas cumque impedit."], ["updated_at", Thu, 01 May 2014 20:57:49 UTC +00:00], ["zip", "19272"]]
+  [1m[36m (19.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (2.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (9.6ms)[0m  TRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "state", "street", "tagline", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["city", "Edwardview"], ["created_at", Thu, 01 May 2014 21:03:08 UTC +00:00], ["description", "Est voluptate officiis quae omnis et facilis voluptas. Fugiat voluptas quis. Distinctio amet numquam error occaecati in. Est ut atque aut non. Id libero voluptate aut voluptatem sed voluptatem."], ["email", "celestino@baumbach.org"], ["latitude", nil], ["longitude", nil], ["name", "Miss Tyree Johns"], ["state", "California"], ["street", "931 Helen Shore"], ["tagline", "Mollitia aperiam omnis et."], ["updated_at", Thu, 01 May 2014 21:03:08 UTC +00:00], ["zip", "73369"]]
+  [1m[36m (4.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL
+  [1m[36m (1.9ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (8.7ms)[0m  TRUNCATE TABLE "user_skills", "users", "user_interests", "categories", "interests", "skills" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "state", "street", "tagline", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["city", "Jaytown"], ["created_at", Thu, 01 May 2014 21:03:42 UTC +00:00], ["description", "Et reiciendis accusantium sapiente temporibus error. Animi perferendis a voluptates consequatur est. Eos qui assumenda. Dolores voluptas ducimus. Recusandae vel quas rerum velit officia alias."], ["email", "edwina.beahan@wintheiser.org"], ["latitude", nil], ["longitude", nil], ["name", "Mr. Dan Stanton"], ["state", "South Dakota"], ["street", "7639 Rutherford Forks"], ["tagline", "Asperiores suscipit ut natus sed."], ["updated_at", Thu, 01 May 2014 21:03:42 UTC +00:00], ["zip", "51474"]]
+  [1m[36m (4.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (8.1ms)[0m  TRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "state", "street", "tagline", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["city", "Georgemouth"], ["created_at", Thu, 01 May 2014 21:06:25 UTC +00:00], ["description", "Tempora magni magnam. Ex quasi earum aperiam et iste. Repellat molestias ut autem qui dicta doloremque. Et molestiae impedit."], ["email", "norris@baumbach.info"], ["latitude", nil], ["longitude", nil], ["name", "Malachi Cremin"], ["state", "Oklahoma"], ["street", "9259 Kub Divide"], ["tagline", "Nobis occaecati mollitia et sit modi suscipit."], ["updated_at", Thu, 01 May 2014 21:06:25 UTC +00:00], ["zip", "37760-8916"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2014-05-01 14:06:25 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 55ms
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.7ms)[0m  select table_name from information_schema.views where table_schema = 'epicswap_test'
+  [1m[36m (9.4ms)[0m  [1mTRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.8ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "state", "street", "tagline", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"  [["city", "Port Bethanyport"], ["created_at", Thu, 01 May 2014 21:07:06 UTC +00:00], ["description", "Perspiciatis est enim. Autem reprehenderit nisi. Et dolores deserunt enim et omnis blanditiis. Illum ut dolorum ex iste in minima qui."], ["email", "edd.schumm@kerlukehackett.info"], ["latitude", nil], ["longitude", nil], ["name", "Lavern Kerluke IV"], ["state", "West Virginia"], ["street", "637 Hayley Island"], ["tagline", "Non et cum architecto et est."], ["updated_at", Thu, 01 May 2014 21:07:06 UTC +00:00], ["zip", "45481"]]
+  [1m[36m (4.8ms)[0m  [1mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2014-05-01 14:07:06 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+Started GET "/users/1" for 127.0.0.1 at 2014-05-01 14:07:06 -0700
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL[0m
+  [1m[35m (1.2ms)[0m  select table_name from information_schema.views where table_schema = 'epicswap_test'
+  [1m[36m (8.2ms)[0m  [1mTRUNCATE TABLE "user_skills", "users", "user_interests", "categories", "interests", "skills" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 6.1ms)
+  [1m[35m (0.6ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL
+  [1m[36m (1.3ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (12.0ms)[0m  TRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (8.0ms)[0m  [1mTRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL[0m
+  [1m[35m (7.2ms)[0m  TRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (6.6ms)[0m  [1mTRUNCATE TABLE "user_skills", "interests", "skills", "users", "user_interests", "categories" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 6.0ms)
+  [1m[35m (0.6ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'epicswap_test'[0m
+  [1m[35m (12.6ms)[0m  TRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL
+  [1m[36m (9.5ms)[0m  [1mTRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL[0m
+  [1m[35m (11.7ms)[0m  TRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "user_skills" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "user_interests" DISABLE TRIGGER ALL;ALTER TABLE "categories" DISABLE TRIGGER ALL;ALTER TABLE "interests" DISABLE TRIGGER ALL;ALTER TABLE "skills" DISABLE TRIGGER ALL
+  [1m[36m (10.5ms)[0m  [1mTRUNCATE TABLE "user_skills", "user_interests", "categories", "interests", "skills", "users" RESTART IDENTITY CASCADE;[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "user_skills" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "user_interests" ENABLE TRIGGER ALL;ALTER TABLE "categories" ENABLE TRIGGER ALL;ALTER TABLE "interests" ENABLE TRIGGER ALL;ALTER TABLE "skills" ENABLE TRIGGER ALL
+Connecting to database specified by database.yml
