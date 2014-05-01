@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe UsersController do
-  let(:user) { FactoryGirl.create :user }
+  let!(:user) { FactoryGirl.create :user }
 
   context '#index' do
     it 'should return the homepage' do
@@ -16,13 +16,13 @@ describe UsersController do
 
   context '#show' do
     it 'should render the users profile' do
-      get :show
+      get :show, id: user.id
       expect(response).to be_success
     end
 
     it 'should assign @user to User.find(user)' do
-      get :show
-      expect(response)
+      get :show, id: user.id
+      expect(assigns(:user)).to eq(user)
     end
   end
 end
