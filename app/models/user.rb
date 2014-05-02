@@ -13,4 +13,10 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+  def self.geocode(user)
+    coords = Location.geocode(user)
+      user.update_attribute(:latitude, coords[0])
+      user.update_attribute(:longitude, coords[1])
+  end
 end
