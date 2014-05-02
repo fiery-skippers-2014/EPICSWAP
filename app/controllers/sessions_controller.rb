@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
   def create
     user = User.from_omniauth(env['omniauth.auth'])
     result = request.location
-    p result.data['latitude']
 
     if user.latitude == nil && user.longitude == nil
       user.latitude = result.data['latitude']
