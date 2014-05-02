@@ -1,0 +1,7 @@
+<ul>
+  <%= form_for [@user, @interest] do |f| %>
+    <li><%= f.label :name, 'Interest' %>
+      <%= f.text_field :name %></li>
+      <li><%= f.submit %></li>
+  <% end %>
+</ul>

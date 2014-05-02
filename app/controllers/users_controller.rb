@@ -2,10 +2,14 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
   end
 
   def show
     @user = User.find(params[:id])
+    @skill = Skill.new
+    @interest = Interest.new
+    @categories = Category.all.collect { |m| [m.name, m.id] }.sort
   end
 
   def edit
