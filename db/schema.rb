@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140501192317) do
+ActiveRecord::Schema.define(:version => 20140502023846) do
 
   create_table "categories", :force => true do |t|
     t.string "name"
@@ -48,8 +48,13 @@ ActiveRecord::Schema.define(:version => 20140501192317) do
     t.text     "description"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.string   "image"
   end
 
 end

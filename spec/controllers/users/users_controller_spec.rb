@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe UsersController do
   let!(:user) { FactoryGirl.create :user }
+  let!(:valid) { FactoryGirl.attributes_for :user}
 
   context '#index' do
     it 'should return the homepage' do
@@ -24,5 +25,34 @@ describe UsersController do
       get :show, id: user.id
       expect(assigns(:user)).to eq(user)
     end
+  end
+
+  context '#edit' do
+    it 'should assign @user to User.find(user)' do
+      get :edit, id: user.id
+      expect(assigns(:user)).to eq(user)
+    end
+
+    it 'should render the users edit profile page' do
+      get :edit, id: user.id
+      expect(response).to be_success
+    end
+  end
+
+  context '#update' do
+    it 'should update attributes with valid information' do
+      expect{
+        post :update, id: user.id, user: { tagline: 'new tagline' }
+        }.to change { user.reload.tagline }.to('new tagline')
+      expect(response).to be_redirect
+    end
+
+    # it 'should not update attributes with invalid information' do
+    #   expect{
+    #     post :update, id: user.id, user: { street: nil }
+    #     }.to_not change { user.reload.street }
+    #   expect(response).not_to be_redirect
+    # end
+
   end
 end

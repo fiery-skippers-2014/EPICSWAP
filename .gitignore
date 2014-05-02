@@ -9,4 +9,4 @@
 /log/*.log
 /tmp
 .DS_Store
-bundler_stubs/
+/bundler_stubs
