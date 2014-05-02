@@ -9,6 +9,7 @@ gem 'pg'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'dotenv'
+gem 'geocoder'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"

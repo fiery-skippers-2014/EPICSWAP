@@ -47,6 +47,13 @@ describe UsersController do
       expect(response).to be_redirect
     end
 
+    it 'should set the latitude and longitude on update' do
+      Location.should_receive(:geocode) {[37.8010187, -122.412323]}
+      expect{
+        post :update, id: user.id, user: { street: '759 Filbert', city: 'San Francisco', state: 'CA' }
+        }.to change { user.reload.latitude }.to(37.8010187)
+    end
+
     # it 'should not update attributes with invalid information' do
     #   expect{
     #     post :update, id: user.id, user: { street: nil }
