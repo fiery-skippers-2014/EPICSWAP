@@ -5,7 +5,7 @@ FactoryGirl.define do
     city { Faker::Address.city }
     state { Faker::Address.state }
     zip { Faker::Address.zip }
-    # email { Faker::Internet.email }
+    email { Faker::Internet.email }
     tagline { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
     latitude { nil }
