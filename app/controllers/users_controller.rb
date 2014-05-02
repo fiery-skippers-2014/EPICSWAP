@@ -5,7 +5,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    p params
     @user = User.find(params[:id])
+    @skill = Skill.new
+    @interest = Interest.new
+    @categories = Category.all.collect { |m| [m.name, m.id] }.sort
   end
 
   def edit
@@ -14,7 +18,6 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    p params[:user]
     if @user.update_attributes(params[:user])
        User.geocode(@user)
       redirect_to user_path(@user)

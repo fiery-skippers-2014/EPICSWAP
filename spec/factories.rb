@@ -11,4 +11,9 @@ FactoryGirl.define do
     latitude { nil }
     longitude { nil }
   end
+
+  factory :skill do
+    name { Faker::Lorem.word }
+    user
+  end
 end

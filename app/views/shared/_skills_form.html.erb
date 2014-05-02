@@ -1,0 +1,10 @@
+<ul>
+  <%= form_for [@user, @skill] do |f| %>
+    <li><%= f.label :name, 'Skill' %>
+      <%= f.text_field :name %></li>
+      <li><%= f.label :category %>
+        <%= f.select(:category_id, @categories)%>
+      </li>
+      <li><%= f.submit %></li>
+  <% end %>
+</ul>
