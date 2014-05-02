@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   attr_accessible :street, :city, :state, :zip, :tagline, :description, :name, :image, :email, :latitude, :longitude
   has_many :skills
   has_many :interests
+  validates_presence_of :name, :email
 
 
   def self.from_omniauth(auth)

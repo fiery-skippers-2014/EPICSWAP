@@ -2,10 +2,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+
   end
 
   def show
-    p params
     @user = User.find(params[:id])
     @skill = Skill.new
     @interest = Interest.new

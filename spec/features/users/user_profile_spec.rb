@@ -5,7 +5,7 @@ feature 'view a user profile' do
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
-  scenario 'a logged in user can view their profile page', js: true do
+  scenario 'a logged in user can view their profile page' do
     visit root_path
     click_on user.name
     expect(page).to have_content(user.tagline)
