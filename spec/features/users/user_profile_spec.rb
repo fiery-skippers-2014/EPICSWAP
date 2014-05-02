@@ -33,3 +33,40 @@ feature 'add interests on the user profile' do
     expect(page).to have_content 'white water rafting'
   end
 end
+
+feature 'edit profile' do
+  let!(:user) { FactoryGirl.create :user }
+  let!(:second_user) { FactoryGirl.create :user }
+
+  before(:each) do
+    ApplicationController.any_instance.stub(:current_user) { user }
+  end
+  scenario 'a logged in user can edit' do
+    visit user_path(user)
+    expect(page).to have_content('Edit Profile')
+  end
+
+  scenario 'a user who is not the current user does not see edit profile link' do
+    visit user_path(second_user)
+    expect(page).to_not have_content('Edit Profile')
+  end
+end
+
+feature 'delete profile' do
+  let!(:user) { FactoryGirl.create :user }
+  let!(:second_user) { FactoryGirl.create :user }
+
+  before(:each) do
+    ApplicationController.any_instance.stub(:current_user) { user }
+  end
+  scenario 'a logged in user can delete their profile' do
+    visit user_path(user)
+    expect(page).to have_content('Delete Profile')
+  end
+
+  scenario ' a user who is not the current user does see delete profile' do
+    visit user_path(second_user)
+    expect(page).to_not have_content('Delete Profile')
+  end
+
+end
