@@ -8,5 +8,7 @@ FactoryGirl.define do
     # email { Faker::Internet.email }
     tagline { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }
+    latitude { nil }
+    longitude { nil }
   end
 end
