@@ -8,6 +8,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
 gem 'dotenv'
 gem 'geocoder'
 
