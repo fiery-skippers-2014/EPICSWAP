@@ -1,23 +1,30 @@
 function MapController(contOpts){
   this.COOL_MAP = contOpts.coolMap;
-  this.getUserData_AJAX = contOpts.getUserData_AJAX;
+  this.getUsersData_AJAX = contOpts.getUsersData_AJAX;
 };
 
 MapController.prototype = {
   initialize: function(){
-    this.getUserInfoFromTheDB;
+    this.getUsersInfoFromDB();
   },
 
-  getUserInfoFromTheDB: function(){
-    this.getUserData_AJAX.request().done(this.onGetUserInfoSuccess.bind(this))
+  getUsersInfoFromDB: function(){
+    console.log("about to send ajax request")
+    this.getUsersData_AJAX.request().done(this._onGetUsersInfoSuccess.bind(this))
   },
 
-  _onGetUserInfoSuccess: function(data){
+  _onGetUsersInfoSuccess: function(data){
     console.log("we are in getUserInfoFromTheDB DATA BELOW ----------------")
     console.log(data)
+    for(i = 0; i < data["users"].length ; i++){
+      var lat = data.users[i].latitude;
+      var long = data.users[i].longitude;
+      this._createMarker(lat, long);
+    }
+
   },
 
-  _createMarker: function(){
-    L.marker([37.785128, -122.397308]).addTo(this.COOL_MAP);
+  _createMarker: function(latitude, longitude){
+    L.marker([latitude, longitude]).addTo(this.COOL_MAP);
   },
 };

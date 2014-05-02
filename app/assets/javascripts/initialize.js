@@ -9,11 +9,11 @@ $(document).ready(function(){
   var ourMap = new MapCreator(mapOpts).buildMap()
 
 
-  var retrieveUserData_CLIENT = new AjaxClient('get', '')//add in proper path here
+  var getUsersData_CLIENT = new AjaxClient('get', '/usersData.json')//add in proper path here
 
   var controllerOpts = {
     coolMap: ourMap,
-    getUserData_AJAX: getUserData_CLIENT
+    getUsersData_AJAX: getUsersData_CLIENT
   };
 
 

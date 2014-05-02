@@ -11,6 +11,8 @@ gem 'omniauth-facebook'
 gem 'dotenv'
 
 group :test, :development do
+  gem 'jasmine-rails'
+  gem 'shoulda-matchers'
   gem "rspec-rails", "~> 2.0"
 end
 
