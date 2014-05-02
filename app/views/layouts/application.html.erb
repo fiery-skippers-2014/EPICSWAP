@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>EpicSwap</title>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -10,6 +12,11 @@
   <%= render 'shared/user_widget' %>
 
 <%= yield %>
+<!-- To be moved to a partial -->
+<h1>HI</h1>
+<div id="map">
+</div>
+<!-- move to partial -->
 
 </body>
 </html>

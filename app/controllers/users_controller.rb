@@ -24,7 +24,11 @@ class UsersController < ApplicationController
     else
       render :edit
     end
-
   end
 
+  # GET /usersData.json
+  def usersData
+    users = User.all
+    render json: { users: users }.to_json
+  end
 end
