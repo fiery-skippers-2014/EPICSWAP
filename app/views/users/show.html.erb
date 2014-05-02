@@ -12,3 +12,10 @@
   <%= @user.longitude %><br>
 
 </div>
+
+<%= link_to 'Cancel Account', {
+  url: user_path,
+  confirm: "Are you sure you want to leave?",
+  method: :delete
+} %>
+rails c

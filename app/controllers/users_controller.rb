@@ -12,12 +12,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
-  def delete
-    user = User.find(params[:id])
-    user.destroy
-    redirect to '/'
-
   def update
     @user = User.find(params[:id])
     p params[:user]
@@ -27,8 +21,12 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+  end
 
-
+  def delete
+    user = User.find(params[:id])
+    user.destroy
+    redirect to '/'
   end
 
 end
