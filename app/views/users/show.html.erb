@@ -12,3 +12,23 @@
   <%= @user.longitude %><br>
 
 </div>
+
+<h2>My Skills</h2>
+<ul>
+  <% @user.skills.each do |skill| %>
+    <li><%= skill.name %></li>
+  <% end %>
+</ul>
+
+<p>Add a skill</p>
+<%= render 'shared/skills_form' %>
+
+<h2>My Interests</h2>
+<ul>
+  <% @user.interests.each do |interest| %>
+    <li><%= interest.name %></li>
+  <% end %>
+</ul>
+
+<p>Add an interest</p>
+<%= render 'shared/interests_form' %>

@@ -6,3 +6,4 @@ require_relative 'preliminary_seeds'
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+  categories = Category.create([ {name: 'language' }, { name: 'sport' }, {name: 'dance'}, {name: 'art'}, {name: 'cooking'}, {name: 'fitness'}, {name: 'technology'} ])

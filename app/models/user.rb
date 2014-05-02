@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  attr_accessible :street, :city, :state, :zip, :tagline, :description, :name, :latitude, :longitude
+  attr_accessible :street, :city, :state, :zip, :tagline, :description, :name, :image, :email, :latitude, :longitude
+  has_many :skills
+  has_many :interests
+
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
