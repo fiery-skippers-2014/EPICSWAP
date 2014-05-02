@@ -48,7 +48,7 @@ describe UsersController do
     end
 
     it 'should set the latitude and longitude on update' do
-      Location.stub(:geocode) {[37.8010187, -122.412323]}
+      Location.should_receive(:geocode) {[37.8010187, -122.412323]}
       expect{
         post :update, id: user.id, user: { street: '759 Filbert', city: 'San Francisco', state: 'CA' }
         }.to change { user.reload.latitude }.to(37.8010187)
