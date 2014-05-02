@@ -72,15 +72,5 @@ describe UsersController do
   end
 
 
-  context '#create' do
-    let!(:user){FactoryGirl.create :user}
-      it 'creates a user' do
-       expect {
-        post :create
-       }.to change {User.count}.by(1)
-      end
-  end
-
-
   end
 end
