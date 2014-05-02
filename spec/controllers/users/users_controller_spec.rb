@@ -61,6 +61,7 @@ describe UsersController do
         post :update, id: user.id, user: { street: '759 Filbert', city: 'San Francisco', state: 'CA' }
         }.to change { user.reload.latitude }.to(37.8010187)
     end
+  end
 
     # it 'should not update attributes with invalid information' do
     #   expect{
@@ -69,5 +70,17 @@ describe UsersController do
     #   expect(response).not_to be_redirect
     # end
 
+
+  context "#destroy" do
+
+    let!(:user) { FactoryGirl.create :user }
+    it "destroys the record" do
+      expect {
+        delete :destroy, :id => user.id
+      }.to change { User.count }.by (-1)
+    end
   end
+
+
+
 end

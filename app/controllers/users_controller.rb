@@ -16,6 +16,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+
+
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
@@ -24,6 +26,14 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+
+  end
+
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    redirect_to  root_path
+
   end
 
   # GET /usersData.json
