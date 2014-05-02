@@ -1,7 +1,21 @@
 function MapFactory(mapOpts){
-  this.START_LATITUDE = opts.startLatitude
+  this.START_LATITUDE  = mapOpts.startLatitude;
+  this.START_LONGITUDE = mapOpts.startLongitude;
+  this.INITIAL_ZOOM    = mapOpts.initialZoom;
 }
 
 MapFactory.prototype = {
+  buildMap: function(){
+    var lMap = new L.map('map');
+    lMap.setView(L.latLng(this.START_LATITUDE, this.START_LONGITUDE), this.INITIAL_ZOOM);
+    return this._initializeOSM(lMap);
+  },
 
-}
+  _initializeOSM: function(map){
+    var osmURL  = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttr = 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors ';
+    var layer   = new L.TileLayer(osmURL, {minZoom: 2, maxZoom: 13, attribution: osmAttr});
+    return map.addLayer(layer);
+  }
+
+};

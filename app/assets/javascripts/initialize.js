@@ -1,10 +1,19 @@
 $(document).ready(function(){
   var mapOpts = {
-    startLatitude: 37.785128,
-    startLongitude: -122.397308
-  }
+    startLatitude:   37.785128,
+    startLongitude: -122.397308,
+    initialZoom:     10
+  };
 
-})
+  /////////////
+  ///Instantiate Instances
+  ////////////
+  var coolMap = new MapFactory(mapOpts);
+  coolMap.buildMap()
+
+
+
+});
 
 
 
