@@ -14,14 +14,17 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    p params[:user]
     if @user.update_attributes(params[:user])
        User.geocode(@user)
       redirect_to user_path(@user)
     else
       render :edit
     end
-
   end
 
+  # GET /usersData.json
+  def usersData
+    users = User.all
+    render json: { users: users }.to_json
+  end
 end

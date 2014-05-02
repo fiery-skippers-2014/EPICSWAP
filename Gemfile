@@ -13,6 +13,8 @@ gem 'dotenv'
 gem 'geocoder'
 
 group :test, :development do
+  gem 'jasmine'
+  gem 'shoulda-matchers'
   gem "rspec-rails", "~> 2.0"
 end
 
