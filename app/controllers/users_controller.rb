@@ -12,6 +12,15 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def create
+    @user = User.new params[:user]
+    if @user.save
+      redirect_to user_path(@user)
+    else
+      render :new
+    end
+  end
+
   def update
     @user = User.find(params[:id])
     p params[:user]
@@ -23,10 +32,10 @@ class UsersController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect to '/'
+    redirect_to  root_path
   end
 
 end

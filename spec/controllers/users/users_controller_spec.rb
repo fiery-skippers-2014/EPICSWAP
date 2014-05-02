@@ -61,5 +61,26 @@ describe UsersController do
     #   expect(response).not_to be_redirect
     # end
 
+
+  context "#destroy" do
+    let!(:user) { FactoryGirl.create :user }
+    it "destroys the record" do
+      expect {
+        delete :destroy, :id => user.id
+      }.to change { User.count }.by (-1)
+    end
+  end
+
+
+  context '#create' do
+    let!(:user){FactoryGirl.create :user}
+      it 'creates a user' do
+       expect {
+        post :create
+       }.to change {User.count}.by(1)
+      end
+  end
+
+
   end
 end
