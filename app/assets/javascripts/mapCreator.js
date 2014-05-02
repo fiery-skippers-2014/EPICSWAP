@@ -18,5 +18,4 @@ MapCreator.prototype = {
     var layer   = new L.TileLayer(osmURL, {minZoom: 2, maxZoom: 18, attribution: osmAttr});
     return map.addLayer(layer);
   }
-
 };

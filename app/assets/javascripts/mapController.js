@@ -9,22 +9,29 @@ MapController.prototype = {
   },
 
   getUsersInfoFromDB: function(){
-    console.log("about to send ajax request")
     this.getUsersData_AJAX.request().done(this._onGetUsersInfoSuccess.bind(this))
   },
 
   _onGetUsersInfoSuccess: function(data){
-    console.log("we are in getUserInfoFromTheDB DATA BELOW ----------------")
-    console.log(data)
-    for(i = 0; i < data["users"].length ; i++){
-      var lat = data.users[i].latitude;
-      var long = data.users[i].longitude;
-      this._createMarker(lat, long);
+    for(var i = 0, d = data["users"].length; i < d; i++){
+      this._createMarkerForUser(data["users"][i]);
     }
-
   },
 
-  _createMarker: function(latitude, longitude){
-    L.marker([latitude, longitude]).addTo(this.COOL_MAP);
+  _createMarkerForUser: function(userData){
+    var currentMarker   = this._addLocation(userData.latitude, userData.longitude);
+    var html            = this._buildMustacheTemplate(userData);
+    currentMarker.bindPopup(html).openPopup();
   },
+
+  _addLocation: function(latitude, longitude){
+    return L.marker([latitude, longitude]).addTo(this.COOL_MAP);
+  },
+
+  _buildMustacheTemplate: function(userData){
+    var rawTemplate     = $("#userMarkerContentTemplate").html();
+    var template        = Handlebars.compile(rawTemplate);
+    var userMiniProfile = { Name: userData.name, Tagline: userData.tagline };
+    return template(userMiniProfile);
+  }
 };

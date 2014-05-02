@@ -8,14 +8,12 @@ $(document).ready(function(){
 
   var ourMap = new MapCreator(mapOpts).buildMap()
 
-
   var getUsersData_CLIENT = new AjaxClient('get', '/usersData.json')//add in proper path here
 
   var controllerOpts = {
     coolMap: ourMap,
     getUsersData_AJAX: getUsersData_CLIENT
   };
-
 
   var coolController = new MapController(controllerOpts)
   //////////////////////
