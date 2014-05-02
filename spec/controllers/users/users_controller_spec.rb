@@ -25,4 +25,16 @@ describe UsersController do
       expect(assigns(:user)).to eq(user)
     end
   end
+
+  context '#edit' do
+    it 'should assign @user to User.find(user)' do
+      get :edit, id: user.id
+      expect(assigns(:user)).to eq(user)
+    end
+
+    it 'should render the users edit profile page' do
+      get :edit, id: user.id
+      expect(response).to be_success
+    end
+  end
 end
