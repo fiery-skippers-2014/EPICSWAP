@@ -1,7 +1,7 @@
-EPICSWAP
+EPIC SWAP
 ========
 
-Epic Swap is the opportunity to share an experience, make a friend and do it all over again.
+EPIC SWAP is the opportunity to share an experience, make a friend and do it all over again.
 
 
 Team:
@@ -9,12 +9,12 @@ Team:
 * Tyler Stauss
 * Lyndsey Williams
 * Namrata Honnavar
-* Ravi Ramphal
+* Ravi S. Rāmphal
 
 Technologies:
 * Rails
 * Ajax
-* MapBox
+* Leaflet.js
 * LinkedIn OAuth
 * Facebook OAuth
 * Google Geocode API

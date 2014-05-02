@@ -300,3 +300,962 @@ ActiveRecord::RecordNotFound (Couldn't find User with id=1):
   Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 15:55:10 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 15:55:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 15:55:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 15:55:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 15:55:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:03:10 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:03:10 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:10 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:10 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:10 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:03:11 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:03:11 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:11 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:11 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:11 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:03:11 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:03:12 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/?error=unsupported_response_type&error_description=We+only+support+a+response_type+of+%22code%22%2C+but+you+passed+code+" for 127.0.0.1 at 2014-05-01 16:15:09 -0700
+Processing by UsersController#index as HTML
+  Parameters: {"error"=>"unsupported_response_type", "error_description"=>"We only support a response_type of \"code\", but you passed code "}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:15:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:15:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:15:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:15:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:33:07 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:07 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:33:07 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:07 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:07 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:14 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 16:33:15 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 16:33:15 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:15 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:15 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 16:33:15 -0700
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 17:48:29 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 69ms (Views: 43.1ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 17:48:29 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 17:48:29 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 17:48:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 17:48:29 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 17:48:32 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQB-Ne8gOuE1fYYMrzF81gmVk82aTEyITwB9kN1FAT28IXSBVW9mqag6mwC_YDMzNBm0WqwXxZiRbDSazHwi1Jee5dc7agdloman7DcOoMfRfbcXb06eQGGJ5oYjr5dyZySZH2FzHhi_fnj7Klxz6T9w_i9toIdY3N0k2345Uo2s0HFs8BxQ15n9GqCCjD1k2u4kVjcloPsMplfACSplC-EKgUe4Bi0VdJ9hELlTR_GOk4gXiyWH7BclWQ-paXYeI8iOzOvX2VxA4ecEy0gY5HmGCFrbgw4lIzgUZZreivoS38nTQQTQT3d8JUnhErccKW0&state=8e48fa06268b673429a1643d1724a2ea64220d5093693ad7" for 127.0.0.1 at 2014-05-01 17:48:39 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB-Ne8gOuE1fYYMrzF81gmVk82aTEyITwB9kN1FAT28IXSBVW9mqag6mwC_YDMzNBm0WqwXxZiRbDSazHwi1Jee5dc7agdloman7DcOoMfRfbcXb06eQGGJ5oYjr5dyZySZH2FzHhi_fnj7Klxz6T9w_i9toIdY3N0k2345Uo2s0HFs8BxQ15n9GqCCjD1k2u4kVjcloPsMplfACSplC-EKgUe4Bi0VdJ9hELlTR_GOk4gXiyWH7BclWQ-paXYeI8iOzOvX2VxA4ecEy0gY5HmGCFrbgw4lIzgUZZreivoS38nTQQTQT3d8JUnhErccKW0", "state"=>"8e48fa06268b673429a1643d1724a2ea64220d5093693ad7", "provider"=>"facebook"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1
+PG::UndefinedColumn: ERROR:  column users.provider does not exist
+LINE 1: SELECT  "users".* FROM "users"  WHERE "users"."provider" = '...
+                                              ^
+: SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.provider does not exist
+LINE 1: SELECT  "users".* FROM "users"  WHERE "users"."provider" = '...
+                                              ^
+: SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1):
+  app/models/user.rb:4:in `from_omniauth'
+  app/controllers/sessions_controller.rb:3:in `create'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/auth/facebook/callback?code=AQBSvdrdl0nZ2RutmXDMDzOtJNyEeVP0XjbDQty8S3aPkrM_FyVTiF4rMtd-bNPQa4IqpHgR7gFDiXBtHy52QG05UAJNvdKqLPAc279h9WdmNoLtKwOvwuyL2T-O4bOU8QN5KT_K5g_fDuGOdKk4c_eDXOvkrRqBER1F0-iD2jZJ4MQO2pE06pd5xXqx52PSL3TBRgJZbnCRT_BtwoALGFnXD0IrFg31nBqu6WsumPngbmGPrVui5FL8ejX86kcy8-r-6ewAWTbkZlL6ptH6ySsp4heYLOdZYiKLghfcMpq-Zb9QcPNRRYwYfLENbUZl9Eo&state=8e48fa06268b673429a1643d1724a2ea64220d5093693ad7" for 127.0.0.1 at 2014-05-01 17:48:52 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBSvdrdl0nZ2RutmXDMDzOtJNyEeVP0XjbDQty8S3aPkrM_FyVTiF4rMtd-bNPQa4IqpHgR7gFDiXBtHy52QG05UAJNvdKqLPAc279h9WdmNoLtKwOvwuyL2T-O4bOU8QN5KT_K5g_fDuGOdKk4c_eDXOvkrRqBER1F0-iD2jZJ4MQO2pE06pd5xXqx52PSL3TBRgJZbnCRT_BtwoALGFnXD0IrFg31nBqu6WsumPngbmGPrVui5FL8ejX86kcy8-r-6ewAWTbkZlL6ptH6ySsp4heYLOdZYiKLghfcMpq-Zb9QcPNRRYwYfLENbUZl9Eo", "state"=>"8e48fa06268b673429a1643d1724a2ea64220d5093693ad7", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1[0m
+PG::UndefinedColumn: ERROR:  column users.provider does not exist
+LINE 1: SELECT  "users".* FROM "users"  WHERE "users"."provider" = '...
+                                              ^
+: SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column users.provider does not exist
+LINE 1: SELECT  "users".* FROM "users"  WHERE "users"."provider" = '...
+                                              ^
+: SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1):
+  app/models/user.rb:4:in `from_omniauth'
+  app/controllers/sessions_controller.rb:3:in `create'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140501192212)
+Migrating to CreateSkills (20140501192228)
+Migrating to CreateInterests (20140501192247)
+Migrating to CreateCategories (20140501192256)
+Migrating to CreateUserSkills (20140501192310)
+Migrating to CreateUserInterests (20140501192317)
+Migrating to UpdateUsers (20140502003809)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140501192212)
+Migrating to CreateSkills (20140501192228)
+Migrating to CreateInterests (20140501192247)
+Migrating to CreateCategories (20140501192256)
+Migrating to CreateUserSkills (20140501192310)
+Migrating to CreateUserInterests (20140501192317)
+Migrating to UpdateUsers (20140502003809)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "oauth_token" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140501192212)
+Migrating to CreateSkills (20140501192228)
+Migrating to CreateInterests (20140501192247)
+Migrating to CreateCategories (20140501192256)
+Migrating to CreateUserSkills (20140501192310)
+Migrating to CreateUserInterests (20140501192317)
+Migrating to UpdateUsers (20140502003809)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" integer
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD COLUMN "oauth_token" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "oauth_expires" timestamp
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140502003809')[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 17:51:11 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 99ms (Views: 46.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 17:51:11 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 17:51:11 -0700
+Served asset /jquery.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 17:51:11 -0700
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 17:51:11 -0700
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 17:51:12 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBY__H0PHJW9zfbszFoRAQU3B9wG631uRPOPND60Y2fd2jjYXsk2nSsIV3RxKNV_n2_uTSzA1stmMtEwJ-RqDt8ux7l0sJN-Hz6uccvJbFFmCywR8WcXrOwbauKWaPdZNKQ7uNUIp4vfZSj17h-XhJrnwc6TETvtNSFWTzDEcEevhuokx-AyALMwp3xWynPJGoYZPWodRuIVgVdw38Wu4vGNQ1HoWFPVoL1P10PYPZmg9oNLJksdo4zvGw_RF23F7F0CGL-rozCijKJP8nZoRx2zIGZXneaviKC2rF0pPl-YsMjJ99F0Wj5QJ1vnPCzxSA&state=b9944831130eae84fa9f9e3c8c94ff127cb0373650a1faa3" for 127.0.0.1 at 2014-05-01 17:51:13 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBY__H0PHJW9zfbszFoRAQU3B9wG631uRPOPND60Y2fd2jjYXsk2nSsIV3RxKNV_n2_uTSzA1stmMtEwJ-RqDt8ux7l0sJN-Hz6uccvJbFFmCywR8WcXrOwbauKWaPdZNKQ7uNUIp4vfZSj17h-XhJrnwc6TETvtNSFWTzDEcEevhuokx-AyALMwp3xWynPJGoYZPWodRuIVgVdw38Wu4vGNQ1HoWFPVoL1P10PYPZmg9oNLJksdo4zvGw_RF23F7F0CGL-rozCijKJP8nZoRx2zIGZXneaviKC2rF0pPl-YsMjJ99F0Wj5QJ1vnPCzxSA", "state"=>"b9944831130eae84fa9f9e3c8c94ff127cb0373650a1faa3", "provider"=>"facebook"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = 10103112634347647 LIMIT 1
+Completed 500 Internal Server Error in 22ms
+
+NoMethodError (undefined method `oauth_expires_at=' for #<User:0x007fe9a4ccd1a8>):
+  app/models/user.rb:9:in `block in from_omniauth'
+  app/models/user.rb:4:in `tap'
+  app/models/user.rb:4:in `from_omniauth'
+  app/controllers/sessions_controller.rb:3:in `create'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140501192212)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "street" character varying(255), "city" character varying(255), "state" character varying(255), "zip" character varying(255), "email" character varying(255), "tagline" character varying(255), "description" text, "latitude" float, "longitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192212')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSkills (20140501192228)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "skills" ("id" serial primary key, "name" character varying(255), "category_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192228')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterests (20140501192247)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "category_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192247')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20140501192256)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192256')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUserSkills (20140501192310)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "user_skills" ("id" serial primary key, "user_id" integer, "skill_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192310')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUserInterests (20140501192317)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "user_interests" ("id" serial primary key, "user_id" integer, "interest_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192317')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to UpdateUsers (20140502003809)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "oauth_token" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "oauth_expires_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140502003809')[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:04:03 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 71ms (Views: 45.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:04:03 -0700
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:04:03 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:04:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:04:03 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 18:04:05 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBBUXTFRVrTIrMkw5vAGo4VdSt7hkOBN65M6GklARPZueARTIUP4R8tqjHcjOtPumOOjHL3mxlu-WkwJ7BDLYXfNAuEa8ApK6DRyplH1-y96nzx_FrQoJqzI7yLk2qSLzvIudWX0KbhnV-C8-l8O8xvSZhGRQbonjTyXYt84SF5WfM3tlDzmLu7YZg1D-wTgMz6bYNwbIlJErFNIswzuy4kNLU20gz1npA1xsAO6UDEnw_7KJyj-X-oxtTdf9qPok9JNaroViBNaISTMCAV6C1tLtTFThnotUZLkElZXmo_zweFbYRQaj6cuQVVL9E0SWc&state=4369d0adfee92071c12c68b8a627d22da42cd97bb2ada6d0" for 127.0.0.1 at 2014-05-01 18:04:05 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBBUXTFRVrTIrMkw5vAGo4VdSt7hkOBN65M6GklARPZueARTIUP4R8tqjHcjOtPumOOjHL3mxlu-WkwJ7BDLYXfNAuEa8ApK6DRyplH1-y96nzx_FrQoJqzI7yLk2qSLzvIudWX0KbhnV-C8-l8O8xvSZhGRQbonjTyXYt84SF5WfM3tlDzmLu7YZg1D-wTgMz6bYNwbIlJErFNIswzuy4kNLU20gz1npA1xsAO6UDEnw_7KJyj-X-oxtTdf9qPok9JNaroViBNaISTMCAV6C1tLtTFThnotUZLkElZXmo_zweFbYRQaj6cuQVVL9E0SWc", "state"=>"4369d0adfee92071c12c68b8a627d22da42cd97bb2ada6d0", "provider"=>"facebook"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = 10103112634347647 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "oauth_expires_at", "oauth_token", "provider", "state", "street", "tagline", "uid", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"  [["city", nil], ["created_at", Fri, 02 May 2014 01:04:06 UTC +00:00], ["description", nil], ["email", nil], ["latitude", nil], ["longitude", nil], ["name", "Tyler Stauss"], ["oauth_expires_at", Tue, 01 Jul 2014 00:48:39 UTC +00:00], ["oauth_token", "CAAGuKRn7gUgBAC84SKI9iZCrbpuNQAvnf2tjrNvgzDcHOtd6bK4TBdpMA8A9JtxSxm5cH81sCqMyhyOW2Ca4OKaNAv79lIBvEkFtDTvuv2ZAuHaa5sQKcW9jTRqYrZC16mdp7Qe6HZCg7eU7TRiPvl2JiP9etTrQOsW50NtfgBdRh65qXDgkhOxD5eiI9OYZD"], ["provider", "facebook"], ["state", nil], ["street", nil], ["tagline", nil], ["uid", 10103112634347647], ["updated_at", Fri, 02 May 2014 01:04:06 UTC +00:00], ["zip", nil]]
+PG::NumericValueOutOfRange: ERROR:  value "10103112634347647" is out of range for type integer
+: INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "oauth_expires_at", "oauth_token", "provider", "state", "street", "tagline", "uid", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 32ms
+
+ActiveRecord::StatementInvalid (PG::NumericValueOutOfRange: ERROR:  value "10103112634347647" is out of range for type integer
+: INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "oauth_expires_at", "oauth_token", "provider", "state", "street", "tagline", "uid", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"):
+  app/models/user.rb:10:in `block in from_omniauth'
+  app/models/user.rb:4:in `tap'
+  app/models/user.rb:4:in `from_omniauth'
+  app/controllers/sessions_controller.rb:3:in `create'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140501192212)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "street" character varying(255), "city" character varying(255), "state" character varying(255), "zip" character varying(255), "email" character varying(255), "tagline" character varying(255), "description" text, "latitude" float, "longitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192212')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSkills (20140501192228)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "skills" ("id" serial primary key, "name" character varying(255), "category_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192228')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateInterests (20140501192247)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "category_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192247')
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCategories (20140501192256)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "categories" ("id" serial primary key, "name" character varying(255)) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192256')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUserSkills (20140501192310)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mCREATE TABLE "user_skills" ("id" serial primary key, "user_id" integer, "skill_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192310')
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUserInterests (20140501192317)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "user_interests" ("id" serial primary key, "user_id" integer, "interest_id" integer) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140501192317')
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to UpdateUsers (20140502003809)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD COLUMN "provider" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "uid" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "oauth_token" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD COLUMN "oauth_expires_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140502003809')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (116.2ms)[0m  DROP DATABASE IF EXISTS "epicswap_test"
+  [1m[36m (356.2ms)[0m  [1mCREATE DATABASE "epicswap_test" ENCODING = 'utf8'[0m
+  [1m[35m (6.1ms)[0m  CREATE TABLE "categories" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (34.2ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "name" character varying(255), "category_id" integer) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "skills" ("id" serial primary key, "name" character varying(255), "category_id" integer) 
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "user_interests" ("id" serial primary key, "user_id" integer, "interest_id" integer) [0m
+  [1m[35m (2.8ms)[0m  CREATE TABLE "user_skills" ("id" serial primary key, "user_id" integer, "skill_id" integer) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying(255), "street" character varying(255), "city" character varying(255), "state" character varying(255), "zip" character varying(255), "email" character varying(255), "tagline" character varying(255), "description" text, "latitude" float, "longitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "provider" character varying(255), "uid" character varying(255), "oauth_token" character varying(255), "oauth_expires_at" timestamp) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+  [1m[36m (1.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140502003809')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140501192212')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140501192228')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140501192247')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140501192256')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140501192310')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140501192317')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:05:26 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 95ms (Views: 45.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:05:26 -0700
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:05:26 -0700
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:05:26 -0700
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:05:26 -0700
+Served asset /application.js - 200 OK (6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 18:05:29 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAwfVl_YVJi2c7kk-ymzyeBw20LCoLGJMcQuEeeMioHIrN80_l9Rz7q2otwH3r4aFN_KWbxIPnsNcA6tX6DdbLsfxAcAC_m_m8Eg6NRrdyIOoI4EfalHh7zVlaJaYNEOLT00Ta9aS7svICSIcxz8S0xHRHppvykkdK8Ja5IuwwnGC8RyyClQgJv94Opzu8hW_nYRre12PXtJ9_87NzwGyCa7DkKcMsXQNxYIDR0-Yo3WfGCKH9i7CRTJQPKj86mCS7I_ybVlI8ZGDIx-2Acr_U-CRV37hzHQvlk1PStGJ-aWvJf7YuK9wkO5faP7NTxH5M&state=697e25b17c839c1ff7aabe49d5db4cdb82bc92fccfbed98c" for 127.0.0.1 at 2014-05-01 18:05:29 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAwfVl_YVJi2c7kk-ymzyeBw20LCoLGJMcQuEeeMioHIrN80_l9Rz7q2otwH3r4aFN_KWbxIPnsNcA6tX6DdbLsfxAcAC_m_m8Eg6NRrdyIOoI4EfalHh7zVlaJaYNEOLT00Ta9aS7svICSIcxz8S0xHRHppvykkdK8Ja5IuwwnGC8RyyClQgJv94Opzu8hW_nYRre12PXtJ9_87NzwGyCa7DkKcMsXQNxYIDR0-Yo3WfGCKH9i7CRTJQPKj86mCS7I_ybVlI8ZGDIx-2Acr_U-CRV37hzHQvlk1PStGJ-aWvJf7YuK9wkO5faP7NTxH5M", "state"=>"697e25b17c839c1ff7aabe49d5db4cdb82bc92fccfbed98c", "provider"=>"facebook"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.7ms)[0m  INSERT INTO "users" ("city", "created_at", "description", "email", "latitude", "longitude", "name", "oauth_expires_at", "oauth_token", "provider", "state", "street", "tagline", "uid", "updated_at", "zip") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16) RETURNING "id"  [["city", nil], ["created_at", Fri, 02 May 2014 01:05:29 UTC +00:00], ["description", nil], ["email", nil], ["latitude", nil], ["longitude", nil], ["name", "Tyler Stauss"], ["oauth_expires_at", Tue, 01 Jul 2014 00:48:39 UTC +00:00], ["oauth_token", "CAAGuKRn7gUgBAL5Ec93if4uUXeJ5ZA8SSkL0kQhv9N0RZBpp1bxSqqkVXF0qmIVyWOMWtpACWZCER2gInRw8RQDtVan1cm2RI0Pe9aZBQgZAOaY7ZBB8WHq1hUnC4yhM3RmxvyQJnDHqOvhiskVQvK5YHFwoc89zZBCoVwm51XZCL4Yms2Om8rPfPo0hYEXhMd4ZD"], ["provider", "facebook"], ["state", nil], ["street", nil], ["tagline", nil], ["uid", "10103112634347647"], ["updated_at", Fri, 02 May 2014 01:05:29 UTC +00:00], ["zip", nil]]
+  [1m[36m (4.5ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 39ms
+
+NoMethodError (undefined method `redirec_to' for #<SessionsController:0x007fe7ce6b9758>):
+  app/controllers/sessions_controller.rb:5:in `create'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.6ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:05:44 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 3.5ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:05:44 -0700
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:05:44 -0700
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:05:44 -0700
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:05:44 -0700
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-05-01 18:05:51 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 18:05:59 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAGHAG_7qx8Uqmi2CwHYjI0JxVk-SEkLjkdjRsedghl6TrxVESgQywc28uodLbcreNDZPrE-9NFlMVVJ8LY9cE-HsY76P0prjZ8t4DzRs6lbyCgDwUIKhajgRKYR2GTIRuObBO4eVnj0URVXLFw485brkhN8Y_Pv6SDZbz9pROBj3kI0izoIErBAT1lF7Gu2kZ8CnVX2fNYTvnREsVxhAjArUbbXLkcuA69S2Xxh04FdIRuDdeXtqEK48zZAD_WHAruMnAbkLQXlMTZpgs1tjvBhVdwmOUzVX7fxfTdghBaofMifA8yQvQkUs-VNUNtA8M&state=091012a0f7a8f8b6cafbbfad50ffff33451b0c4075f5452c" for 127.0.0.1 at 2014-05-01 18:05:59 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAGHAG_7qx8Uqmi2CwHYjI0JxVk-SEkLjkdjRsedghl6TrxVESgQywc28uodLbcreNDZPrE-9NFlMVVJ8LY9cE-HsY76P0prjZ8t4DzRs6lbyCgDwUIKhajgRKYR2GTIRuObBO4eVnj0URVXLFw485brkhN8Y_Pv6SDZbz9pROBj3kI0izoIErBAT1lF7Gu2kZ8CnVX2fNYTvnREsVxhAjArUbbXLkcuA69S2Xxh04FdIRuDdeXtqEK48zZAD_WHAruMnAbkLQXlMTZpgs1tjvBhVdwmOUzVX7fxfTdghBaofMifA8yQvQkUs-VNUNtA8M", "state"=>"091012a0f7a8f8b6cafbbfad50ffff33451b0c4075f5452c", "provider"=>"facebook"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "oauth_token" = 'CAAGuKRn7gUgBAHzzkJ4pUofWLtLWjfbkU73UZApghIMZBZBnYepmPwFqdFzfjIr9ebZCFNWFfp9LtCT5AvfnZCLylMO3TySFV19TqiWFqQcvIBG3xqZCpUY69VDR8A9T3qeuriyflVRsBDV07EIAUcDpMZCCae7sMpeaVWwCLIiWfKpIOTYNtK4pZAMeWaw5nFIZD', "updated_at" = '2014-05-02 01:06:00.181642' WHERE "users"."id" = 1
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:06:00 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-05-01 18:06:08 -0700
+
+AbstractController::ActionNotFound (The action 'destroy' could not be found for SessionsController):
+  actionpack (3.2.13) lib/abstract_controller/base.rb:116:in `process'
+  actionpack (3.2.13) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.13) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.13) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.13) lib/action_dispatch/routing/route_set.rb:612:in `call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.1) lib/omniauth/builder.rb:59:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.13) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.13) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `_run__2652336624457790477__call__1166260978425300269__callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.13) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.13) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/apprentice/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.7ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-05-01 18:06:50 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:06:50 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 3.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:06:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:06:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:06:50 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:06:50 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 18:06:54 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQDT8l3N3e835G4LG6s3PZVtRx8SnVKGqOk9DuKnE7WmazplUujo14m2qwieXwlSAprSZ1AF1E9c2jCO51Xu8FR-VU9dI2FqrHg2uLr7YxpU9NvKPHgW-ho2lb48hvnOgmmxnHUUeoiCC6HEmXCHjMQZ_keTMDttAr55nsYqjzOaJeHV2N_UmWU69QJluP9JMRl74A0jNYM3c9BbYir5XwmWsmXBds2f1yLAYRelXxENqT6CQSm1Nz3F4tAbLGoclrd-kCsCrJq6lUIOz9O12ddCo9cFCLwD5DkCV7QnKi7-Yn4AmwI4cpuqgaXrbKibUz0&state=41322e3fb55c4eda4e994ad0ff086302001bbbcfc3decb99" for 127.0.0.1 at 2014-05-01 18:06:54 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDT8l3N3e835G4LG6s3PZVtRx8SnVKGqOk9DuKnE7WmazplUujo14m2qwieXwlSAprSZ1AF1E9c2jCO51Xu8FR-VU9dI2FqrHg2uLr7YxpU9NvKPHgW-ho2lb48hvnOgmmxnHUUeoiCC6HEmXCHjMQZ_keTMDttAr55nsYqjzOaJeHV2N_UmWU69QJluP9JMRl74A0jNYM3c9BbYir5XwmWsmXBds2f1yLAYRelXxENqT6CQSm1Nz3F4tAbLGoclrd-kCsCrJq6lUIOz9O12ddCo9cFCLwD5DkCV7QnKi7-Yn4AmwI4cpuqgaXrbKibUz0", "state"=>"41322e3fb55c4eda4e994ad0ff086302001bbbcfc3decb99", "provider"=>"facebook"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mUPDATE "users" SET "oauth_token" = 'CAAGuKRn7gUgBADU1NciQYhtSWRSyYU9ZB7vrHnAhZB8vIZCOMKRRguMrPLlkktUNNm6D1MogxmC0SKhEz4tXzMfQa5XMdAsy3BnXmb0DTLBqciUVXCKZC94Rmpkvl3yzsrxoEJ9xNZBmnrhMCUUqQsWYY8eVlAzLXaAI4JPmxMIQD3ARqrMlBT6gDKZCWgp9gZD', "updated_at" = '2014-05-02 01:06:56.071557' WHERE "users"."id" = 1[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:06:56 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:06:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:06:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:06:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:06:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-05-01 18:10:08 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:10:08 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:10:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:10:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:10:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:10:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:10:11 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:10:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:10:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:10:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:10:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:11:00 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 110ms (Views: 45.7ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:11:01 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:01 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:01 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-05-01 18:11:02 -0700
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCp28_hv49Dy0T3LAwUy2FEzDfbe4xQRLwSC1LBWm9eQGllR149wH9QwSfYjcOT3gp5FARZ2JaFigvhQ_mmRNudfWXNB1qp8Vya2XdeIVyJRj48uL6-Xt0g_MiyICSyOHWoFtGP5hma0zvv_8RjP3iqejYrgmbrvn6Y65fvEYONqwP2K8WoUPw9EKJja33lMBiPYX1S736RQpYQtah0w9IaZKU6WbMtwIgY0HHW_9gPVuMUK0S8xC_687HRrg-I8EfPsSw5r9oWPGHYF6OYJX1TEb1JWBRGzl4QoELDJ8NcTaW70Gi4e13RFGNM4SHW8pw&state=469aff6b6281b38a539638a4353be695a73fe08f89e23e47" for 127.0.0.1 at 2014-05-01 18:11:03 -0700
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCp28_hv49Dy0T3LAwUy2FEzDfbe4xQRLwSC1LBWm9eQGllR149wH9QwSfYjcOT3gp5FARZ2JaFigvhQ_mmRNudfWXNB1qp8Vya2XdeIVyJRj48uL6-Xt0g_MiyICSyOHWoFtGP5hma0zvv_8RjP3iqejYrgmbrvn6Y65fvEYONqwP2K8WoUPw9EKJja33lMBiPYX1S736RQpYQtah0w9IaZKU6WbMtwIgY0HHW_9gPVuMUK0S8xC_687HRrg-I8EfPsSw5r9oWPGHYF6OYJX1TEb1JWBRGzl4QoELDJ8NcTaW70Gi4e13RFGNM4SHW8pw", "state"=>"469aff6b6281b38a539638a4353be695a73fe08f89e23e47", "provider"=>"facebook"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10103112634347647' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE "users" SET "oauth_token" = 'CAAGuKRn7gUgBAPO4TlQT7ORaDDy7bFW5ogSsk6A5UeKkRtB3FEWlOsXY64iOULjGIxXkmZBYvsUTnlOwPCddobrikyPb63oeKOEHObedON6abhlqFcByVF45yTYZBoBiVkeoXMWXCcMGSXGR9GNyrb1kZBDccDT8AcA78Mr34H7niDhZCjGOdtqSAo7FT30ZD', "updated_at" = '2014-05-02 01:11:04.015932' WHERE "users"."id" = 1
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 51ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:11:04 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:11:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:04 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:04 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-05-01 18:11:05 -0700
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-01 18:11:05 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-01 18:11:06 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-01 18:11:06 -0700
+Served asset /application.js - 304 Not Modified (0ms)
