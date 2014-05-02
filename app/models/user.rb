@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   attr_accessible :street, :city, :state, :zip, :tagline, :description
 
   def self.from_omniauth(auth)

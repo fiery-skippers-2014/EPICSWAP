@@ -46,5 +46,13 @@ describe UsersController do
         }.to change { user.reload.tagline }.to('new tagline')
       expect(response).to be_redirect
     end
+
+    # it 'should not update attributes with invalid information' do
+    #   expect{
+    #     post :update, id: user.id, user: { street: nil }
+    #     }.to_not change { user.reload.street }
+    #   expect(response).not_to be_redirect
+    # end
+
   end
 end
