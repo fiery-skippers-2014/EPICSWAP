@@ -14,7 +14,6 @@ var UserInterests = {
   }
 }
 
-
 var UserSkills = {
   init: function(){
     $('form.new_skill').on('ajax:success', this.appendSkill )
