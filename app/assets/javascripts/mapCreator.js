@@ -7,6 +7,18 @@ function MapCreator(mapOpts){
 
 MapCreator.prototype = {
   buildMap: function(){
+    return this.buildMapBox_MAP();
+    // return this.buildOSM_Map();
+  },
+
+  buildMapBox_MAP: function(){
+    var map = L.mapbox.map('map', 'nathansass.i4gofhc8')
+                      .setView(L.latLng(this.START_LATITUDE, this.START_LONGITUDE),
+                      this.INITIAL_ZOOM);
+    return map
+  },
+
+  buildOSM_Map: function(){ //CALL WITH return this.buildOSM_MAP()
     var lMap = new L.map(this.PAGE_LOCATION);
     lMap.setView(L.latLng(this.START_LATITUDE, this.START_LONGITUDE), this.INITIAL_ZOOM);
     return this._initializeOSM(lMap);
@@ -18,4 +30,5 @@ MapCreator.prototype = {
     var layer   = new L.TileLayer(osmURL, {minZoom: 2, maxZoom: 18, attribution: osmAttr});
     return map.addLayer(layer);
   }
+
 };
