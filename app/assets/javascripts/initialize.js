@@ -6,6 +6,7 @@ $(document).ready(function(){
 
   UserInterests.init();
   UserSkills.init();
+  UserReputation.init();
 
   //////////////////////
   ///  MAP BUILDER   ///

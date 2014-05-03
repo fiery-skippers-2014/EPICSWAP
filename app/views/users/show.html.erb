@@ -7,7 +7,7 @@
 
     <p><%= @user.name %> is <%= @distance %> miles away.</p>
     <p><%= @user.name %> Reputation</p>
-    <p><%= @user.reputation %></p>
+    <p id="user-reputation"><%= @user.reputation %></p>
 
     <%= form_for [@user, @reputation], remote: true do |f| %>
       <%= f.submit 'Rep+' %>

@@ -2,6 +2,7 @@ var UserInterests = {
   init: function(){
     $('form.new_interest').on('ajax:success', this.appendInterest )
     $('form.new_interest').on('ajax:error', this.appendError )
+
   },
 
   appendInterest: function(e, data){
@@ -23,6 +24,21 @@ var UserSkills = {
   appendSkill: function(e, data){
     console.log('success')
     $('ul.my-skills').append(data)
+  },
+
+  appendError: function(e, data){
+    console.log('fail');
+  }
+}
+
+var UserReputation = {
+  init: function(){
+    $('form.new_reputation').on('ajax:success', this.appendReputation )
+    $('form.new_reputation').on('ajax:error', this.appendError )
+  },
+  appendReputation: function(e, data){
+
+    $('p#user-reputation').html(data.score)
   },
 
   appendError: function(e, data){
