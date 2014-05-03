@@ -9,6 +9,5 @@ class SkillsController < ApplicationController
       render :nothing => true
     end
 
-  end
 
 end
