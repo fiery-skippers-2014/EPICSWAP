@@ -25,11 +25,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
        User.geocode(@user)
-      redirect_to user_path(@user)
+       render json: { user: @user }.to_json
     else
       render :edit
     end
-
   end
 
   def destroy
