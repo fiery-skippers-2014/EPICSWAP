@@ -27,8 +27,9 @@
   <% end %>
 </ul>
 
-<p>Add a skill</p>
-<%= render 'shared/skills_form' %>
+<% if current_user == @user %>
+  <%= render 'shared/skills_form' %>
+<% end %>
 
 <h2>My Interests</h2>
 <ul class='my-interests'>
@@ -37,7 +38,8 @@
   <% end %>
 </ul>
 
-<p>Add an interest</p>
 
-<%= render 'shared/interests_form' %>
+<% if current_user == @user %>
+  <%= render 'shared/interests_form' %>
+<% end %>
 

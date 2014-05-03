@@ -30,7 +30,7 @@ $(document).ready(function(){
 
     var coolController = new MapController(controllerOpts)
     //////////////////////
-    ///FIRE IT UP BELOW///
+    ///FIRE IN THE HOLE///
     //////////////////////
     coolController.initialize();
   }
