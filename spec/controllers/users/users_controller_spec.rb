@@ -33,6 +33,16 @@ describe UsersController do
       get :show, id: user.id
       expect(assigns(:skill)).to be_a_new Skill
     end
+
+    it 'should assign @interest to interest.new' do
+      get :show, id: user.id
+      expect(assigns(:interest)).to be_a_new Interest
+    end
+
+    it 'should assign @reputation to reputation.new' do
+      get :show, id: user.id
+      expect(assigns(:reputation)).to be_a_new Reputation
+    end
   end
 
   context '#edit' do

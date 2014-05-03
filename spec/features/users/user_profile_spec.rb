@@ -26,6 +26,25 @@ feature 'view a user profile' do
     visit user_path(second_user)
     expect(page).to have_content("Email #{second_user.name}")
   end
+
+  scenario 'a logged in user can give reputation to another user' do
+    visit user_path(second_user)
+    expect(page).to have_button('Rep+')
+  end
+end
+
+feature 'non logged in user' do
+  let!(:user) { FactoryGirl.create :user }
+  let!(:second_user) { FactoryGirl.create :user }
+  scenario 'cannot view a profile page' do
+    visit user_path(second_user)
+    expect(page).to have_content('Sign in')
+  end
+
+  scenario 'cannot view an edit profile page' do
+    visit edit_user_path(second_user)
+    expect(page).to have_content('Sign in')
+  end
 end
 
 feature 'add skills on the user profile' do
