@@ -8,10 +8,13 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
 gem 'dotenv'
 gem 'geocoder'
 
 group :test, :development do
+  gem 'jasmine'
+  gem 'shoulda-matchers'
   gem "rspec-rails", "~> 2.0"
 end
 
@@ -19,7 +22,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rack_session_access'
