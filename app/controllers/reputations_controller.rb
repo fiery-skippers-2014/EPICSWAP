@@ -11,7 +11,7 @@ class ReputationsController < ApplicationController
       @user.save
       render json: { score: @user.reputation }.to_json
     else
-      render :nothing => true
+      redirect_to user_path(@user)
     end
   end
 end

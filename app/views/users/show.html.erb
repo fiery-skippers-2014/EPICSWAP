@@ -14,8 +14,8 @@
       <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
   <% end %>
 
-<h3><%= @user.tagline %></h3>
-<p><%= @user.description %></p>
+<h3 class="tagline"><%= @user.tagline %></h3>
+<p class="description"><%= @user.description %></p>
 
 
 <h2>My Skills</h2>

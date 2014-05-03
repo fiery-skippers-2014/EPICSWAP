@@ -25,24 +25,20 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
        User.geocode(@user)
-      redirect_to user_path(@user)
+       render json: { user: @user }.to_json
     else
       render :edit
     end
-
   end
 
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to  root_path
-
+    redirect_to root_path
   end
 
   # GET /usersData.json
   def usersData
-    users = User.all
-    render json: { users: users }.to_json
+    render json: { users: User.all_with_skills }.to_json
   end
-
 end
