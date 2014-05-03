@@ -90,10 +90,14 @@ feature 'edit profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
 
+
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
+
+
   end
   scenario 'a logged in user can edit' do
+    Location.should_receive(:geocode) {[37.8010187, -122.412323]}
     visit user_path(user)
     expect(page).to have_content('Edit Profile')
     click_on 'Edit Profile'

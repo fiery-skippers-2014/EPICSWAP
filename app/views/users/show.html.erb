@@ -9,12 +9,7 @@
   <% else %>
 
     <p><%= @user.name %> is <%= @distance %> miles away.</p>
-    <p><%= @user.name %> Reputation</p>
-    <p id="user-reputation"><%= @user.reputation %></p>
-
-    <%= form_for [@user, @reputation], remote: true do |f| %>
-      <%= f.submit 'Rep+' %>
-    <% end %>
+    <%= render '/shared/reputation' %>
 
       <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
   <% end %>

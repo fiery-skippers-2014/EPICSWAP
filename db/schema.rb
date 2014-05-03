@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140503040829) do
+ActiveRecord::Schema.define(:version => 20140503182700) do
 
   create_table "categories", :force => true do |t|
     t.string "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20140503040829) do
   create_table "reputations", :force => true do |t|
     t.integer "score"
     t.integer "user_id"
+    t.integer "giver"
   end
 
   create_table "skills", :force => true do |t|

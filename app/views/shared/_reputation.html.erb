@@ -1,0 +1,10 @@
+<p><%= @user.name %> Reputation</p>
+<p id="user-reputation"><%= @user.reputation %></p>
+
+<% if reputation_given?(current_user, @user) %>
+  <p>You have already positvely affected <%= @user.name %>'s reputation.</p>
+<% else %>
+  <%= form_for [@user, @reputation], remote: true do |f| %>
+    <%= f.submit 'Rep+' %>
+  <% end %>
+<% end %>

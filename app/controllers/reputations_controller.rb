@@ -3,8 +3,10 @@ class ReputationsController < ApplicationController
   def create
     p params
     @user = User.find(params[:user_id])
+    @giver = current_user
     @reputation = @user.reputations.build(params[:reputation])
     @reputation.update_attribute('score', 1)
+    @reputation.update_attribute('giver', @giver.id)
     if @reputation.save
       @user.reputation = @user.reputation + 1
       @user.save
