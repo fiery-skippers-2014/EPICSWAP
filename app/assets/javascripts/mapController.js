@@ -13,16 +13,15 @@ MapController.prototype = {
   },
 
   _onGetUsersInfoSuccess: function(data){
-    debugger
+    console.log(data)
     for(var i = 0, d = data["users"].length; i < d; i++){
-      console.log(data["users"][i].id)
+      console.log(data["users"][i]['user'].id)
       this._createMarkerForUser(data["users"][i]);
-      // this._findUserSkills()
     }
   },
 
   _createMarkerForUser: function(userData){
-    var currentMarker   = this._addLocation(userData.latitude, userData.longitude);
+    var currentMarker   = this._addLocation(userData["user"].latitude, userData["user"].longitude);
     var html            = this._buildMustacheTemplate(userData);
     currentMarker.bindPopup(html).openPopup();
   },
@@ -34,15 +33,13 @@ MapController.prototype = {
   _buildMustacheTemplate: function(userData){
     var rawTemplate     = $("#userMarkerContentTemplate").html();
     var template        = Handlebars.compile(rawTemplate);
-    var userMiniProfile = { profileImage: userData.image,
-                            userId: userData.id,
-                            Name: userData.name,
-                            Tagline: userData.tagline
+    var userMiniProfile = { profileImage: userData["user"].image,
+                            userId: userData["user"].id,
+                            Name: userData["user"].name,
+                            Tagline: userData["user"].tagline,
+                            skillList: userData["skills"]
                           };
     return template(userMiniProfile);
-  },
-
-  _findUserSkills: function(userData){
-
   }
+
 };
