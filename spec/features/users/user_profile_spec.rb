@@ -33,7 +33,7 @@ feature 'add skills on the user profile' do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
   let!(:user) { FactoryGirl.create :user }
-  scenario 'a user can add skills they can teach' do
+  scenario 'a user can add skills they can teach', js: true do
     visit user_path(user)
     fill_in 'Skill', :with => 'basketball'
     click_on 'Create Skill'
@@ -47,7 +47,7 @@ feature 'add interests on the user profile' do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
   let!(:user) { FactoryGirl.create :user }
-  scenario 'a user can add interests they can teach' do
+  scenario 'a user can add interests they can teach', js: true  do
     visit user_path(user)
     fill_in 'Interest', :with => 'white water rafting'
     click_on 'Create Interest'

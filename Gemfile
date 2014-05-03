@@ -19,6 +19,7 @@ group :test, :development do
 end
 
 group :test do
+  gem 'simplecov'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
