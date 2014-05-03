@@ -3,7 +3,7 @@ class InterestsController < ApplicationController
     @user = User.find(params[:user_id])
     @interest = @user.interests.build(params[:interest])
     if @interest.save
-      redirect_to user_path(@user)
+      render partial: 'shared/interest', locals: { interest: @interest }
     else
       render :nothing => true
     end

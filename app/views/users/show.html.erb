@@ -21,7 +21,7 @@
 
 
 <h2>My Skills</h2>
-<ul>
+<ul class='my-skills'>
   <% @user.skills.each do |skill| %>
     <li><%= skill.name %></li>
   <% end %>
@@ -31,7 +31,7 @@
 <%= render 'shared/skills_form' %>
 
 <h2>My Interests</h2>
-<ul>
+<ul class='my-interests'>
   <% @user.interests.each do |interest| %>
     <li><%= interest.name %></li>
   <% end %>

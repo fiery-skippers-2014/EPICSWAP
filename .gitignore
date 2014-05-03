@@ -11,3 +11,4 @@
 /tmp
 .DS_Store
 /bundler_stubs
+/coverage
