@@ -2,7 +2,7 @@
 <img src="<%= @user.image %>">
 <% if current_user == @user %>
   <%= link_to "Edit Profile", edit_user_path(@user) %>
-  <%= link_to "Delete Profile", edit_user_path(@user), confirm: "Are you sure you want to delete your profile?" %>
+  <%= link_to "Delete Profile", user_path, confirm: "Are you sure you want to delete your profile?", method: :delete %>
   <% else %>
       <p><%= @user.name %> is <%= @distance %> miles away.</p>
       <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
@@ -10,6 +10,7 @@
 
 <h3><%= @user.tagline %></h3>
 <p><%= @user.description %></p>
+
 
 <h2>My Skills</h2>
 <ul>
@@ -29,4 +30,6 @@
 </ul>
 
 <p>Add an interest</p>
+
 <%= render 'shared/interests_form' %>
+
