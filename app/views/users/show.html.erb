@@ -7,9 +7,12 @@
 
     <p><%= @user.name %> is <%= @distance %> miles away.</p>
     <p><%= @user.name %> Reputation</p>
-<% end %>
+    <p><%= @user.reputation %></p>
 
-      <p><%= @user.name %> is <%= @distance %> miles away.</p>
+    <%= form_for [@user, @reputation], remote: true do |f| %>
+      <%= f.submit 'Rep+' %>
+    <% end %>
+
       <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
   <% end %>
 

@@ -55,14 +55,14 @@ ActiveRecord::Schema.define(:version => 20140503040829) do
     t.text     "description"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
     t.string   "provider"
     t.string   "uid"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.string   "image"
-    t.integer  "reputation"
+    t.integer  "reputation",       :default => 0
   end
 
 end

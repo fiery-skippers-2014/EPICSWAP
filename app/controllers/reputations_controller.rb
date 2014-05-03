@@ -4,7 +4,7 @@ class ReputationsController < ApplicationController
     @user = User.find(params[:user_id])
     @reputation = user.reputations.build(params[:reputation])
     if @reputation.save
-      redirect_to user_path(@user)
+      @reputation.score.to_json
     else
       render :nothing => true
     end

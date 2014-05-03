@@ -10,6 +10,7 @@ class UsersController < ApplicationController
     @interest   = Interest.new
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
     @distance   = @user.distance(current_user).round(2)
+    @reputation = Reputation.new
 
   end
 
