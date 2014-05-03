@@ -17,12 +17,13 @@
 <h3 class="tagline"><%= @user.tagline %></h3>
 <p class="description"><%= @user.description %></p>
 
-<%= @test %>
 <h2>My Skills</h2>
 <ul class='my-skills'>
   <% @user.skills.each do |skill| %>
     <li><%= skill.name %>
-      (<%= link_to num_users_by_interests(skill.name), interest_path(corresponding_interest(skill.name)) %>)
+      <% unless corresponding_interest(skill.name) == nil  %>
+        (<%= link_to num_users_by_interests(skill.name), interest_path(corresponding_interest(skill.name)) %>)
+      <% end %>
     </li>
 
   <% end %>

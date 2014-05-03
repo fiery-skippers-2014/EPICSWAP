@@ -1,6 +1,6 @@
 <h1><%= @interest.name %></h1>
 <%find_users_by_interest(@interest.name) %>
 <% @interested_users.each do |interested_user| %><br>
-<%= interested_user.name %>
+<%= link_to "#{interested_user.name}", user_path(interested_user.id) %>
 <% end %>
 

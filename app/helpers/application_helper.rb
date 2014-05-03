@@ -16,5 +16,4 @@ module ApplicationHelper
     interest = Interest.where('name = ?', skill).first
   end
 
-
 end
