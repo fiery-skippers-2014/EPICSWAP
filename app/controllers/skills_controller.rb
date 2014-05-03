@@ -4,7 +4,7 @@ class SkillsController < ApplicationController
     @user = User.find(params[:user_id])
     @skill = @user.skills.build(params[:skill])
     if @skill.save
-      redirect_to user_path(@user)
+      render partial: 'shared/skill', locals: { skill: @skill }
     else
       render :nothing => true
     end

@@ -1,7 +1,7 @@
 <ul>
-  <%= form_for [@user, @interest] do |f| %>
+  <%= form_for [@user, @interest], remote: true do |f| %>
     <li><%= f.label :name, 'Interest' %>
-      <%= f.text_field :name %></li>
+      <%= f.text_field :name, required: true %></li>
       <li><%= f.submit %></li>
   <% end %>
 </ul>

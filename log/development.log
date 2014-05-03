@@ -2511,3 +2511,1864 @@ Connecting to database specified by database.yml
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140502003809')
   [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140502023846')[0m
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140502175601')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:01:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.5ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4
+  Rendered shared/_skills_form.html.erb (9.9ms)
+  [1m[36mInterest Load (0.4ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4[0m
+  Rendered shared/_interests_form.html.erb (2.3ms)
+  Rendered users/show.html.erb within layouts/application (71.6ms)
+Compiled map_style.css  (0ms)  (pid 16222)
+Compiled application.css  (2ms)  (pid 16222)
+Compiled jquery.js  (1ms)  (pid 16222)
+Compiled jquery_ujs.js  (0ms)  (pid 16222)
+Compiled handlebars-v1.3.0.js  (0ms)  (pid 16222)
+Compiled AjaxClient.js  (0ms)  (pid 16222)
+Compiled UserProfile.js  (0ms)  (pid 16222)
+Compiled initialize.js  (0ms)  (pid 16222)
+Compiled mapController.js  (0ms)  (pid 16222)
+Compiled mapCreator.js  (0ms)  (pid 16222)
+Compiled application.js  (30ms)  (pid 16222)
+  Rendered shared/_user_widget.html.erb (1.2ms)
+Completed 200 OK in 292ms (Views: 189.0ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /map_style.css - 200 OK (1ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /AjaxClient.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /handlebars-v1.3.0.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /UserProfile.js - 200 OK (2ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /initialize.js - 200 OK (2ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /mapController.js - 200 OK (3ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /mapCreator.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:01:17 -0700
+Served asset /application.js - 200 OK (15ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-02 21:01:21 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" 
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered shared/_user_widget.html.erb (1.9ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/usersData.json" for 127.0.0.1 at 2014-05-02 21:01:21 -0700
+Processing by UsersController#usersData as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" 
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered shared/_user_widget.html.erb (1.9ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usersData.json" for 127.0.0.1 at 2014-05-02 21:05:21 -0700
+Processing by UsersController#usersData as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.8ms)
+  [1m[35mInterest Load (0.6ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (2.7ms)
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-02 21:05:38 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered shared/_user_widget.html.erb (1.7ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:38 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:38 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:38 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usersData.json" for 127.0.0.1 at 2014-05-02 21:05:39 -0700
+Processing by UsersController#usersData as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3[0m
+  Rendered shared/_skills_form.html.erb (3.0ms)
+  [1m[35mInterest Load (0.4ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3
+  Rendered shared/_interests_form.html.erb (1.8ms)
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered shared/_user_widget.html.erb (0.6ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:05:53 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/3/skills" for 127.0.0.1 at 2014-05-02 21:06:29 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"POttery", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", 4], ["name", "POttery"], ["user_id", 3]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered shared/_skill.html.erb (0.4ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3
+  Rendered shared/_skills_form.html.erb (1.9ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3[0m
+  Rendered shared/_interests_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (6.8ms)
+  Rendered shared/_user_widget.html.erb (0.5ms)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:06:49 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (4.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.5ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3
+  Rendered shared/_skills_form.html.erb (8.5ms)
+  [1m[36mInterest Load (0.8ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3[0m
+  Rendered shared/_interests_form.html.erb (3.3ms)
+  Rendered users/show.html.erb within layouts/application (69.2ms)
+  Rendered shared/_user_widget.html.erb (1.2ms)
+Completed 200 OK in 223ms (Views: 123.3ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /map_style.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /AjaxClient.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /UserProfile.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /initialize.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /mapController.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /mapCreator.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:28 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started POST "/users/3/interests" for 127.0.0.1 at 2014-05-02 21:07:36 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"Things"}, "commit"=>"Create Interest", "user_id"=>"3"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", nil], ["name", "Things"], ["user_id", 3]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_interest.html.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users/3/interests" for 127.0.0.1 at 2014-05-02 21:07:37 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"Things"}, "commit"=>"Create Interest", "user_id"=>"3"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", nil], ["name", "Things"], ["user_id", 3]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_interest.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.8ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:07:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:07:51 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"Fistingbumping", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", 4], ["name", "Fistingbumping"], ["user_id", 4]]
+  [1m[35m (15.9ms)[0m  COMMIT
+  Rendered shared/_skill.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 5.2ms | ActiveRecord: 17.3ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:07:52 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"Fistingbumping", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", 4], ["name", "Fistingbumping"], ["user_id", 4]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  Rendered shared/_skill.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/4/interests" for 127.0.0.1 at 2014-05-02 21:07:58 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"ADD SKILL"}, "commit"=>"Create Interest", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", nil], ["name", "ADD SKILL"], ["user_id", 4]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered shared/_interest.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/4/interests" for 127.0.0.1 at 2014-05-02 21:07:59 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"ADD SKILL"}, "commit"=>"Create Interest", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", nil], ["name", "ADD SKILL"], ["user_id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered shared/_interest.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4
+  Rendered shared/_skills_form.html.erb (2.5ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4[0m
+  Rendered shared/_interests_form.html.erb (1.8ms)
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:09:36 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/4/interests" for 127.0.0.1 at 2014-05-02 21:09:44 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"awd"}, "commit"=>"Create Interest", "user_id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", nil], ["name", "awd"], ["user_id", 4]]
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_interest.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 3.5ms | ActiveRecord: 16.1ms)
+
+
+Started POST "/users/4/interests" for 127.0.0.1 at 2014-05-02 21:09:45 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"awd"}, "commit"=>"Create Interest", "user_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", nil], ["name", "awd"], ["user_id", 4]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_interest.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:10:59 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"BOOM", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", 4], ["name", "BOOM"], ["user_id", 4]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_skill.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:10:59 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.6ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Compiled jquery.js  (1ms)  (pid 16569)
+Compiled jquery_ujs.js  (0ms)  (pid 16569)
+Compiled handlebars-v1.3.0.js  (1ms)  (pid 16569)
+Compiled AjaxClient.js  (0ms)  (pid 16569)
+Compiled UserProfile.js  (0ms)  (pid 16569)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled mapController.js  (0ms)  (pid 16569)
+Compiled mapCreator.js  (0ms)  (pid 16569)
+Compiled application.js  (61ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 85.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:10:59 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /UserProfile.js - 200 OK (3ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:00 -0700
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.4ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4
+  Rendered shared/_skills_form.html.erb (1.7ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4[0m
+  Rendered shared/_interests_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (7.3ms)
+Compiled UserProfile.js  (0ms)  (pid 16569)
+Compiled application.js  (4ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 68.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /UserProfile.js - 200 OK (3ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:11:41 -0700
+Served asset /application.js - 304 Not Modified (52ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:11:43 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"sdf", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", 4], ["name", "sdf"], ["user_id", 4]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_skill.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:11:46 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"sdf", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", 4], ["name", "sdf"], ["user_id", 4]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_skill.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:11:46 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"sdf", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", 4], ["name", "sdf"], ["user_id", 4]]
+  [1m[36m (20.1ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_skill.html.erb (0.0ms)
+Completed 200 OK in 26ms (Views: 3.0ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.4ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (0.9ms)
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /initialize.js - 200 OK (1ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:05 -0700
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:06 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:06 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4
+  Rendered shared/_skills_form.html.erb (1.7ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4[0m
+  Rendered shared/_interests_form.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.6ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (1.4ms)
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:26 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:27 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:27 -0700
+Served asset /initialize.js - 200 OK (1ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:27 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:27 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:27 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4
+  Rendered shared/_skills_form.html.erb (1.4ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4[0m
+  Rendered shared/_interests_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (6.5ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.5ms)
+Completed 200 OK in 155ms (Views: 152.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /initialize.js - 200 OK (1ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:12:42 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:12:45 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"dfdf", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", 4], ["name", "dfdf"], ["user_id", 4]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_skill.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (2.1ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.9ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (12.2ms)
+Compiled UserProfile.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 55.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /UserProfile.js - 200 OK (6ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:09 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:13:12 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"sdfdsf", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", 4], ["name", "sdfdsf"], ["user_id", 4]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  Rendered shared/_skill.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/4/interests" for 127.0.0.1 at 2014-05-02 21:13:30 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"sffs"}, "commit"=>"Create Interest", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", nil], ["name", "sffs"], ["user_id", 4]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered shared/_interest.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3
+  Rendered shared/_skills_form.html.erb (2.1ms)
+  [1m[36mInterest Load (0.4ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3[0m
+  Rendered shared/_interests_form.html.erb (2.2ms)
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+  Rendered shared/_user_widget.html.erb (0.8ms)
+Completed 200 OK in 25ms (Views: 19.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:13:37 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/3/skills" for 127.0.0.1 at 2014-05-02 21:13:41 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"sfg", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["category_id", 4], ["name", "sfg"], ["user_id", 3]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered shared/_skill.html.erb (0.1ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3[0m
+  Rendered shared/_skills_form.html.erb (1.5ms)
+  [1m[35mInterest Load (0.4ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3
+  Rendered shared/_interests_form.html.erb (2.7ms)
+  Rendered users/show.html.erb within layouts/application (8.6ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.5ms)
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /initialize.js - 200 OK (2ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:18:48 -0700
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:19:04 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3
+  Rendered shared/_skills_form.html.erb (1.6ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3[0m
+  Rendered shared/_interests_form.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (5.9ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 62.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:19:04 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:19:04 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:05 -0700
+Served asset /initialize.js - 200 OK (1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:19:16 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3[0m
+  Rendered shared/_skills_form.html.erb (1.7ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3
+  Rendered shared/_interests_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:19:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:19:16 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:16 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:17 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:17 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:17 -0700
+Served asset /initialize.js - 200 OK (1ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:17 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:17 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:19:17 -0700
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "3"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3
+  Rendered shared/_skills_form.html.erb (1.5ms)
+  [1m[36mInterest Load (0.4ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3[0m
+  Rendered shared/_interests_form.html.erb (1.1ms)
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /initialize.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /application.js - 304 Not Modified (42ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:32 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "3"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.2ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 3[0m
+  Rendered shared/_skills_form.html.erb (1.5ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 3
+  Rendered shared/_interests_form.html.erb (1.0ms)
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /initialize.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:44 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:45 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:20:45 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered shared/_user_widget.html.erb (1.8ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:02 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSkill Load (0.3ms)[0m  SELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4
+  Rendered shared/_skills_form.html.erb (1.6ms)
+  [1m[36mInterest Load (0.3ms)[0m  [1mSELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4[0m
+  Rendered shared/_interests_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:21:10 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.2ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.7ms)
+  [1m[35mInterest Load (0.3ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (1.2ms)
+  Rendered users/show.html.erb within layouts/application (6.9ms)
+Compiled initialize.js  (0ms)  (pid 16569)
+Compiled application.js  (3ms)  (pid 16569)
+  Rendered shared/_user_widget.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /initialize.js - 200 OK (2ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:35 -0700
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered shared/_user_widget.html.erb (2.2ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/usersData.json" for 127.0.0.1 at 2014-05-02 21:24:41 -0700
+Processing by UsersController#usersData as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" [0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSkill Load (0.3ms)[0m  [1mSELECT "skills".* FROM "skills" WHERE "skills"."user_id" = 4[0m
+  Rendered shared/_skills_form.html.erb (1.8ms)
+  [1m[35mInterest Load (0.4ms)[0m  SELECT "interests".* FROM "interests" WHERE "interests"."user_id" = 4
+  Rendered shared/_interests_form.html.erb (1.9ms)
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+  Rendered shared/_user_widget.html.erb (0.5ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/map_style.css?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /map_style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AjaxClient.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /AjaxClient.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/handlebars-v1.3.0.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /handlebars-v1.3.0.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/UserProfile.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /UserProfile.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/initialize.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /initialize.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapController.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /mapController.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mapCreator.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /mapCreator.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-02 21:24:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/4/skills" for 127.0.0.1 at 2014-05-02 21:24:47 -0700
+Processing by SkillsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "skill"=>{"name"=>"dd", "category_id"=>"4"}, "commit"=>"Create Skill", "user_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "skills" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", 4], ["name", "dd"], ["user_id", 4]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered shared/_skill.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/4/interests" for 127.0.0.1 at 2014-05-02 21:24:50 -0700
+Processing by InterestsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL6EvCRVVFhuuwxWg5HVoMM203AAnPymtmegWPj+rHs=", "interest"=>{"name"=>"sdsd"}, "commit"=>"Create Interest", "user_id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "interests" ("category_id", "name", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["category_id", nil], ["name", "sdsd"], ["user_id", 4]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered shared/_interest.html.erb (0.1ms)
+Completed 200 OK in 6ms (Views: 2.1ms | ActiveRecord: 1.3ms)
