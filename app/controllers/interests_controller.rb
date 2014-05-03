@@ -9,4 +9,9 @@ class InterestsController < ApplicationController
     end
 
   end
+
+
+  def show
+    @interest = Interest.find(params[:id])
+  end
 end
