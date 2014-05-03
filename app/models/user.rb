@@ -31,10 +31,19 @@ class User < ActiveRecord::Base
   end
 
   def self.all_with_skills
-    User.all.map { |user| user.with_skills }
+    skilled_users = User.find_users_with_skills
+    skilled_users.map { |user| user.with_skills }
+  end
+
+  def self.find_users_with_skills
+    users_with_skills = []
+    Skill.all.each do |skill|
+      users_with_skills << skill.user
+    end
+    return users_with_skills.uniq
   end
 
   def with_skills
-    { user: self, skills: self.skills.map(&:name) }
+    { user: self, skills: self.skills.map(&:name), category: self.skills.sample(1).first.category.name }
   end
 end

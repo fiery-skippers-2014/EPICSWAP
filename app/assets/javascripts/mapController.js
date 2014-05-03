@@ -19,6 +19,7 @@ MapController.prototype = {
   },
 
   _createMarkerForUser: function(userData){
+    var category        = userData['category']
     var currentMarker   = this._addLocation(userData["user"].latitude, userData["user"].longitude);
     var html            = this._buildMustacheTemplate(userData);
     currentMarker.bindPopup(html).openPopup();
