@@ -5,12 +5,6 @@ class User < ActiveRecord::Base
   has_many :reputations
   validates_presence_of :name, :email
 
-  # after_save :set_reputation
-
-  # def self.set_reputation
-  #   self.reputations.update_attribute(score: score +=1 )
-  # end
-
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider

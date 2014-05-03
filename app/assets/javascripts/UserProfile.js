@@ -37,7 +37,7 @@ var UserReputation = {
     $('form.new_reputation').on('ajax:error', this.appendError )
   },
   appendReputation: function(e, data){
-
+    $('form.new_reputation').hide();
     $('p#user-reputation').html(data.score)
   },
 
