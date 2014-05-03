@@ -26,6 +26,31 @@ feature 'view a user profile' do
     visit user_path(second_user)
     expect(page).to have_content("Email #{second_user.name}")
   end
+
+  scenario 'a logged in user can give reputation to another user' do
+    visit user_path(second_user)
+    expect(page).to have_button('Rep+')
+  end
+
+  scenario 'a user cannot give reputation to the same user twice' do
+    visit user_path(second_user)
+    click_on 'Rep+'
+    expect(page).to_not have_button('Rep+')
+  end
+end
+
+feature 'non logged in user' do
+  let!(:user) { FactoryGirl.create :user }
+  let!(:second_user) { FactoryGirl.create :user }
+  scenario 'cannot view a profile page' do
+    visit user_path(second_user)
+    expect(page).to have_content('Sign in')
+  end
+
+  scenario 'cannot view an edit profile page' do
+    visit edit_user_path(second_user)
+    expect(page).to have_content('Sign in')
+  end
 end
 
 feature 'add skills on the user profile' do
@@ -71,12 +96,20 @@ feature 'edit profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
 
+
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
+
+
   end
   scenario 'a logged in user can edit' do
+    Location.should_receive(:geocode) {[37.8010187, -122.412323]}
     visit user_path(user)
     expect(page).to have_content('Edit Profile')
+    click_on 'Edit Profile'
+    fill_in 'Tagline', with: 'new tagline'
+    click_on 'Update User'
+    expect(page).to have_content('new tagline')
   end
 
   scenario 'a user who is not the current user does not see edit profile link' do

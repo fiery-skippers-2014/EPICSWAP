@@ -1,5 +1,6 @@
 <div id="user-widget">
   <% if current_user %>
+  <%= link_to 'Home', root_path %>
     Welcome <strong><%= link_to current_user.name, user_path(current_user) %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
   <% else %>
