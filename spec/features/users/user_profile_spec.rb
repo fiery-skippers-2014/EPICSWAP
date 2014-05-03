@@ -31,6 +31,12 @@ feature 'view a user profile' do
     visit user_path(second_user)
     expect(page).to have_button('Rep+')
   end
+
+  scenario 'a user cannot give reputation to the same user twice' do
+    visit user_path(second_user)
+    click_on 'Rep+'
+    expect(page).to_not have_button('Rep+')
+  end
 end
 
 feature 'non logged in user' do
