@@ -6,7 +6,9 @@ class SessionsController < ApplicationController
     if user.latitude == nil && user.longitude == nil
       user.latitude = result.data['latitude']
       user.longitude = result.data['longitude']
+      user.save
     end
+
     session[:user_id] = user.id
     redirect_to user_path(user)
   end
