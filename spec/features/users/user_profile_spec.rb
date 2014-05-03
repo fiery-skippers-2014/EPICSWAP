@@ -2,6 +2,7 @@ require 'spec_helper'
 
 feature 'view a user profile' do
   let!(:user) { FactoryGirl.create :user }
+  let!(:second_user) { FactoryGirl.create :user }
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
@@ -10,9 +11,22 @@ feature 'view a user profile' do
     click_on user.name
     expect(page).to have_content(user.tagline)
   end
+
+  scenario 'a logged in user can view another persons profile' do
+    visit user_path(second_user)
+    expect(page).to have_content(second_user.name)
+  end
+
+  scenario 'a logged in user can see the distance from another user' do
+    visit user_path(second_user)
+    expect(page).to have_content('miles away')
+  end
 end
 
 feature 'add skills on the user profile' do
+  before(:each) do
+    ApplicationController.any_instance.stub(:current_user) { user }
+  end
   let!(:user) { FactoryGirl.create :user }
   scenario 'a user can add skills they can teach' do
     visit user_path(user)
@@ -24,6 +38,9 @@ feature 'add skills on the user profile' do
 end
 
 feature 'add interests on the user profile' do
+  before(:each) do
+    ApplicationController.any_instance.stub(:current_user) { user }
+  end
   let!(:user) { FactoryGirl.create :user }
   scenario 'a user can add interests they can teach' do
     visit user_path(user)

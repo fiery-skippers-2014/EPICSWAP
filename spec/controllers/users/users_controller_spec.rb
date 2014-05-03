@@ -3,6 +3,9 @@ require 'spec_helper'
 describe UsersController do
   let!(:user) { FactoryGirl.create :user }
   let!(:valid) { FactoryGirl.attributes_for :user}
+  before(:each) do
+    ApplicationController.any_instance.stub(:current_user) { user }
+  end
 
   context '#index' do
     it 'should return the homepage' do

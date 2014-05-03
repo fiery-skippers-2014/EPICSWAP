@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.oauth_token = auth.credentials.token
         if (:provider == :facebook)
-      user.oauth_expires_at = Time.at(auth.credentials.expires_at) 
+      user.oauth_expires_at = Time.at(auth.credentials.expires_at)
        end
       user.save!
     end
@@ -24,5 +24,9 @@ class User < ActiveRecord::Base
     coords = Location.geocode(user)
       user.update_attribute(:latitude, coords[0])
       user.update_attribute(:longitude, coords[1])
+  end
+
+  def distance(user)
+    Geocoder::Calculations.distance_between([self.latitude, self.longitude],[user.latitude, user.longitude])
   end
 end

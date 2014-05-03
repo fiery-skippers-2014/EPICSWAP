@@ -2,14 +2,15 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-
   end
 
   def show
-    @user = User.find(params[:id])
-    @skill = Skill.new
-    @interest = Interest.new
+    @user       = User.find(params[:id])
+    @skill      = Skill.new
+    @interest   = Interest.new
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
+    @distance   = @user.distance(current_user).round(2)
+
   end
 
   def edit
@@ -31,4 +32,5 @@ class UsersController < ApplicationController
     users = User.all
     render json: { users: users }.to_json
   end
+
 end

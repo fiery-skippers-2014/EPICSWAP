@@ -22,7 +22,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rack_session_access'
