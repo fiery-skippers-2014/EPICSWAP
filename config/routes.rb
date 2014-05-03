@@ -4,6 +4,7 @@ EpicSwap::Application.routes.draw do
   resources :users do
     resources :skills
     resources :interests
+    resources :reputations, only: [:create]
   end
 
   get '/usersData.:format', to: 'users#usersData', as: :usersData, constraints: { format: /json/ }

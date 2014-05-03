@@ -5,6 +5,7 @@
   <%= link_to "Delete Profile", edit_user_path(@user), confirm: "Are you sure you want to delete your profile?" %>
   <% else %>
     <p><%= @user.name %> is <%= @distance %> miles away.</p>
+    <p><%= @user.name %> Reputation</p>
 <% end %>
 <h3><%= @user.tagline %></h3>
 <p><%= @user.description %></p>
