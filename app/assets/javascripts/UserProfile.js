@@ -45,3 +45,20 @@ var UserReputation = {
     console.log('fail');
   }
 }
+
+var EditProfile = {
+  init: function(){
+    $('div.edit-user-form').hide();
+    $('a.edit-profile-link').on('click', this.showForm)
+    $('form.edit_user').on('ajax:success', this.hideForm)
+    $('form.edit_user').on('ajax:error', this.appendError)
+  },
+  showForm: function(e){
+    e.preventDefault()
+    $('div.edit-user-form').slideDown();
+  },
+
+  hideForm: function(e, data){
+    $('div.edit-user-form').hide();
+  }
+}

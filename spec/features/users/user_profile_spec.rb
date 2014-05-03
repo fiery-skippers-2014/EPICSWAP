@@ -96,6 +96,10 @@ feature 'edit profile' do
   scenario 'a logged in user can edit' do
     visit user_path(user)
     expect(page).to have_content('Edit Profile')
+    click_on 'Edit Profile'
+    fill_in 'Tagline', with: 'new tagline'
+    click_on 'Update User'
+    expect(page).to have_content('new tagline')
   end
 
   scenario 'a user who is not the current user does not see edit profile link' do
