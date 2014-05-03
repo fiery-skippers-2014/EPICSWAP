@@ -13,8 +13,11 @@ MapController.prototype = {
   },
 
   _onGetUsersInfoSuccess: function(data){
+    debugger
     for(var i = 0, d = data["users"].length; i < d; i++){
+      console.log(data["users"][i].id)
       this._createMarkerForUser(data["users"][i]);
+      // this._findUserSkills()
     }
   },
 
@@ -31,7 +34,15 @@ MapController.prototype = {
   _buildMustacheTemplate: function(userData){
     var rawTemplate     = $("#userMarkerContentTemplate").html();
     var template        = Handlebars.compile(rawTemplate);
-    var userMiniProfile = { Name: userData.name, Tagline: userData.tagline };
+    var userMiniProfile = { profileImage: userData.image,
+                            userId: userData.id,
+                            Name: userData.name,
+                            Tagline: userData.tagline
+                          };
     return template(userMiniProfile);
+  },
+
+  _findUserSkills: function(userData){
+
   }
 };

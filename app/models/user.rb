@@ -29,4 +29,14 @@ class User < ActiveRecord::Base
   def distance(user)
     Geocoder::Calculations.distance_between([self.latitude, self.longitude],[user.latitude, user.longitude])
   end
+
+
+  def self.all_with_skills
+    User.all.map { |user| user.with_skills }
+  end
+
+  def with_skills
+    { user: self, skills: self.skills.map(&:name) }
+  end
+
 end

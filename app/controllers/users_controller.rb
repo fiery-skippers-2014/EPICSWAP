@@ -41,8 +41,7 @@ class UsersController < ApplicationController
 
   # GET /usersData.json
   def usersData
-    users = User.all
-    render json: { users: users }.to_json
+    render json: { users: User.all_with_skills}.to_json
   end
 
 end
