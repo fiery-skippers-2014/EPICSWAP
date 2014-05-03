@@ -21,6 +21,11 @@ feature 'view a user profile' do
     visit user_path(second_user)
     expect(page).to have_content('miles away')
   end
+
+  scenario 'a logged in user can email another user' do
+    visit user_path(second_user)
+    expect(page).to have_content("Email #{second_user.name}")
+  end
 end
 
 feature 'add skills on the user profile' do
