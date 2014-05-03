@@ -5,12 +5,6 @@ class User < ActiveRecord::Base
   has_many :reputations
   validates_presence_of :name, :email
 
-  # after_save :set_reputation
-
-  # def self.set_reputation
-  #   self.reputations.update_attribute(score: score +=1 )
-  # end
-
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
@@ -34,5 +28,13 @@ class User < ActiveRecord::Base
 
   def distance(user)
     Geocoder::Calculations.distance_between([self.latitude, self.longitude],[user.latitude, user.longitude])
+  end
+
+  def self.all_with_skills
+    User.all.map { |user| user.with_skills }
+  end
+
+  def with_skills
+    { user: self, skills: self.skills.map(&:name) }
   end
 end

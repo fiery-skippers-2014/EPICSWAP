@@ -66,7 +66,6 @@ describe UsersController do
       expect{
         post :update, id: user.id, user: { tagline: 'new tagline' }
         }.to change { user.reload.tagline }.to('new tagline')
-      expect(response).to be_redirect
     end
 
     it 'should set the latitude and longitude on update' do
