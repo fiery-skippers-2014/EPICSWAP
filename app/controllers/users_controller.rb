@@ -12,13 +12,11 @@ class UsersController < ApplicationController
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
     @distance   = @user.distance(current_user).round(2) if current_user
     @reputation = Reputation.new
-
   end
 
   def edit
     @user = User.find(params[:id])
     redirect_to root_path unless current_user == @user
-
   end
 
   def update

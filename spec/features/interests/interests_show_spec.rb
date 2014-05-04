@@ -12,10 +12,9 @@ feature 'interest page' do
   	click_on 'Create Interest'
   	fill_in 'Skill', with: 'basketball'
   	click_on 'Create Skill'
-  	visit root_path
   	visit user_path(user)
   	click_on '1'
   	expect(page).to have_content(user.name)
-  end	
+  end
 end
 
