@@ -3,4 +3,5 @@ class Interest < ActiveRecord::Base
   has_many :user_interests
   attr_accessible :name, :user_id
   validates_presence_of :name
+
 end

@@ -17,5 +17,4 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
     redirect_to user_path(@user)
   end
-
 end

@@ -17,11 +17,14 @@
 <h3 class="tagline"><%= @user.tagline %></h3>
 <p class="description"><%= @user.description %></p>
 
-
 <h2>My Skills</h2>
 <ul class='my-skills'>
   <% @user.skills.each do |skill| %>
-    <li><%= skill.name %>
+    <li>
+      <% unless corresponding_interest(skill.name) == nil  %>
+        (<%= link_to num_users_by_interests(skill.name), interest_path(corresponding_interest(skill.name)) %>)
+      <% end %>
+      <%= skill.name %>
       <%= link_to 'delete', user_skill_path(skill), remote: true, method: :delete, id: "skill-#{skill.id}", class: 'delete-skill' %>
     </li>
   <% end %>
