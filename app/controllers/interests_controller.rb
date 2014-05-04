@@ -19,6 +19,8 @@ class InterestsController < ApplicationController
 
   def show
     @interest = Interest.find(params[:id])
+    @sorted_users = @interest.sort_users_by_distance(current_user)
+    p @sorted_users
   end
 
   def destroy
