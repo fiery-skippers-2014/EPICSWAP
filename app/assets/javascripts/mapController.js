@@ -28,6 +28,18 @@ MapController.prototype = {
                  .openPopup();
   },
 
+  _buildMustacheTemplate: function(userData){
+    var rawTemplate     = $("#userMarkerContentTemplate").html();
+    var template        = Handlebars.compile(rawTemplate);
+    var userMiniProfile = { profileImage: userData["user"].image,
+                            userId: userData["user"].id,
+                            Name: userData["user"].name,
+                            Tagline: userData["user"].tagline,
+                            skillList: userData["skills"]
+                          };
+    return template(userMiniProfile);
+  },
+
   _buildMarker: function(latitude, longitude, category){
     if(category == "language"){
       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
@@ -53,18 +65,6 @@ MapController.prototype = {
     }else{
       return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, category, "heart", "548F79");
     }
-  },
-
-  _buildMustacheTemplate: function(userData){
-    var rawTemplate     = $("#userMarkerContentTemplate").html();
-    var template        = Handlebars.compile(rawTemplate);
-    var userMiniProfile = { profileImage: userData["user"].image,
-                            userId: userData["user"].id,
-                            Name: userData["user"].name,
-                            Tagline: userData["user"].tagline,
-                            skillList: userData["skills"]
-                          };
-    return template(userMiniProfile);
   }
 
 };

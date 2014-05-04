@@ -20,10 +20,10 @@ $(document).ready(function(){
       pageLocation:    'map'
     };
 
-    var ourMap = new MapCreator(mapOpts).buildMap()
+    var ourMap = new MapCreator(mapOpts).buildMap();
 
-    var getUsersData_CLIENT = new AjaxClient('get', '/usersData.json')//add in proper path here
-    var ourMarker = new MapMarker()
+    var getUsersData_CLIENT = new AjaxClient('get', '/usersData.json');//add in proper path here
+    var ourMarker = new MapMarker();
 
     var controllerOpts = {
       coolMap: ourMap,
@@ -31,7 +31,7 @@ $(document).ready(function(){
       coolMarker: ourMarker
     };
 
-    var coolController = new MapController(controllerOpts)
+    var coolController = new MapController(controllerOpts);
     //////////////////////
     ///FIRE IN THE HOLE///
     //////////////////////

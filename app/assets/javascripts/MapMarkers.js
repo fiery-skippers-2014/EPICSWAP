@@ -13,7 +13,6 @@ MapMarker.prototype = {
               "description": "A description",
               "marker-size": "medium",
               "marker-symbol": symbol,
-              //color is here
               "marker-color": color,
               "stroke": "#555555",
               "stroke-opacity": 1.0,
