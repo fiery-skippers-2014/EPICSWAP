@@ -67,6 +67,19 @@ feature 'add skills on the user profile' do
   end
 end
 
+# feature 'add number of interested users for a skill' do
+#   let!(:user) {FactoryGirl.create :user}
+#   let!(:skill) {FactoryGirl.create :skill}
+#   let!(:interest) {FactoryGirl.create :interest}
+#   skill_id: skill.id, interest_id: interest.id
+#   skill_id = interest_id
+#   scenario 'link from skill on users profile to interest page' do
+#   visit user_path(user)
+#   click_on num_users_by_interests(skill)
+#   expect(page).to eq skill.name
+#   end
+# end
+
 feature 'add interests on the user profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
