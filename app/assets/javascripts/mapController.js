@@ -28,35 +28,36 @@ MapController.prototype = {
   },
 
   _buildMarker: function(latitude, longitude, category){
-    var geoJsonData = {
-      "type": "FeatureCollection",
-      "features": [{ "type": "Feature",
-          "geometry": {
-              "type": "Point",
-              "coordinates": [longitude, latitude]
-          },
-          "properties": {
-              "title": "love", //$("[title=love]").hide()
-              "description": "A description",
-              "marker-size": "medium",
-              "marker-symbol": "heart",
-              "marker-color": "2963ba",
-              "stroke": "#555555",
-              "stroke-opacity": 1.0,
-              "stroke-width": 2,
-              "fill": "#555555",
-              "fill-opacity": 0.5,
-              "className": "awesome"
-          }
-      }]
-    };
+    var CoolMarker = new MapMarker()
+    return CoolMarker.categoryART(latitude, longitude)
+    // var geoJsonData = {
+    //   "type": "FeatureCollection",
+    //   "features": [{ "type": "Feature",
+    //       "geometry": {
+    //           "type": "Point",
+    //           "coordinates": [longitude, latitude]
+    //       },
+    //       "properties": {
+    //           "title": "love", //$("[title=love]").hide()
+    //           "description": "A description",
+    //           "marker-size": "medium",
+    //           "marker-symbol": "heart",
+    //           "marker-color": "2963ba",
+    //           "stroke": "#555555",
+    //           "stroke-opacity": 1.0,
+    //           "stroke-width": 2,
+    //           "fill": "#555555",
+    //           "fill-opacity": 0.5
+    //       }
+    //   }]
+    // };
 
-    var geoJson = L.geoJson(geoJsonData, {
-          pointToLayer: L.mapbox.marker.style,
-          style: function(feature) { return feature.properties; }
-    });
+    // var geoJson = L.geoJson(geoJsonData, {
+    //       pointToLayer: L.mapbox.marker.style,
+    //       style: function(feature) { return feature.properties; }
+    // });
 
-    return geoJson
+    // return geoJson
   },
 
   _buildMustacheTemplate: function(userData){
