@@ -13,9 +13,7 @@ MapController.prototype = {
   },
 
   _onGetUsersInfoSuccess: function(data){
-    console.log(data)
     for(var i = 0, d = data["users"].length; i < d; i++){
-      console.log(data["users"][i]['user'].id)
       this._createMarkerForUser(data["users"][i]);
     }
   },
