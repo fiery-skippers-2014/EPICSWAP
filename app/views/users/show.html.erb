@@ -27,6 +27,7 @@
       <%= skill.name %>
       <%= link_to 'delete', user_skill_path(@user, skill), remote: true, :method => :delete, class: 'delete-skill', id: "skill-#{skill.id}", :data => { :id => "#{skill.id}"} %>
     </li>
+
   <% end %>
 </ul>
 
