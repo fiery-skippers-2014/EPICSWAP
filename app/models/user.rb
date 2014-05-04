@@ -38,8 +38,6 @@ class User < ActiveRecord::Base
 
   def self.all_with_skills
     skilled_users = User.find_users_with_skills
-    p '$' * 50
-    p skilled_users
     skilled_users.map { |user| user.with_skills }
   end
 
