@@ -4,10 +4,16 @@ class SkillsController < ApplicationController
     @user = User.find(params[:user_id])
     @skill = Skill.find_or_create_by_name_and_category_id(params[:skill])
     if @skill.save
-      @user.skills << @skill unless Skill.relationship_exists(@user, @skill)
-      render partial: 'shared/skill', locals: { skill: @skill }
+      if Skill.relationship_exists(@user, @skill)
+        @errors = "You already have #{@skill.name} in your skill list"
+        render partial: 'shared/errors', locals: {errors: @errors}
+      else
+        @user.skills << @skill
+        render partial: 'shared/skill', locals: { skill: @skill }
+      end
     else
-      render :nothing => true
+      @errors = 'Skill cannot be blank'
+      render partial: 'shared/errors', locals: {errors: @errors}
     end
   end
 

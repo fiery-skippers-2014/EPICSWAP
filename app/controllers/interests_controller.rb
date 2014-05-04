@@ -3,10 +3,16 @@ class InterestsController < ApplicationController
     @user = User.find(params[:user_id])
     @interest = Interest.find_or_create_by_name(params[:interest][:name])
     if @interest.save
-      @user.interests << @interest unless Interest.relationship_exists(@user, @interest)
-      render partial: 'shared/interest', locals: { interest: @interest }
+      if Interest.relationship_exists(@user, @interest)
+        @errors = "You already have #{@interest.name} in your interest list"
+        render partial: 'shared/errors', locals: {errors: @errors}
+      else
+        @user.interests << @interest
+        render partial: 'shared/interest', locals: { interest: @interest }
+      end
     else
-      render :nothing => true
+      @errors = 'Interest cannot be blank'
+      render partial: 'shared/errors', locals: {errors: @errors}
     end
 
   end
