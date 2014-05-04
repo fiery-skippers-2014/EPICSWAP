@@ -66,15 +66,15 @@ feature 'skills on the user profile' do
     expect(page).to have_content 'basketball'
   end
 
-  # scenario 'a user can delete skills', js: true do
-  #   visit user_path(user)
-  #   fill_in 'Skill', :with => 'basketball'
-  #   click_on 'Create Skill'
-  #   visit root_path
-  #   visit user_path(user)
-  #   click_on 'delete'
-  #   expect(page).to_not have_content('basketball')
-  # end
+  scenario 'a user can delete skills', js: true do
+    visit user_path(user)
+    fill_in 'Skill', :with => 'basketball'
+    click_on 'Create Skill'
+    visit root_path
+    visit user_path(user)
+    click_on 'delete'
+    expect(page).to_not have_content('basketball')
+  end
 end
 
 # feature 'add number of interested users for a skill' do
@@ -90,7 +90,7 @@ end
 #   end
 # end
 
-feature 'add interests on the user profile' do
+feature 'interests on the user profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
   before(:each) do
@@ -102,6 +102,16 @@ feature 'add interests on the user profile' do
     click_on 'Create Interest'
     expect(page).to have_content 'My Interests'
     expect(page).to have_content 'white water rafting'
+  end
+
+  scenario 'a user can delete interests', js: true do
+    visit user_path(user)
+    fill_in 'Interest', :with => 'basketball'
+    click_on 'Create Interest'
+    visit root_path
+    visit user_path(user)
+    click_on 'delete'
+    expect(page).to_not have_content('basketball')
   end
 
   scenario 'a user who is not the current user cannot add skills' do

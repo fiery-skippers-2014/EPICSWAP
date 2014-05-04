@@ -14,4 +14,9 @@ class InterestsController < ApplicationController
   def show
     @interest = Interest.find(params[:id])
   end
+
+  def destroy
+    UserInterest.delete_relationship(current_user.id, params[:id])
+    render :nothing => true
+  end
 end

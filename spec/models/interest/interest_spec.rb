@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Interest do
   context 'associations' do
     it { should have_many(:users) }
+    it { should have_many(:user_interests) }
   end
 
   context 'validations' do
