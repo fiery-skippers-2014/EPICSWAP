@@ -1,6 +1,6 @@
 function MapMarker(){}
 MapMarker.prototype = {
-  categoryART: function(latitude, longitude){
+  styleMarker: function(latitude, longitude, category, symbol, color){
     var geoJsonData = {
       "type": "FeatureCollection",
       "features": [{ "type": "Feature",
@@ -9,11 +9,12 @@ MapMarker.prototype = {
               "coordinates": [longitude, latitude]
           },
           "properties": {
-              "title": "love", //$("[title=love]").hide()
+              "title": category, //$("[title=love]").hide()
               "description": "A description",
               "marker-size": "medium",
-              "marker-symbol": "heart",
-              "marker-color": "2963ba",
+              "marker-symbol": symbol,
+              //color is here
+              "marker-color": color,
               "stroke": "#555555",
               "stroke-opacity": 1.0,
               "stroke-width": 2,
@@ -30,4 +31,5 @@ MapMarker.prototype = {
 
     return geoJson
   }
+
 }

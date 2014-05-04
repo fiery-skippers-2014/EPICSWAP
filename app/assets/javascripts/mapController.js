@@ -1,5 +1,6 @@
 function MapController(contOpts){
   this.COOL_MAP = contOpts.coolMap;
+  this.COOL_MARKER = contOpts.coolMarker;
   this.getUsersData_AJAX = contOpts.getUsersData_AJAX;
 };
 
@@ -28,36 +29,30 @@ MapController.prototype = {
   },
 
   _buildMarker: function(latitude, longitude, category){
-    var CoolMarker = new MapMarker()
-    return CoolMarker.categoryART(latitude, longitude)
-    // var geoJsonData = {
-    //   "type": "FeatureCollection",
-    //   "features": [{ "type": "Feature",
-    //       "geometry": {
-    //           "type": "Point",
-    //           "coordinates": [longitude, latitude]
-    //       },
-    //       "properties": {
-    //           "title": "love", //$("[title=love]").hide()
-    //           "description": "A description",
-    //           "marker-size": "medium",
-    //           "marker-symbol": "heart",
-    //           "marker-color": "2963ba",
-    //           "stroke": "#555555",
-    //           "stroke-opacity": 1.0,
-    //           "stroke-width": 2,
-    //           "fill": "#555555",
-    //           "fill-opacity": 0.5
-    //       }
-    //   }]
-    // };
+    if(category == "language"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
 
-    // var geoJson = L.geoJson(geoJsonData, {
-    //       pointToLayer: L.mapbox.marker.style,
-    //       style: function(feature) { return feature.properties; }
-    // });
+    }else if(category == "sport"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "17750D");
 
-    // return geoJson
+    }else if(category == "dance"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "0C0A45");
+
+    }else if(category == "art"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "75391B");
+
+    }else if(category == "cooking"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "fast-food", "72751B");
+
+    }else if(category == "fitness"){
+       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "school", "A8236F");
+
+    }else if(category == "technology"){
+       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
+
+    }else{
+      return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, category, "heart", "548F79");
+    }
   },
 
   _buildMustacheTemplate: function(userData){
