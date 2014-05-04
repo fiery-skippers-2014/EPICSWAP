@@ -19,5 +19,6 @@ class SkillsController < ApplicationController
 
   def destroy
     UserSkill.delete_relationship(current_user.id, params[:id])
-    render :nothing => true  end
+    render :nothing => true
+  end
 end
