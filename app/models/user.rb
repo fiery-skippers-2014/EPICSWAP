@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessible :street, :city, :state, :zip, :tagline, :description, :name, :image, :email, :latitude, :longitude, :reputation
-  has_many :skills
-  has_many :interests
+  has_many :skills, through: :user_skills
+  has_many :user_skills
+  has_many :user_interests
+  has_many :interests, through: :user_interests
   has_many :reputations
   validates_presence_of :name, :email
 

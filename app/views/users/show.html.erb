@@ -21,7 +21,9 @@
 <h2>My Skills</h2>
 <ul class='my-skills'>
   <% @user.skills.each do |skill| %>
-    <li><%= skill.name %></li>
+    <li><%= skill.name %>
+      <%= link_to 'delete', user_skill_path(skill), remote: true, method: :delete, id: "skill-#{skill.id}", class: 'delete-skill' %>
+    </li>
   <% end %>
 </ul>
 

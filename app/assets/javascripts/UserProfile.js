@@ -21,10 +21,16 @@ var UserSkills = {
   init: function(){
     $('form.new_skill').on('ajax:success', this.appendSkill )
     $('form.new_skill').on('ajax:error', this.appendError )
+    $('a.delete-skill').on('ajax:success', this.removeSkill )
+    $('a.delete-skill').on('ajax:error', this.showError )
+  },
+
+  removeSkill: function(e,data){
+    console.log('success')
   },
 
   appendSkill: function(e, data){
-    console.log('success')
+    console.log(data)
     $('ul.my-skills').append(data);
     $('form.new_skill').each(function(){
       this.reset();
@@ -32,7 +38,8 @@ var UserSkills = {
   },
 
   appendError: function(e, data){
-    console.log('fail');
+    console.log(data);
+    console.log(e)
   }
 }
 
