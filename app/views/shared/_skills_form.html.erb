@@ -1,5 +1,5 @@
 <p>Add a skill</p>
-<ul>
+<ul class='skill-form'>
   <%= form_for [@user, @skill], remote: true do |f| %>
     <li><%= f.label :name, 'Skill' %>
       <%= f.text_field :name %></li>
