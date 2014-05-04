@@ -3,7 +3,7 @@ class SkillsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @skill = Skill.find_or_create_by_name_and_category_id(params[:skill])
-    @skill.name.downcase
+    @skill.name.downcase if @skill.name != nil
     if @skill.save
       if Skill.relationship_exists(@user, @skill)
         @errors = "You already have #{@skill.name} in your skill list"
