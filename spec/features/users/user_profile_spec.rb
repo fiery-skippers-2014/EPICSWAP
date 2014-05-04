@@ -66,6 +66,18 @@ feature 'skills on the user profile' do
     expect(page).to have_content 'basketball'
   end
 
+  scenario 'a user cannot add more than 3 skills', js: true do
+    visit user_path(user)
+    fill_in 'Skill', :with => 'basketball'
+    click_on 'Create Skill'
+    fill_in 'Skill', :with => 'soccer'
+    click_on 'Create Skill'
+    fill_in 'Skill', :with => 'football'
+    click_on 'Create Skill'
+    visit user_path(user)
+    expect(page).to have_content('maximum')
+  end
+
   scenario 'a user can delete skills', js: true do
     visit user_path(user)
     fill_in 'Skill', :with => 'basketball'

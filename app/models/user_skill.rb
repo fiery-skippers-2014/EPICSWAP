@@ -6,4 +6,8 @@ class UserSkill < ActiveRecord::Base
   	relationship = UserSkill.where('user_id = ? AND skill_id = ?', user_id, skill_id)
   	UserSkill.destroy(relationship.first.id)
   end
+
+  def self.less_than_max?(user)
+    UserSkill.where('user_id = ?', user.id).length < 3
+  end
 end

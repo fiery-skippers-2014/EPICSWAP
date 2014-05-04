@@ -30,7 +30,7 @@ var UserSkills = {
     $('form.new_skill').on('ajax:error', this.appendError )
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
-    $('form.new_skill input#skill_name')
+    $('form.new_skill input#skill_name').on('keyup', this.autoComplete)
   },
   removeSkill: function(e,data){
     var id = $(e.target).data('id')
@@ -47,8 +47,9 @@ var UserSkills = {
   },
   showError: function(e, data){
   },
-  autoComplete: function(){
-    console.log('here')
+  autoComplete: function(e){
+    var query = ''
+    console.log(String.fromCharCode(e.which))
   }
 }
 

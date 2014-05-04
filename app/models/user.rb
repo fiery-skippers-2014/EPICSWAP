@@ -32,6 +32,10 @@ class User < ActiveRecord::Base
     Geocoder::Calculations.distance_between([self.latitude, self.longitude],[user.latitude, user.longitude])
   end
 
+  def less_than_max?
+    UserSkill.less_than_max?(self)
+  end
+
   def self.all_with_skills
     skilled_users = User.find_users_with_skills
     p '$' * 50

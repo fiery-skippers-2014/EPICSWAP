@@ -6,42 +6,26 @@
   <div class='edit-user-form hidden'>
     <%= render 'shared/edit_profile' %>
   </div>
-  <% else %>
+<% else %>
 
     <p><%= @user.name %> is <%= @distance %> miles away.</p>
     <%= render '/shared/reputation' %>
 
-      <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
-  <% end %>
+    <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
+<% end %>
 
 <h3 class="tagline"><%= @user.tagline %></h3>
 <p class="description"><%= @user.description %></p>
 
-<h2>My Skills</h2>
-<ul class='my-skills'>
-  <% @user.skills.each do |skill| %>
-    <li id="skill_<%= skill.id %>">
-      <% unless corresponding_interest(skill.name) == nil  %>
-        (<%= link_to num_users_by_interests(skill.name), interest_path(corresponding_interest(skill.name)) %>)
-      <% end %>
-      <%= skill.name %>
-      <%= link_to 'delete', user_skill_path(@user, skill), remote: true, :method => :delete, class: 'delete-skill', id: "skill-#{skill.id}", :data => { :id => "#{skill.id}"} %>
-    </li>
+<%= render 'shared/user_skills' %>
 
-  <% end %>
-</ul>
-
-<% if current_user == @user %>
+<% if current_user == @user && @user.less_than_max? %>
   <%= render 'shared/skills_form' %>
+<% else %>
+  <p>You can have a maximum of 3 skills</p>
 <% end %>
 
-<h2>My Interests</h2>
-<ul class='my-interests'>
-  <% @user.interests.each do |interest| %>
-    <li id="interest_<%= interest.id %>"><%= interest.name %>  <%= link_to 'delete', user_interest_path(@user, interest), remote: true, :method => :delete, class: 'delete-interest', id: "interest-#{interest.id}", :data => { :id => "#{interest.id}"} %></li>
-  <% end %>
-</ul>
-
+<%= render 'shared/user_interests' %>
 
 <% if current_user == @user %>
   <%= render 'shared/interests_form' %>
