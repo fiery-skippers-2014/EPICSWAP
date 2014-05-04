@@ -19,12 +19,11 @@ describe SkillsController do
   end
 
   # context '#destroy' do
-  #   let(:user) { FactoryGirl.create :user }
-  #   let(:skill) { FactoryGirl.create :skill }
+  #   let!(:skill) { FactoryGirl.create :skill }
   #   it 'deletes a skill' do
   #     expect{
   #       delete :destroy, user_id: user.id, id: skill.id
-  #     }.to change { Skill.count }.by(-1)
+  #     }.to change { UserSkill.count }.by(-1)
   #   end
   # end
 end

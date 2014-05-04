@@ -10,13 +10,14 @@ class SkillsController < ApplicationController
     else
       render :nothing => true
     end
+  end
 
+  def show
+    @skill = Skill.find(params[:id])
+    redirect_to user_path(@user)
   end
 
   def destroy
-    @user = User.find(params[:user_id])
-    @skill = Skill.find(params[:id])
-    redirect_to user_path(@user)
-
-  end
+    UserSkill.delete_relationship(current_user.id, params[:id])
+    render :nothing => true  end
 end

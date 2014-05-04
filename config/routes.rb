@@ -2,8 +2,8 @@ EpicSwap::Application.routes.draw do
   root :to => 'users#index'
 
   resources :users do
-    resources :skills, only: [:create]
-    resources :interests, only: [:create]
+    resources :skills, only: [:create, :destroy]
+    resources :interests, only: [:create, :destroy]
     resources :reputations, only: [:create]
   end
 

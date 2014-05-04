@@ -14,12 +14,10 @@ FactoryGirl.define do
 
   factory :skill do
     name { Faker::Lorem.word }
-    user
   end
 
   factory :interest do
     name {Faker::Lorem.word}
-    user
   end
 
 end
