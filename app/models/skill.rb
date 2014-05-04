@@ -9,4 +9,8 @@ class Skill < ActiveRecord::Base
   def skill_cooresponding_interest
     Interest.where('name = ?', self.name).uniq
   end
+
+  def self.relationship_exists(user, skill)
+    UserSkill.where('user_id = ? AND skill_id = ?', user.id, skill.id).length > 0
+  end
 end
