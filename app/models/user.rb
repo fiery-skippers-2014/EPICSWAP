@@ -39,8 +39,8 @@ class User < ActiveRecord::Base
 
   def self.find_users_with_skills
     users_with_skills = []
-    Skill.all.each do |skill|
-      users_with_skills << skill.user
+    User.all.each do |user|
+      users_with_skills << user if user.skills.length > 0
     end
     return users_with_skills.uniq
   end
