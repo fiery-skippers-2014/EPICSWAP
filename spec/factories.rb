@@ -19,7 +19,6 @@ FactoryGirl.define do
 
   factory :interest do
     name {Faker::Lorem.word}
-    user
   end
 
 end

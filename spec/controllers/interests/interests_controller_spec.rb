@@ -22,7 +22,7 @@ describe InterestsController do
     let(:interest) {FactoryGirl.create :interest}
     it 'saves an interest found by ID to the instance variable @interest' do
         get :show, id: interest.id
-        expect(assigns(:interest)).to eq interest
+        expect(assigns(:interest)).to eq(interest)
     end
   end
 end
