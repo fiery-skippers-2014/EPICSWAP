@@ -5,4 +5,7 @@ class Skill < ActiveRecord::Base
   attr_accessible :name, :category_id
   validates_presence_of :name
 
+  def skill_cooresponding_interest
+    Interest.where('name = ?', self.name).uniq
+  end
 end

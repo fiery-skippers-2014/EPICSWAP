@@ -138,6 +138,8 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails_db_info (0.1.9)
+      rails (>= 3.1.0)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -171,6 +173,8 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
+    sextant (0.2.4)
+      rails (>= 3.2)
     shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     simplecov (0.8.2)
@@ -216,9 +220,11 @@ DEPENDENCIES
   pg
   rack_session_access
   rails (= 3.2.13)
+  rails_db_info
   rspec-rails (~> 2.0)
   sass-rails (~> 3.2.3)
   selenium-webdriver
+  sextant
   shoulda-matchers
   simplecov
   uglifier (>= 1.0.3)

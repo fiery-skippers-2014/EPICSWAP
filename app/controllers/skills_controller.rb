@@ -10,12 +10,13 @@ class SkillsController < ApplicationController
     else
       render :nothing => true
     end
+
   end
 
   def destroy
     @user = User.find(params[:user_id])
     @skill = Skill.find(params[:id])
     redirect_to user_path(@user)
-  end
 
+  end
 end

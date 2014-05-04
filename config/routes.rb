@@ -2,10 +2,13 @@ EpicSwap::Application.routes.draw do
   root :to => 'users#index'
 
   resources :users do
-    resources :skills
-    resources :interests
+    resources :skills, only: [:create]
+    resources :interests, only: [:create]
     resources :reputations, only: [:create]
   end
+
+  resources :interests, only: [:show]
+  resources :skills, only: [:show]
 
   get '/usersData.:format', to: 'users#usersData', as: :usersData, constraints: { format: /json/ }
 
