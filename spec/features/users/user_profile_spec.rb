@@ -53,7 +53,7 @@ feature 'non logged in user' do
   end
 end
 
-feature 'add skills on the user profile' do
+feature 'skills on the user profile' do
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
@@ -65,6 +65,16 @@ feature 'add skills on the user profile' do
     expect(page).to have_content 'My Skills'
     expect(page).to have_content 'basketball'
   end
+
+  # scenario 'a user can delete skills', js: true do
+  #   visit user_path(user)
+  #   fill_in 'Skill', :with => 'basketball'
+  #   click_on 'Create Skill'
+  #   visit root_path
+  #   visit user_path(user)
+  #   click_on 'delete'
+  #   expect(page).to_not have_content('basketball')
+  # end
 end
 
 # feature 'add number of interested users for a skill' do
