@@ -4,10 +4,11 @@ function AjaxClient(method, action){
 }
 
 AjaxClient.prototype = {
-  request: function(){
+  request: function(data){
     var response = $.ajax({
       type: this.method,
-      url: this.action
+      url: this.action,
+      data: data
     });
     return response;
   }

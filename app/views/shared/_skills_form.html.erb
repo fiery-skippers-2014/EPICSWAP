@@ -2,7 +2,9 @@
 <ul class='skill-form'>
   <%= form_for [@user, @skill], remote: true do |f| %>
     <li><%= f.label :name, 'Skill' %>
-      <%= f.text_field :name %></li>
+      <%= f.text_field :name, placeholder: "What can you teach?" %></li>
+      <div class='skill_dropdown'>
+      </div>
       <li><%= f.label :category %>
         <%= f.select(:category_id, @categories)%>
       </li>

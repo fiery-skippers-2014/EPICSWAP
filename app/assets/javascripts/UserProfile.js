@@ -12,7 +12,6 @@ var UserInterests = {
   },
 
   appendInterest: function(e, data){
-
     $('ul.my-interests').append(data)
     $('form.new_interest').each(function(){
       this.reset();
@@ -25,12 +24,14 @@ var UserInterests = {
 }
 
 var UserSkills = {
+  query: '',
   init: function(){
     $('form.new_skill').on('ajax:success', this.appendSkill )
     $('form.new_skill').on('ajax:error', this.appendError )
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
-    $('form.new_skill input#skill_name').on('keyup', this.autoComplete)
+    $('form.new_skill input#skill_name').on('keyup', this.autoComplete.bind(this))
+    $('div.skill_dropdown').on('click', 'li a', this.insertAutoComplete)
   },
   removeSkill: function(e,data){
     var id = $(e.target).data('id')
@@ -48,8 +49,24 @@ var UserSkills = {
   showError: function(e, data){
   },
   autoComplete: function(e){
-    var query = ''
-    console.log(String.fromCharCode(e.which))
+    this.query = this.query + String.fromCharCode(e.which);
+    var searchLetters = this.query
+    var checkDBforSkill = new AjaxClient("get", "/skills/autocomplete")
+    checkDBforSkill.request(searchLetters).done(this.onDataCompleteSuccess.bind(this))
+                             .fail(this.onDataCompleteFail.bind(this));
+  },
+  onDataCompleteSuccess: function(data){
+    $('div.skill_dropdown').html(data)
+  },
+  onDataCompleteFail: function(data){
+    console.log("we messed up maaaan")
+  },
+
+  insertAutoComplete: function(e){
+    e.preventDefault();
+    var skill = $(this).html()
+    $('input#skill_name').val(skill)
+
   }
 }
 
