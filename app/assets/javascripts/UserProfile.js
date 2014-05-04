@@ -7,6 +7,9 @@ var UserInterests = {
   appendInterest: function(e, data){
     console.log(data)
     $('ul.my-interests').append(data)
+    $('form.new_interest').each(function(){
+      this.reset();
+    });
   },
 
   appendError: function(e, data){
@@ -22,7 +25,10 @@ var UserSkills = {
 
   appendSkill: function(e, data){
     console.log('success')
-    $('ul.my-skills').append(data)
+    $('ul.my-skills').append(data);
+    $('form.new_skill').each(function(){
+      this.reset();
+    });
   },
 
   appendError: function(e, data){
