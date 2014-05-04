@@ -8,13 +8,11 @@ var UserInterests = {
 
   removeInterest: function(e,data){
     var id = $(e.target).data('id')
-    console.log(id)
     $('li#interest_'+ id).remove()
   },
 
   appendInterest: function(e, data){
-    console.log('success')
-    console.log(data)
+
     $('ul.my-interests').append(data)
     $('form.new_interest').each(function(){
       this.reset();
@@ -32,6 +30,7 @@ var UserSkills = {
     $('form.new_skill').on('ajax:error', this.appendError )
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
+    $('form.new_skill input#skill_name')
   },
   removeSkill: function(e,data){
     var id = $(e.target).data('id')
@@ -44,14 +43,12 @@ var UserSkills = {
     });
   },
   appendError: function(e, data, f, g){
-    console.log(data)
-    console.log(e)
-    console.log(f)
-    console.log(g)
     $('ul.skill-form').prepend(data)
   },
   showError: function(e, data){
-    console.log('error')
+  },
+  autoComplete: function(){
+    console.log('here')
   }
 }
 

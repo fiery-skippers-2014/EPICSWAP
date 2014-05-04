@@ -70,7 +70,6 @@ feature 'skills on the user profile' do
     visit user_path(user)
     fill_in 'Skill', :with => 'basketball'
     click_on 'Create Skill'
-    visit root_path
     visit user_path(user)
     click_on 'delete'
     expect(page).to_not have_content('basketball')
