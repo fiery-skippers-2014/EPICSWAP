@@ -1,7 +1,7 @@
 <h1><%= @interest.name %></h1>
 
 <ul>
-  <% @interest.users.each do |user| %>
-    <li><%= link_to user.name, user_path(user) %></li>
+  <% @sorted_users.each do |user, distance| %>
+    <li><%= link_to user.name, user_path(user) %> - <%= distance %> miles away</li>
   <% end %>
 </ul>

@@ -70,8 +70,10 @@ feature 'skills on the user profile' do
     visit user_path(user)
     fill_in 'Skill', :with => 'basketball'
     click_on 'Create Skill'
+    visit user_path(user)
     fill_in 'Skill', :with => 'soccer'
     click_on 'Create Skill'
+    visit user_path(user)
     fill_in 'Skill', :with => 'football'
     click_on 'Create Skill'
     visit user_path(user)
