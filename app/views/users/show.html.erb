@@ -17,11 +17,17 @@
 <h3 class="tagline"><%= @user.tagline %></h3>
 <p class="description"><%= @user.description %></p>
 
-
 <h2>My Skills</h2>
 <ul class='my-skills'>
   <% @user.skills.each do |skill| %>
-    <li><%= skill.name %></li>
+    <li id="skill_<%= skill.id %>">
+      <% unless corresponding_interest(skill.name) == nil  %>
+        (<%= link_to num_users_by_interests(skill.name), interest_path(corresponding_interest(skill.name)) %>)
+      <% end %>
+      <%= skill.name %>
+      <%= link_to 'delete', user_skill_path(@user, skill), remote: true, :method => :delete, class: 'delete-skill', id: "skill-#{skill.id}", :data => { :id => "#{skill.id}"} %>
+    </li>
+
   <% end %>
 </ul>
 
@@ -32,7 +38,7 @@
 <h2>My Interests</h2>
 <ul class='my-interests'>
   <% @user.interests.each do |interest| %>
-    <li><%= interest.name %></li>
+    <li id="interest_<%= interest.id %>"><%= interest.name %>  <%= link_to 'delete', user_interest_path(@user, interest), remote: true, :method => :delete, class: 'delete-interest', id: "interest-#{interest.id}", :data => { :id => "#{interest.id}"} %></li>
   <% end %>
 </ul>
 

@@ -2,14 +2,27 @@ var UserInterests = {
   init: function(){
     $('form.new_interest').on('ajax:success', this.appendInterest )
     $('form.new_interest').on('ajax:error', this.appendError )
+    $('a.delete-interest').on('ajax:success', this.removeInterest )
+    $('a.delete-interest').on('ajax:error', this.showErrorInterest )
+  },
+
+  removeInterest: function(e,data){
+    var id = $(e.target).data('id')
+    console.log(id)
+    $('li#interest_'+ id).remove()
   },
 
   appendInterest: function(e, data){
+    console.log('success')
     console.log(data)
     $('ul.my-interests').append(data)
+    $('form.new_interest').each(function(){
+      this.reset();
+    });
   },
 
   appendError: function(e, data){
+    console.log('error')
     console.log(data);
   }
 }
@@ -18,15 +31,30 @@ var UserSkills = {
   init: function(){
     $('form.new_skill').on('ajax:success', this.appendSkill )
     $('form.new_skill').on('ajax:error', this.appendError )
+    $('a.delete-skill').on('ajax:success', this.removeSkill )
+    $('a.delete-skill').on('ajax:error', this.showError )
+
   },
 
+  removeSkill: function(e,data){
+    var id = $(e.target).data('id')
+    $('li#skill_'+ id).remove()
+  },
+
+
   appendSkill: function(e, data){
-    console.log('success')
-    $('ul.my-skills').append(data)
+    $('ul.my-skills').append(data);
+    $('form.new_skill').each(function(){
+      this.reset();
+    });
   },
 
   appendError: function(e, data){
-    console.log('fail');
+    console.log(data);
+    console.log(e)
+  },
+  showError: function(e, data){
+    console.log('error')
   }
 }
 

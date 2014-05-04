@@ -1,0 +1,6 @@
+<h1><%= @interest.name %></h1>
+
+<%= @interest.users.each do |user|%>
+	<%= link_to user.name, user_path(user) %>
+<% end %>
+

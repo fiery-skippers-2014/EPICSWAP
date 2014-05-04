@@ -28,6 +28,11 @@ group :test do
   gem 'rack_session_access'
 end
 
+group :development do
+  gem 'sextant' #can see routes on the browser
+  gem 'rails_db_info' #can look up the database schema and tables
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
