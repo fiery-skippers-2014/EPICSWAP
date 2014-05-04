@@ -1,8 +1,9 @@
 class InterestsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
-    @interest = @user.interests.build(params[:interest])
+    @interest = Interest.new(params[:interest])
     if @interest.save
+      @user.interests << @interest
       render partial: 'shared/interest', locals: { interest: @interest }
     else
       render :nothing => true

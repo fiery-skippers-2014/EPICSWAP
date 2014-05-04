@@ -1,12 +1,12 @@
 class SkillsController < ApplicationController
 
   def create
-    p params
     @user = User.find(params[:user_id])
+    @skill = Skill.new(params[:skill])
 
-
-    if @user.skills << Skill.new(params[:skill])
-      render partial: 'shared/skill', locals: { skill: @user.skills.last.name }
+    if @skill.save
+      @user.skills << @skill
+      render partial: 'shared/skill', locals: { skill: @skill }
     else
       render :nothing => true
     end
