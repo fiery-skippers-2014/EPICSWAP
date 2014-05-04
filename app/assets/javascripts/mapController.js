@@ -26,38 +26,21 @@ MapController.prototype = {
   },
 
   _buildMarker: function(latitude, longitude, category){
-    var iconForCategory = _iconByCategory(category)
-    return L.marker([latitude, longitude], { icon: iconForCategory }).addTo(this.COOL_MAP); //location to add icon parameters, possible default icon
-  },
-
-  _iconByCategory: function(category){
-    if (category == "art"){
-      var artIcon = new MapMarker({iconUrl: })
-
-    }
-    else if (category == "cooking"){
-
-    }else if(category == "sports"){
-
-    }else{
-      // default here
-    }
-  },
-
-
-  _iconBaseClass: function(){
-    var CategoryIcon = L.Icon.extend({
-      options: {
-          shadowUrl: 'leaf-shadow.png',
-          iconSize:     [38, 95],
-          shadowSize:   [50, 64],
-          iconAnchor:   [22, 94],
-          shadowAnchor: [4, 62],
-          popupAnchor:  [-3, -76]
-      }
+    var myIcon = L.icon({
+      iconUrl: '/assets/sample_icon.png',
+      // iconRetinaUrl: 'my-icon@2x.png',
+      iconSize: [38, 50],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      // shadowUrl: 'sample_icon',
+      // shadowRetinaUrl: 'my-icon-shadow@2x.png',
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94],
+      className: "coolMarkers"
     });
-  },
 
+    return L.marker([latitude, longitude],{icon: myIcon}).addTo(this.COOL_MAP); //location to add icon parameters, possible default icon
+  },
 
   _buildMustacheTemplate: function(userData){
     var rawTemplate     = $("#userMarkerContentTemplate").html();
