@@ -1,11 +1,13 @@
 <p>Add a skill</p>
 <ul class='skill-form'>
   <%= form_for [@user, @skill], remote: true do |f| %>
+    <li><%= f.label :category %>
+      <%= f.select(:category_id, @categories)%>
+    </li>
     <li><%= f.label :name, 'Skill' %>
-      <%= f.text_field :name %></li>
-      <li><%= f.label :category %>
-        <%= f.select(:category_id, @categories)%>
-      </li>
-      <li><%= f.submit %></li>
+      <%= f.text_field :name, placeholder: "What can you teach?" %></li>
+      <div class='skill_dropdown'>
+      </div>
+    <li><%= f.submit %></li>
   <% end %>
 </ul>

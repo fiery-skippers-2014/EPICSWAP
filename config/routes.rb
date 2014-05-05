@@ -7,12 +7,13 @@ EpicSwap::Application.routes.draw do
     resources :reputations, only: [:create]
   end
 
+  match 'skills/autocomplete', to: 'skills#autocomplete', as: 'autocomplete', via: [:get]
   resources :interests, only: [:show]
   resources :skills, only: [:show]
 
   get '/usersData.:format', to: 'users#usersData', as: :usersData, constraints: { format: /json/ }
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+
 	match 'auth/failure', to: redirect('/'), via: [:get, :post]
 	match 'signout', to: 'sessions#destroy', via: [ :delete]
-end
