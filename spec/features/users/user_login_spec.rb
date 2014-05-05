@@ -7,7 +7,6 @@ describe "access users page" do
     mock_auth_hash
     page.find_by_id('facebook_button').click
     expect(page).to have_content("mockuser")  # user name
-    expect(page).to have_content("Sign out")
   end
 
   it "can handle authentication error" do
@@ -26,7 +25,6 @@ describe "access Linked in users page" do
     mock_auth_hash
     page.find_by_id('linkedin_button').click
     expect(page).to have_content("mockuser")
-    expect(page).to have_content("Sign out")
   end
 
    it "can handle authentication error" do

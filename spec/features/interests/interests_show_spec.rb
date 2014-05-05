@@ -10,9 +10,10 @@ feature 'interest page' do
   	visit user_path(user)
     click_on 'Add a Interest'
   	fill_in 'Interest', with: 'basketball'
-  	click_link_or_button "Create Interest"
+  	click_link_or_button "Add Interest"
+    click_on 'Add a Skill'
   	fill_in 'Skill', with: 'basketball'
-  	click_link_or_button "Create Skill"
+  	click_link_or_button "Add Skill"
   	visit user_path(user)
   	click_on '1'
   	expect(page).to have_content(user.name)
