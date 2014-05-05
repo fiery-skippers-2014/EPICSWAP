@@ -10,22 +10,26 @@ MapController.prototype = {
   },
 
   getUsersInfoFromDB: function(){
-    this.getUsersData_AJAX.request().done(this._onGetUsersInfoSuccess.bind(this))
+    this.getUsersData_AJAX.request().done(this._onGetUsersInfoSuccess.bind(this));
   },
 
   _onGetUsersInfoSuccess: function(data){
     for(var i = 0, d = data["users"].length; i < d; i++){
-      this._createMarkerForUser(data["users"][i]);
-    }
+      this._createMarkerByUser(data["users"][i]);
+    };
+    this._reCenterMap(data["current_user"].latitude, data["current_user"].longitude);
   },
 
-  _createMarkerForUser: function(userData){
-    var category        = userData['category']
+  _createMarkerByUser: function(userData){
+    var latitude        = userData["user"].latitude;
+    var longitude       = userData["user"].longitude;
+    var category        = userData['category'];
     var html            = this._buildMustacheTemplate(userData); //May run into an issue here of this taking too long to execute
-    var currentMarker   = this._buildMarker(userData["user"].latitude, userData["user"].longitude, category);
+    var currentMarker   = this._buildMarker(latitude, longitude, category);
     currentMarker.addTo(this.COOL_MAP)
                  .bindPopup(html)
                  .openPopup();
+    $(currentMarker).click(function(){this._reCenterMap(latitude, longitude)}.bind(this));
   },
 
   _buildMustacheTemplate: function(userData){
@@ -65,6 +69,10 @@ MapController.prototype = {
     }else{
       return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, category, "heart", "548F79");
     }
+  },
+
+  _reCenterMap: function(latitude, longitude){
+    this.COOL_MAP.panTo(new L.LatLng(latitude, longitude));
   }
 
 };
