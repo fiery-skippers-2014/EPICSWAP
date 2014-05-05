@@ -21,7 +21,7 @@
 
 <% if current_user == @user && @user.less_than_max? %>
   <%= render 'shared/skills_form' %>
-<% else %>
+<% elsif current_user == @user%>
   <p>You can have a maximum of 3 skills</p>
 <% end %>
 
