@@ -2,8 +2,16 @@ class SkillsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @skill = Skill.find_or_create_by_name(params[:skill]['name'])
-    @skill.name.downcase if @skill.name != nil
+    skill_name = params[:skill][:name]
+    skill_name.downcase!
+    @skill = Skill.find_or_create_by_name(skill_name)
+    p @skill
+
+
+    if @skill.category_id == nil
+      @skill.update_attribute("category_id", params[:skill][:category_id])
+    end
+
     if @skill.save
       if Skill.relationship_exists(@user, @skill)
         @errors = "You already have #{@skill.name} in your skill list"
