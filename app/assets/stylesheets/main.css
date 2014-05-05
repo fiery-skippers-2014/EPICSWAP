@@ -88,6 +88,9 @@ body {
   bottom: 0vh;
   font-size: 3.5vh; }
 
+input, textarea, select {
+  color: black; }
+
 @media all and (orientation: portrait) {
   #site_intro_container, #login_container, #header, #map, #filter {
     width: 96vw;
