@@ -1,7 +1,8 @@
 var DropDownMenu = {
   init: function(){
+
+    $('ul#dropdown_menu').hide();
     $('span#menu_dropdown').on('click', this.toggleMenu);
-    $('ul#dropdown_menu').slideUp();
   },
 
   toggleMenu: function(){
