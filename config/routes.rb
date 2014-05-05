@@ -8,6 +8,7 @@ EpicSwap::Application.routes.draw do
   end
 
   match 'skills/autocomplete', to: 'skills#autocomplete', as: 'autocomplete', via: [:get]
+  match 'interests/autocomplete', to: 'interests#autocomplete', as: 'interestauto', via: [:get]
   resources :interests, only: [:show]
   resources :skills, only: [:show]
 

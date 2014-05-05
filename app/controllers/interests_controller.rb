@@ -26,4 +26,11 @@ class InterestsController < ApplicationController
     UserInterest.delete_relationship(current_user.id, params[:id])
     render :nothing => true
   end
+
+  def autocomplete #Ask SHADI ABOUT THIS
+    word = params.keys.first.downcase
+    word = "#{word}%"
+    @words = Interest.where("name like ?", word)
+    render partial: 'shared/autocomplete', locals: { words: @words }
+  end
 end
