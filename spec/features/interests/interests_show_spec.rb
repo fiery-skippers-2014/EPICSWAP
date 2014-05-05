@@ -6,15 +6,20 @@ feature 'interest page' do
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
-  scenario 'a logged in user can view an interest page', js: true do
+  scenario 'a logged in user can view an interest page' do
   	visit user_path(user)
   	fill_in 'Interest', with: 'basketball'
   	click_button "Create Interest"
-  	fill_in 'Skill', with: 'basketball'
-  	click_link_or_button "Create Skill"
   	visit user_path(user)
-  	click_on '1'
   	expect(page).to have_content(user.name)
+  end
+
+  scenario 'a logged in user can view a skill page' do
+    visit user_path(user)
+    fill_in 'Skill', with: 'soccer'
+    click_on "Create Skill"
+    visit user_path(user)
+    expect(page).to have_content(user.name)
   end
 end
 
