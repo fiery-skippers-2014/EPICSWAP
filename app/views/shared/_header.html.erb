@@ -1,0 +1,10 @@
+<div id="header">
+  <a href="/">
+    <span class="ontop">
+      <object id="logo" class="header" type="image/svg+xml" data="/assets/epicswap.svg"></object>
+    </span>
+  </a>
+  <%= link_to current_user.name, user_path(current_user) if current_user %>
+  <%= link_to 'Sign out', signout_path %>
+  <img id="menu" class="header" src="/assets/menu.svg">
+</div>

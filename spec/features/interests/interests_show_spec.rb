@@ -9,9 +9,9 @@ feature 'interest page' do
   scenario 'a logged in user can view an interest page', js: true do
   	visit user_path(user)
   	fill_in 'Interest', with: 'basketball'
-  	click_on 'Create Interest'
+  	click_button "Create Interest"
   	fill_in 'Skill', with: 'basketball'
-  	click_on 'Create Skill'
+  	click_link_or_button "Create Skill"
   	visit user_path(user)
   	click_on '1'
   	expect(page).to have_content(user.name)

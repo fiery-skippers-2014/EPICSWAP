@@ -6,7 +6,7 @@
 
 $STANDARD_FONT: 'Avenir';
 $HEADING_FONT: 'Lato';
-$STANDARD_FONT_COLOR: black;
+$STANDARD_FONT_COLOR: white;
 $BACKGROUND_COLOR: black;
 $ACCENT_COLOR: #0085EF;
 $LOGO_SIZE: 5vh;
@@ -37,7 +37,11 @@ body {
   height: $LOGO_SIZE;
 }
 
-// REFERENCED EXTERNALLY BY SVGS
+// SVG
+
+.ontop {
+  z-index: 1000;
+}
 
 #epicswap_logo_top {
   fill: #000000;

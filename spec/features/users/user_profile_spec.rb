@@ -44,12 +44,12 @@ feature 'non logged in user' do
   let!(:second_user) { FactoryGirl.create :user }
   scenario 'cannot view a profile page' do
     visit user_path(second_user)
-    expect(page).to have_content('Sign in')
+    expect(page).to have_content('Login')
   end
 
   scenario 'cannot view an edit profile page' do
     visit edit_user_path(second_user)
-    expect(page).to have_content('Sign in')
+    expect(page).to have_content('Login')
   end
 end
 
@@ -112,7 +112,7 @@ feature 'interests on the user profile' do
   scenario 'a user can add interests they can teach', js: true  do
     visit user_path(user)
     fill_in 'Interest', :with => 'white water rafting'
-    click_on 'Create Interest'
+    click_link_or_button "Create Interest"
     expect(page).to have_content 'My Interests'
     expect(page).to have_content 'white water rafting'
   end
@@ -120,7 +120,7 @@ feature 'interests on the user profile' do
   scenario 'a user can delete interests', js: true do
     visit user_path(user)
     fill_in 'Interest', :with => 'basketball'
-    click_on 'Create Interest'
+    click_link_or_button "Create Interest"
     visit root_path
     visit user_path(user)
     click_on 'delete'

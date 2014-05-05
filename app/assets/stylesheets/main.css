@@ -4,7 +4,7 @@ body {
   font-family: "Avenir";
   height: 98vh;
   width: 98vw;
-  color: black;
+  color: white;
   overflow: hidden;
   background-attachment: fixed; }
 
@@ -16,6 +16,9 @@ body {
 
 #logo, #menu {
   height: 5vh; }
+
+.ontop {
+  z-index: 1000; }
 
 #epicswap_logo_top {
   fill: #000000; }
@@ -55,6 +58,9 @@ body {
 #login_text {
   font-size: 4vh;
   margin-bottom: 1vh; }
+
+#site_name, #tagline, #login_text {
+  color: black; }
 
 #header, #filter {
   text-align: center;
