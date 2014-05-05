@@ -54,19 +54,16 @@
   font-size: 3vh;
 }
 
-div#map_filter_menu {
-  position: absolute;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 99vw;
-  height: 87vh;
-  bottom: 6vh;
-  left: 0.5vw;
-  color: black;
-}
-
 ul#filter_categories {
   list-style: none;
+}
+
+ul#filter_categories a {
+  text-decoration: none;
+}
+
+ul#filter_categories li{
+
 }
 
 span#menu_dropdown {
