@@ -114,20 +114,13 @@ feature 'interests on the user profile' do
   before(:each) do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
-  scenario 'a user can add interests they can teach', js: true  do
-    visit user_path(user)
-    click_on 'Add a Interest'
-    fill_in 'Interest', :with => 'white water rafting'
-    click_link_or_button "Create Interest"
-    expect(page).to have_content 'My Interests'
-    expect(page).to have_content 'white water rafting'
-  end
+
 
   scenario 'a user can delete interests', js: true do
     visit user_path(user)
     click_on 'Add a Interest'
     fill_in 'Interest', :with => 'basketball'
-    click_link_or_button "Create Interest"
+    click_link_or_button "Add Interest"
     visit root_path
     visit user_path(user)
     click_on 'delete'
