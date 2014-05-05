@@ -2,7 +2,7 @@
   <% if current_user %>
   <%= link_to 'Home', root_path %>
     Welcome <strong><%= link_to current_user.name, user_path(current_user) %></strong>!
-    <%= link_to "Sign out", signout_path, method: "delete", id: "sign_out"  %>
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
   <% else %>
     <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %><br>
     <%= link_to "Sign in with Linked In", "/auth/linkedin", id: "Sign_in" %>
