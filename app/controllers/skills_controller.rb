@@ -2,7 +2,7 @@ class SkillsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @skill = Skill.find_or_create_by_name_and_category_id(params[:skill])
+    @skill = Skill.find_or_create_by_name(params[:skill]['name'])
     @skill.name.downcase if @skill.name != nil
     if @skill.save
       if Skill.relationship_exists(@user, @skill)
