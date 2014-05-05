@@ -17,6 +17,12 @@ body {
 #logo, #menu {
   height: 5vh; }
 
+input, textarea, select {
+  color: black; }
+
+.hidden {
+  display: none; }
+
 .ontop {
   z-index: 1000; }
 
@@ -87,9 +93,6 @@ body {
   position: fixed;
   bottom: 0vh;
   font-size: 3.5vh; }
-
-input, textarea, select {
-  color: black; }
 
 @media all and (orientation: portrait) {
   #site_intro_container, #login_container, #header, #map, #filter {

@@ -1,5 +1,5 @@
-<p>Add an interest</p>
-<ul>
+
+<ul class='interest-form hidden'>
   <%= form_for [@user, @interest], remote: true do |f| %>
     <li><%= f.label :name, 'Interest'%>
       <%= f.text_field :name, placeholder: 'What do you want to learn?' %></li>
