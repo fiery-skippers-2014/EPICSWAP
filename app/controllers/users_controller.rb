@@ -6,16 +6,14 @@ class UsersController < ApplicationController
   end
 
   def show
-
+    redirect_to root_path unless current_user
     @user       = User.find(params[:id])
     @skill      = Skill.new
     @interest   = Interest.new
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
     @distance   = @user.distance(current_user).round(2) if current_user
     @reputation = Reputation.new
-    redirect_to root_path unless current_user
     render 'initial' if current_user && current_user.street == nil
-
   end
 
   def edit
