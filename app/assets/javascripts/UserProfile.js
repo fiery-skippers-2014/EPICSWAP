@@ -26,7 +26,7 @@ var UserInterests = {
 var UserSkills = {
   query: '',
   init: function(){
-    $('form.new_skill').on('ajax:success', this.appendSkill )
+    $('form.new_skill').on('ajax:success', this.appendSkill.bind(this) )
     $('form.new_skill').on('ajax:error', this.appendError )
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
@@ -38,10 +38,13 @@ var UserSkills = {
     $('li#skill_'+ id).remove()
   },
   appendSkill: function(e, data){
+    console.log(data)
     $('ul.my-skills').append(data);
     $('form.new_skill').each(function(){
       this.reset();
     });
+    $('div.skill_dropdown').html('')
+    this.query = ''
   },
   appendError: function(e, data, f, g){
     $('ul.skill-form').prepend(data)
@@ -66,7 +69,7 @@ var UserSkills = {
     e.preventDefault();
     var skill = $(this).html()
     $('input#skill_name').val(skill)
-
+    // $('form.new_skill').trigger('ajax:success')
   }
 }
 
