@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     render :welcome, layout: false unless current_user
+    @categories = Category.all
     @users = User.all
   end
 
