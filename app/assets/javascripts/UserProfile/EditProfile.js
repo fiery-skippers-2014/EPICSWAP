@@ -14,6 +14,7 @@ var EditProfile = {
     this.hideForm(e, data);
     this.appendTagline(e, data);
     this.appendDescription(e, data);
+    this.hideInitialEditProfileForm()
   },
 
   hideForm: function(e, data){
@@ -28,5 +29,10 @@ var EditProfile = {
    appendDescription: function(e, data){
     var description = data["user"]["description"];
     $('.description').html(description);
+  },
+  hideInitialEditProfileForm: function(){
+    $('div.initial.edit-profile').hide()
+    $('div.initial.add-skill').slideDown()
+
   }
 }
