@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+body {
+  background-color: black;
+  font-family: "Avenir";
+  height: 98vh;
+  width: 98vw;
+  color: black;
+  overflow: hidden;
+  background-attachment: fixed; }
+
+#container {
+  position: relative; }
+
+.heading {
+  font-family: "Lato"; }
+
+#logo, #menu {
+  height: 5vh; }
+
+#epicswap_logo_top {
+  fill: #000000; }
+
+#epicswap_logo_bottom {
+  fill: #0085ef; }
+
+#logo.welcome {
+  height: 10vh; }
+
+#site_intro_container, #login_container {
+  text-align: center;
+  position: fixed;
+  left: 0vw; }
+
+#site_intro_container {
+  top: 0vh; }
+
+#login_container {
+  bottom: 0vh; }
+
+#site_name {
+  font-size: 6vh;
+  font-weight: 900;
+  opacity: 1; }
+
+.login_button {
+  height: 8vh;
+  margin-left: 1vw;
+  margin-right: 1vw; }
+
+#tagline, #login_text {
+  text-transform: uppercase;
+  font-size: 3.5vh;
+  letter-spacing: 0.4vw; }
+
+#login_text {
+  font-size: 4vh;
+  margin-bottom: 1vh; }
+
+#header, #filter {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5); }
+
+#header {
+  height: 5vh; }
+
+#logo.header {
+  float: left; }
+
+#menu.header {
+  float: right; }
+
+#map {
+  height: 98vh;
+  overflow: hidden; }
+
+.leaflet-bar {
+  background-color: gray; }
+
+#filter {
+  height: 4vh;
+  position: fixed;
+  bottom: 0vh;
+  font-size: 3.5vh; }
+
+@media all and (orientation: portrait) {
+  #site_intro_container, #login_container, #header, #map, #filter {
+    width: 96vw;
+    margin: 1vw;
+    padding: 1vw; }
+
+  body.welcome {
+    background-image: url("/assets/skating_portrait.jpg");
+    background-size: 100vh;
+    background-position: center; }
+
+  #site_intro_container, #login_container {
+    background-color: rgba(255, 255, 255, 0.5); } }
+@media all and (orientation: landscape) {
+  #site_intro_container, #login_container, #header, #map, #filter {
+    width: 98vw;
+    margin: 0.5vw;
+    padding: 0.5vw; }
+
+  body.welcome {
+    background-image: url("/assets/skating_landscape.jpg");
+    background-size: auto 100vh;
+    background-position: top right; }
+
+  #site_intro_container, #login_container {
+    width: 68.6vw;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5) 20%, transparent 100%);
+    background: -o-linear-gradient(right, rgba(255, 255, 255, 0.5) 40%, transparent 100%);
+    background: -moz-linear-gradient(right, rgba(255, 255, 255, 0.5) 40%, transparent 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 40%, transparent 100%); }
+
+  .stripe {
+    width: 39.2vw; } }

@@ -1,0 +1,58 @@
+// FONTS
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+// CONSTANTS
+
+$STANDARD_FONT: 'Avenir';
+$HEADING_FONT: 'Lato';
+$STANDARD_FONT_COLOR: black;
+$BACKGROUND_COLOR: black;
+$ACCENT_COLOR: #0085EF;
+$LOGO_SIZE: 5vh;
+$SITE_WIDTH: 98vw;
+$SITE_HEIGHT: 98vh;
+
+// GENERAL
+
+body {
+  background-color: $BACKGROUND_COLOR;
+  font-family: $STANDARD_FONT;
+  height: $SITE_HEIGHT;
+  width: $SITE_WIDTH;
+  color: $STANDARD_FONT_COLOR;
+  overflow: hidden;
+  background-attachment: fixed;
+}
+
+#container {
+  position: relative;
+}
+
+.heading {
+  font-family: $HEADING_FONT;
+}
+
+#logo, #menu {
+  height: $LOGO_SIZE;
+}
+
+// REFERENCED EXTERNALLY BY SVGS
+
+#epicswap_logo_top {
+  fill: #000000;
+}
+
+#epicswap_logo_bottom {
+  fill: $ACCENT_COLOR;
+}
+
+// PAGE SPECIFIC
+
+@import '_welcome';
+@import '_map';
+
+// MEDIA STYLESHEETS
+
+@import '_portrait';
+@import '_landscape';

@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EpicSwap</title>
-  <%# <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" /> %>
-  <%# <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script> %>
-  <%#<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script> %>
-  <%# <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' /> %>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <%= render 'shared/user_widget' %>
+  <head>
+    <title>EPIC SWAP</title>
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+    <%= csrf_meta_tags %>
+  </head>
 
-<%= yield %>
-
-
-</body>
+  <body>
+    <%= yield %>
+  </body>
 </html>
