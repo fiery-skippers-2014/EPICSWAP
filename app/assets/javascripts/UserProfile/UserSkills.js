@@ -42,9 +42,8 @@ var UserSkills = {
   },
 
   onDataCompleteFail: function(data){
-    console.log("Error in onDataCompleteFail")
+    console.log("Error in Skill onDataCompleteFail")
   },
-
 
   insertAutoComplete: function(e){
     e.preventDefault();
