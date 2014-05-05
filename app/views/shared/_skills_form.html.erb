@@ -1,5 +1,4 @@
-<p>Add a skill</p>
-<ul class='skill-form'>
+<ul class='skill-form hidden'>
   <%= form_for [@user, @skill], remote: true do |f| %>
     <li><%= f.label :category %>
       <%= f.select(:category_id, @categories)%>
