@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
+    reset_session
     user.destroy
     redirect_to root_path
   end
