@@ -8,8 +8,11 @@ feature 'interest page' do
   end
   scenario 'a logged in user can view an interest page' do
   	visit user_path(user)
+    click_on 'Add a Interest'
   	fill_in 'Interest', with: 'basketball'
-  	click_button "Create Interest"
+  	click_link_or_button "Create Interest"
+  	fill_in 'Skill', with: 'basketball'
+  	click_link_or_button "Create Skill"
   	visit user_path(user)
   	expect(page).to have_content(user.name)
   end
