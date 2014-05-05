@@ -14,6 +14,8 @@ EpicSwap::Application.routes.draw do
 
   get '/usersData.:format', to: 'users#usersData', as: :usersData, constraints: { format: /json/ }
 
+  get '/currentUserData.:format', to: 'users#currentUserData', as: :currentUserData, constraints: { format: /json/ }
+
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 
 	match 'auth/failure', to: redirect('/'), via: [:get, :post]
