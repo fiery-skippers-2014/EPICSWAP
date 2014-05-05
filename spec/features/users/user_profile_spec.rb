@@ -60,6 +60,7 @@ feature 'skills on the user profile' do
   let!(:user) { FactoryGirl.create :user }
   scenario 'a user can add skills they can teach', js: true do
     visit user_path(user)
+    click_on 'Add a Skill'
     fill_in 'Skill', :with => 'basketball'
     click_on 'Create Skill'
     expect(page).to have_content 'My Skills'
@@ -68,12 +69,15 @@ feature 'skills on the user profile' do
 
   scenario 'a user cannot add more than 3 skills', js: true do
     visit user_path(user)
+    click_on 'Add a Skill'
     fill_in 'Skill', :with => 'basketball'
     click_on 'Create Skill'
     visit user_path(user)
+    click_on 'Add a Skill'
     fill_in 'Skill', :with => 'soccer'
     click_on 'Create Skill'
     visit user_path(user)
+    click_on 'Add a Skill'
     fill_in 'Skill', :with => 'football'
     click_on 'Create Skill'
     visit user_path(user)
@@ -82,6 +86,7 @@ feature 'skills on the user profile' do
 
   scenario 'a user can delete skills', js: true do
     visit user_path(user)
+    click_on 'Add a Skill'
     fill_in 'Skill', :with => 'basketball'
     click_on 'Create Skill'
     visit user_path(user)
@@ -111,6 +116,7 @@ feature 'interests on the user profile' do
   end
   scenario 'a user can add interests they can teach', js: true  do
     visit user_path(user)
+    click_on 'Add a Interest'
     fill_in 'Interest', :with => 'white water rafting'
     click_link_or_button "Create Interest"
     expect(page).to have_content 'My Interests'
@@ -119,6 +125,7 @@ feature 'interests on the user profile' do
 
   scenario 'a user can delete interests', js: true do
     visit user_path(user)
+    click_on 'Add a Interest'
     fill_in 'Interest', :with => 'basketball'
     click_link_or_button "Create Interest"
     visit root_path
