@@ -5,6 +5,8 @@
     </span>
   </a>
   <%= link_to current_user.name, user_path(current_user) if current_user %>
-  <%= link_to 'Sign out', signout_path %>
-  <img id="menu" class="header" src="/assets/menu.svg">
+   <span id="menu_dropdown"> <img id="menu" class="header" src="/assets/menu.svg" ></span>
+    <%= render 'shared/dropdown_menu' %>
+
+
 </div>
