@@ -1,5 +1,11 @@
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
+<div id="map"></div>
+<div id="filter">
+  FILTER
+</div>
+
+<%# <!-- TEMPLATES --> %>
+
 <script id="userMarkerContentTemplate" type="text/x-handlebars-template">
     <img src="{{profileImage}}" alt={{name}}><br>
     <a href="/users/{{userId}}">{{Name}}</a></b><br>
@@ -12,6 +18,3 @@
       {{/skillList}}
     </ul>
 </script>
-
-<div id="map">
-</div>
