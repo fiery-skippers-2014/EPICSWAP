@@ -37,6 +37,10 @@ body {
   height: $LOGO_SIZE;
 }
 
+input, textarea, select {
+  color: black;
+}
+
 // SVG
 
 .ontop {
@@ -55,6 +59,7 @@ body {
 
 @import '_welcome';
 @import '_map';
+@import '_user';
 
 // MEDIA STYLESHEETS
 
