@@ -19,13 +19,14 @@ $(document).ready(function(){
   DisplayInterestsForm.init();
 
   //////////////////////
-  ///  MAP PAGE   ///
+  ///    MAP PAGE    ///
   //////////////////////
   if ($('#map').length){
-    MapFilter.init()
-  //////////////////////
-  ///  MAP BUILDER   ///
-  //////////////////////
+    MapFilter.init();
+
+    //////////////////////
+    ///  MAP BUILDER   ///
+    //////////////////////
     var mapOpts = {
       startLatitude:   37.785128,
       startLongitude: -122.397308,

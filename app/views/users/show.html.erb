@@ -1,4 +1,4 @@
- <h1><%= @user.name %></h1>
+ <h1 id ="user_name"><%= @user.name %></h1>
 <img src="<%= @user.image %>">
 <% if current_user == @user %>
   <%= link_to "Edit Profile", edit_user_path(@user), class: 'edit-profile-link'  %>
