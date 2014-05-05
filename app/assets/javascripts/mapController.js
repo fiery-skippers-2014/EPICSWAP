@@ -17,6 +17,7 @@ MapController.prototype = {
     for(var i = 0, d = data["users"].length; i < d; i++){
       this._createMarkerForUser(data["users"][i]);
     }
+    this._reCenterMap(40.737, -73.923);
   },
 
   _createMarkerForUser: function(userData){
@@ -65,6 +66,11 @@ MapController.prototype = {
     }else{
       return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, category, "heart", "548F79");
     }
+  },
+
+  _reCenterMap: function(latitude, longitude){
+    this.COOL_MAP.panTo(new L.LatLng(latitude, longitude));
+
   }
 
 };
