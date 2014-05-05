@@ -13,11 +13,4 @@ class Skill < ActiveRecord::Base
   def self.relationship_exists(user, skill)
     UserSkill.where('user_id = ? AND skill_id = ?', user.id, skill.id).length > 0
   end
-
-  def save_new_skill_with_category(category_id)
-    if self.category_id == nil
-     self.update_attribute("category_id", category_id)
-    end
-
-  end
 end
