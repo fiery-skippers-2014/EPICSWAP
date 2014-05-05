@@ -1,20 +1,3 @@
-#header, #filter {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-#header {
-  height: $LOGO_SIZE;
-}
-
-#logo.header {
-  float: left;
-}
-
-#menu.header {
-  float: right;
-}
-
 #map {
   height: $SITE_HEIGHT;
   overflow: hidden;
@@ -22,13 +5,6 @@
 
 .leaflet-bar {
   background-color: gray;
-}
-
-#filter {
-  height: 4vh;
-  position: fixed;
-  bottom: 0vh;
-  font-size: 3.5vh;
 }
 
 // <a href='https://www.mapbox.com/about/maps/' target='_blank'>Maps &copy; Mapbox &copy; OpenStreetMap</a>

@@ -1,0 +1,74 @@
+#header, #filter {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#header {
+  height: $LOGO_SIZE;
+}
+
+#logo.header {
+  float: left;
+}
+
+#menu.header {
+  float: right;
+}
+
+#filter {
+  height: 4vh;
+  position: fixed;
+  bottom: 0vh;
+  font-size: 3.5vh;
+}
+
+#dropdown_menu {
+  position: absolute;
+  background-color: white;
+  width: 4vw;
+  z-index: 1000;
+  list-style: none;
+  float: right;
+  top: $LOGO_SIZE;
+  right: 1vw;
+  text-align: center;
+
+  li:hover {
+    background-color: #444444;
+  }
+
+  li a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+#header_user_name {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  font-size: 3vh;
+}
+
+div#map_filter_menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 99vw;
+  height: 87vh;
+  bottom: 6vh;
+  left: 0.5vw;
+  color: black;
+}
+
+ul#filter_categories {
+  list-style: none;
+}
+
+span#menu_dropdown {
+    cursor: pointer;
+}
