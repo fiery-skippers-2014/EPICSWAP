@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
   //////////////////////
-  /// Drop Down Menu ///
+  /// Homepage + Menu///
   //////////////////////
 
   DropDownMenu.init()
+
 
   //////////////////////
   ///  USER PROFILE  ///
@@ -18,9 +19,13 @@ $(document).ready(function(){
   DisplayInterestsForm.init();
 
   //////////////////////
-  ///  MAP BUILDER   ///
+  ///  MAP PAGE   ///
   //////////////////////
   if ($('#map').length){
+    MapFilter.init()
+  //////////////////////
+  ///  MAP BUILDER   ///
+  //////////////////////
     var mapOpts = {
       startLatitude:   37.785128,
       startLongitude: -122.397308,

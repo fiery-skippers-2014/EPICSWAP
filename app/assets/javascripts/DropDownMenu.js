@@ -1,6 +1,7 @@
 var DropDownMenu = {
   init: function(){
-    $('span#menu_dropdown').on('click', this.toggleMenu)
+    $('ul#dropdown_menu').hide();
+    $('span#menu_dropdown').on('click', this.toggleMenu);
 
   },
   toggleMenu: function(){
