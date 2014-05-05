@@ -62,7 +62,7 @@ feature 'skills on the user profile' do
     visit user_path(user)
     click_on 'Add a Skill'
     fill_in 'Skill', :with => 'basketball'
-    click_on 'Create Skill'
+    click_on 'Add Skill'
     expect(page).to have_content 'My Skills'
     expect(page).to have_content 'basketball'
   end
@@ -71,15 +71,15 @@ feature 'skills on the user profile' do
     visit user_path(user)
     click_on 'Add a Skill'
     fill_in 'Skill', :with => 'basketball'
-    click_on 'Create Skill'
+    click_on 'Add Skill'
     visit user_path(user)
     click_on 'Add a Skill'
     fill_in 'Skill', :with => 'soccer'
-    click_on 'Create Skill'
+    click_on 'Add Skill'
     visit user_path(user)
     click_on 'Add a Skill'
     fill_in 'Skill', :with => 'football'
-    click_on 'Create Skill'
+    click_on 'Add Skill'
     visit user_path(user)
     expect(page).to have_content('maximum')
   end
@@ -88,7 +88,7 @@ feature 'skills on the user profile' do
     visit user_path(user)
     click_on 'Add a Skill'
     fill_in 'Skill', :with => 'basketball'
-    click_on 'Create Skill'
+    click_on 'Add Skill'
     visit user_path(user)
     click_on 'delete'
     expect(page).to_not have_content('basketball')
@@ -115,6 +115,15 @@ feature 'interests on the user profile' do
     ApplicationController.any_instance.stub(:current_user) { user }
   end
 
+  scenario 'a user can add interests they can teach', js: true  do
+    visit user_path(user)
+    click_on 'Add a Interest'
+    fill_in 'Interest', :with => 'white water rafting'
+    click_link_or_button "Add Interest"
+    expect(page).to have_content 'My Interests'
+    expect(page).to have_content 'white water rafting'
+  end
+
 
   scenario 'a user can delete interests', js: true do
     visit user_path(user)
@@ -129,12 +138,12 @@ feature 'interests on the user profile' do
 
   scenario 'a user who is not the current user cannot add skills' do
     visit user_path(second_user)
-    expect(page).to_not have_content('Create Skill')
+    expect(page).to_not have_content('Add Skill')
   end
 
   scenario 'a user who is not the current user cannot add interest' do
     visit user_path(second_user)
-    expect(page).to_not have_content('Create Interest')
+    expect(page).to_not have_content('Add Interest')
   end
 end
 

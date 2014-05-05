@@ -4,7 +4,9 @@
       <object id="logo" class="header" type="image/svg+xml" data="/assets/epicswap.svg"></object>
     </span>
   </a>
-  <%= link_to current_user.name, user_path(current_user) if current_user %>
-  <%= link_to 'Sign out', signout_path %>
-  <img id="menu" class="header" src="/assets/menu.svg">
+  <%= link_to current_user.name, user_path(current_user), id: 'header_user_name' if current_user %>
+   <span id="menu_dropdown"> <img id="menu" class="header" src="/assets/menu.svg" ></span>
+    <%= render 'shared/dropdown_menu' %>
+
+
 </div>
