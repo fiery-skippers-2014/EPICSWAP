@@ -18,3 +18,4 @@ EpicSwap::Application.routes.draw do
 
 	match 'auth/failure', to: redirect('/'), via: [:get, :post]
 	match 'signout', to: 'sessions#destroy', via: [ :delete]
+end
