@@ -1,19 +1,21 @@
 var EditProfile = {
   init: function(){
     $('div.edit-user-form').hide();
-    $('a.edit-profile-link').on('click', this.showForm)
-    $('form.edit_user').on('ajax:success', this.editSuccess.bind(this))
-    $('form.edit_user').on('ajax:error', this.appendError)
+    $('a.edit-profile-link').on('click', this.showForm);
+    $('form.edit_user').on('ajax:success', this.editSuccess.bind(this));
+    $('form.edit_user').on('ajax:error', this.appendError);
   },
+
   showForm: function(e){
     e.preventDefault();
-    $('div.edit-user-form').slideDown();
+    $('div.edit-user-form').slideToggle();
   },
 
   editSuccess: function(e, data){
     this.hideForm(e, data);
     this.appendTagline(e, data);
     this.appendDescription(e, data);
+    this.hideInitialEditProfileForm()
   },
 
   hideForm: function(e, data){
@@ -25,8 +27,13 @@ var EditProfile = {
     $('.tagline').html(tagline);
   },
 
-   appendDescription: function(e, data){
+  appendDescription: function(e, data){
     var description = data["user"]["description"];
     $('.description').html(description);
+  },
+
+  hideInitialEditProfileForm: function(){
+    $('div.initial.edit-profile').hide();
+    $('div.initial.add-skill').slideDown();
   }
 }

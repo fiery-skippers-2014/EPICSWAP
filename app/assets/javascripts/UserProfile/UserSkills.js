@@ -19,6 +19,8 @@ var UserSkills = {
       this.reset();
     });
     $('div.skill_dropdown').html('');
+    $('div.initial.add-skill').hide()
+    $('div.initial.add-interests').slideDown()
   },
 
   appendError: function(e, data, f, g){

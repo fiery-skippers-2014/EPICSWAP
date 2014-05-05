@@ -1,10 +1,10 @@
-<p>Add an interest</p>
-<ul>
+
+<ul class='interest-form hidden'>
   <%= form_for [@user, @interest], remote: true do |f| %>
     <li><%= f.label :name, 'Interest'%>
       <%= f.text_field :name, placeholder: 'What do you want to learn?' %></li>
       <div class='interest_dropdown'>
       </div>
-      <li><%= f.submit %></li>
+      <li><%= f.submit 'Add Interest', class: 'initial-interest-submit' %></li>
   <% end %>
 </ul>

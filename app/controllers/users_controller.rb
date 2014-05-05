@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
     @distance   = @user.distance(current_user).round(2) if current_user
     @reputation = Reputation.new
+    render 'initial' if current_user && current_user.street == nil
   end
 
   def edit
@@ -32,6 +33,7 @@ class UsersController < ApplicationController
 
   def destroy
     user = User.find(params[:id])
+    reset_session
     user.destroy
     redirect_to root_path
   end

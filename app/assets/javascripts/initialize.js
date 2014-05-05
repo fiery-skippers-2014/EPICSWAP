@@ -8,6 +8,8 @@ $(document).ready(function(){
   UserSkills.init();
   UserReputation.init();
   EditProfile.init();
+  DisplaySkillsForm.init();
+  DisplayInterestsForm.init();
 
   //////////////////////
   ///  MAP BUILDER   ///
