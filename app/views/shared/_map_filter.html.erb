@@ -1,4 +1,5 @@
 <div id="map_filter_menu">
+  <p>Click to Turn off a Category</p>
   <ul id='filter_categories'>
     <% @categories.each do |category|  %>
       <li id="catetgory_<%= category.id %>"><%=link_to category.name, "#", data: {title: "#{category.name}"}, class: 'filter_link' %></li>
