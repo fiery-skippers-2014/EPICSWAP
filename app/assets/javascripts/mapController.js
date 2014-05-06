@@ -14,6 +14,9 @@ MapController.prototype = {
   },
 
   _onGetUsersInfoSuccess: function(data){
+    console.log("--------------_onGetUsersInfoSuccess")
+    console.log(data)
+    console.log("--------------_onGetUsersInfoSuccess")
     for(var i = 0, d = data["users"].length; i < d; i++){
       this._createMarkerByUser(data["users"][i]);
     };
@@ -26,6 +29,9 @@ MapController.prototype = {
     var category        = userData['category'];
     var html            = this._buildMustacheTemplate(userData); //May run into an issue here of this taking too long to execute
     var currentMarker   = this._buildMarker(latitude, longitude, category);
+    console.log("--------------html")
+    console.log(html)
+    console.log("--------------html")
     currentMarker.addTo(this.COOL_MAP)
                  .bindPopup(html)
                  .openPopup();

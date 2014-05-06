@@ -6,7 +6,8 @@ body {
   width: 98vw;
   color: white;
   overflow: hidden;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  font-size: 3vh; }
 
 a {
   text-decoration: none; }
@@ -205,13 +206,15 @@ ul {
 #dropdown_menu {
   position: absolute;
   background-color: white;
-  width: 4vw;
+  width: 10vw;
   z-index: 1000;
   list-style: none;
   float: right;
   top: 5vh;
   right: 1vw;
-  text-align: center; }
+  text-align: center;
+  padding-left: 0;
+  font-size: 3vh; }
   #dropdown_menu li:hover {
     background-color: #444444; }
   #dropdown_menu li a {
