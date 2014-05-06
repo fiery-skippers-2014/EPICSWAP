@@ -5,9 +5,10 @@ var UserSkills = {
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
     $('form.new_skill input#skill_name').on('keyup', this.autoComplete.bind(this))
-    $('#skill_dropdown').on('click', 'tr a', this.insertAutoComplete)
+    $('#skill_dropdown').on('click', 'a', this.insertAutoComplete)
     $("#skill-dropdown-row").hide();
   },
+
   removeSkill: function(e,data){
     var id = $(e.target).data('id');
     $('tr#skill_'+ id).remove();
