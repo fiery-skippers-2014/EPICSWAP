@@ -22,25 +22,31 @@ require_relative 'preliminary_seeds'
 
   language.each do |skill|
   	Skill.create(name: skill, category_id: 1)
+  	Interest.create(name: skill)
   end
 
   sport.each do |skill|
   	Skill.create(name: skill, category_id: 2)
+  	Interest.create(name: skill)
   end
 
   finance.each do |skill|
   	Skill.create(name: skill, category_id: 3)
+  	Interest.create(name: skill)
   end
 
   art.each do |skill|
   	Skill.create(name: skill, category_id: 4)
+  	Interest.create(name: skill)
   end
 
   fitness.each do |skill|
   	Skill.create(name: skill, category_id: 5)
+  	Interest.create(name: skill)
   end
 
   technology.each do |skill|
   	Skill.create(name: skill, category_id: 6)
+  	Interest.create(name: skill)
   end
 
