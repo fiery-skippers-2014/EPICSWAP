@@ -27,7 +27,7 @@ class InterestsController < ApplicationController
     render :nothing => true
   end
 
-  def autocomplete #Ask SHADI ABOUT THIS
+  def autocomplete
     word = params.keys.first.downcase
     word = "%#{word}%"
     @words = Interest.where("name like ?", word)

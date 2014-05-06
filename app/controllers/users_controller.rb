@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  # GET /usersData.json
+
   def usersData
     render json: { users: User.all_with_skills, current_user: current_user }.to_json
   end
