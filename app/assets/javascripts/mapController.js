@@ -35,7 +35,9 @@ MapController.prototype = {
     var category        = userData['category'];
     console.log("--------------_userData[cate] in _createMarkerByUser")
     console.log(userData['category'])
-    var html            = this._buildMustacheTemplate(userData); //May run into an issue here of this taking too long to execute
+    var html            = this._buildMustacheTemplate(userData);
+    console.log("--------------html in _createMarkerByUser")
+    console.log(html) //May run into an issue here of this taking too long to execute
     var currentMarker   = this._buildMarker(latitude, longitude, category);
     console.log("--------------html")
     console.log(html)
@@ -48,14 +50,21 @@ MapController.prototype = {
   },
 
   _buildMustacheTemplate: function(userData){
+    console.log('made it to _buildMustacheTemplate')
     var rawTemplate     = $("#userMarkerContentTemplate").html();
+    console.log("--------------rawTemplate in _buildMustacheTemplate")
+    console.log(userData[rawTemplate])
     var template        = Handlebars.compile(rawTemplate);
+    console.log("--------------template in _buildMustacheTemplate")
+    console.log(userData[template])
     var userMiniProfile = { profileImage: userData["user"].image,
                             userId: userData["user"].id,
                             Name: userData["user"].name,
                             Tagline: userData["user"].tagline,
                             skillList: userData["skills"]
                           };
+    console.log("--------------userMiniProfile in _buildMustacheTemplate")
+    console.log(userData[userMiniProfile])
     return template(userMiniProfile);
   },
 
