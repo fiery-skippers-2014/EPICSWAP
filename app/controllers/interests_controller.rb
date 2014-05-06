@@ -5,14 +5,14 @@ class InterestsController < ApplicationController
     if @interest.save
       if Interest.relationship_exists(@user, @interest)
         @errors = "You already have #{@interest.name} in your interest list"
-        render partial: 'shared/errors', locals: {errors: @errors}
+        render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
       else
         @user.interests << @interest
         render partial: 'shared/interest', locals: { interest: @interest }
       end
     else
       @errors = 'Interest cannot be blank'
-      render partial: 'shared/errors', locals: {errors: @errors}
+      render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
     end
 
   end
