@@ -11,7 +11,7 @@ body {
 a {
   text-decoration: none; }
   a:link, a:visited {
-    color: yellow; }
+    color: #0085ef; }
   a:hover, a:active {
     color: red; }
 

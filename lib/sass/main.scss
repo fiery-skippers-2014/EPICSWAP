@@ -36,7 +36,7 @@ a {
   text-decoration: none;
 
   &:link, &:visited {
-    color: yellow;
+    color: $ACCENT_COLOR;
   }
 
   &:hover, &:active {
