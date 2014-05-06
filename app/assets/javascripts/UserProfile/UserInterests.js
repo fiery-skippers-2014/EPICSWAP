@@ -7,6 +7,7 @@ var UserInterests = {
     $('form.new_interest input#interest_name').on('keyup', this.autoComplete.bind(this));
     $('#interest_dropdown').on('click', 'li a', this.insertAutoComplete)
     $('div.initial input.initial-interest-submit').on('click', this.redirectToUserPage)
+    $("#interest-dropdown-row").hide();
   },
 
   removeInterest: function(e,data){
@@ -29,6 +30,7 @@ var UserInterests = {
   },
 
   autoComplete: function(e){
+    $("#interest-dropdown-row").show();
     var searchLetters   = $("#interest_name").val();
     var checkDBforInterest = new AjaxClient("get", "/interests/autocomplete")
     checkDBforInterest.request(searchLetters)
@@ -48,6 +50,9 @@ var UserInterests = {
     e.preventDefault();
     var interest = $(this).html()
     $('input#interest_name').val(interest)
+    $('#interest-dropdown-row').hide();
+    $("#add_interest").trigger('submit');
+    $("#interest-form").hide();
   },
   redirectToUserPage: function(e){
     window.location.replace("/")
