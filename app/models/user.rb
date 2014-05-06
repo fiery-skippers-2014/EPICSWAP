@@ -36,6 +36,10 @@ class User < ActiveRecord::Base
     UserSkill.less_than_max?(self)
   end
 
+  def missing_address?
+    self.street.nil?
+  end
+
   def self.all_with_skills
     skilled_users = User.find_users_with_skills
     skilled_users.map { |user| user.with_skills }
