@@ -6,7 +6,8 @@ body {
   width: 98vw;
   color: white;
   overflow: hidden;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  font-size: 3vh; }
 
 a {
   text-decoration: none; }
