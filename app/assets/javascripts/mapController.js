@@ -20,13 +20,21 @@ MapController.prototype = {
     for(var i = 0, d = data["users"].length; i < d; i++){
       this._createMarkerByUser(data["users"][i]);
     };
+    console.log("--------------_current_user in _onGetUsersInfoSuccess")
+    console.log(data['current_user'])
     this._reCenterMap(data["current_user"].latitude, data["current_user"].longitude);
   },
 
   _createMarkerByUser: function(userData){
+    console.log("--------------_userData in _createMarkerByUser")
+    console.log(userData)
+    console.log("--------------_userData[user] in _createMarkerByUser")
+    console.log(userData['user'])
     var latitude        = userData["user"].latitude;
     var longitude       = userData["user"].longitude;
     var category        = userData['category'];
+    console.log("--------------_userData[cate] in _createMarkerByUser")
+    console.log(userData['category'])
     var html            = this._buildMustacheTemplate(userData); //May run into an issue here of this taking too long to execute
     var currentMarker   = this._buildMarker(latitude, longitude, category);
     console.log("--------------html")
@@ -36,6 +44,7 @@ MapController.prototype = {
                  .bindPopup(html)
                  .openPopup();
     $(currentMarker).click(function(){this._reCenterMap(latitude, longitude)}.bind(this));
+    console.log('made it to the end of _createMarkerByUser')
   },
 
   _buildMustacheTemplate: function(userData){
