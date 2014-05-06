@@ -27,7 +27,7 @@ class SkillsController < ApplicationController
 
   def show
     @skill = Skill.find(params[:id])
-    redirect_to user_path(@user)
+    @sorted_users = @skill.sort_users_by_distance(current_user)
   end
 
   def destroy

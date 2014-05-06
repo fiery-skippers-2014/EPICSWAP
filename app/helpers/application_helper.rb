@@ -16,4 +16,19 @@ module ApplicationHelper
     interest = Interest.where('name = ?', skill).first
   end
 
+
+  #####
+
+  def num_users_by_skills(interest)
+   skilled_users = User.joins(:skills).where('skills.name = ?', interest).uniq.length
+  end
+
+  def find_users_by_skill(interest)
+   @skilled_users = User.joins(:skills).where('skills.name = ?', interest).uniq
+  end
+
+  def corresponding_skill(interest)
+    skill = Skill.where('name = ?', interest).first
+  end
+
 end

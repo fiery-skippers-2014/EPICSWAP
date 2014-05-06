@@ -1,4 +1,4 @@
-<h1><%= @interest.name.capitalize %></h1>
+<h2> <%= @skill.name.capitalize %></h2>
 <ul>
   <% @sorted_users.each do |user, distance| %>
     <li><%= link_to user.name, user_path(user) %> - <%= distance %> miles away</li>

@@ -2,7 +2,7 @@
 
   // SHARED
 
-  #site_intro_container, #login_container, #header, #map, #filter {
+  #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: $SITE_WIDTH;
     margin: 0.5vw;
     padding: 0.5vw;
@@ -31,5 +31,8 @@
 
   // MAP
 
-
+  #map_filter_menu {
+    bottom: 7vh;
+    height: 81.5vh;
+  }
 }
