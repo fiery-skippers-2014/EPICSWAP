@@ -14,6 +14,7 @@
 $STANDARD_FONT: 'Avenir';
 $HEADING_FONT: 'Lato';
 $STANDARD_FONT_COLOR: white;
+$STANDARD_FONT_SIZE: 3vh;
 $BACKGROUND_COLOR: black;
 $ACCENT_COLOR: #0085EF;
 $LOGO_SIZE: 5vh;
@@ -30,13 +31,14 @@ body {
   color: $STANDARD_FONT_COLOR;
   overflow: hidden;
   background-attachment: fixed;
+  font-size: $STANDARD_FONT_SIZE;
 }
 
 a {
   text-decoration: none;
 
   &:link, &:visited {
-    color: yellow;
+    color: $ACCENT_COLOR;
   }
 
   &:hover, &:active {

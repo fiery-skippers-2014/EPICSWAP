@@ -6,12 +6,13 @@ body {
   width: 98vw;
   color: white;
   overflow: hidden;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  font-size: 3vh; }
 
 a {
   text-decoration: none; }
   a:link, a:visited {
-    color: yellow; }
+    color: #0085ef; }
   a:hover, a:active {
     color: red; }
 
@@ -171,7 +172,7 @@ td {
 #new_interest {
   padding-left: 3vw; }
 
-a.delete-skill, a.delete-in {
+a.delete-skill, a.delete-interest {
   color: red;
   font-style: italic;
   font-size: 80%;
