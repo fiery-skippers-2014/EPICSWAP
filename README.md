@@ -18,3 +18,7 @@ Technologies:
 * LinkedIn OAuth
 * Facebook OAuth
 * Google Geocode API
+
+Workflow:
+
+!http://i.imgur.com/FkRfykU.png?1
