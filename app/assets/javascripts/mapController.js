@@ -69,30 +69,38 @@ MapController.prototype = {
   },
 
   _buildMarker: function(latitude, longitude, category){
-    if(category == "language"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
+    console.log('we made it to _buildMarker')
+     console.log('latitude below-------------------')
+    console.log(latitude)
+    console.log('longitude below-------------------')
+    console.log(longitude)
+    console.log('category below-------------------')
+    console.log(category)
+    // if(category == "language"){
+    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
 
-    }else if(category == "sport"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "17750D");
+    // }else if(category == "sport"){
+    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "17750D");
 
-    }else if(category == "dance"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "0C0A45");
+    // }else if(category == "dance"){
+    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "0C0A45");
 
-    }else if(category == "art"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "75391B");
+    // }else if(category == "art"){
+    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "75391B");
 
-    }else if(category == "cooking"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "fast-food", "72751B");
+    // }else if(category == "cooking"){
+    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "fast-food", "72751B");
 
-    }else if(category == "fitness"){
-       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "school", "A8236F");
+    // }else if(category == "fitness"){
+    //    return this.COOL_MARKER.styleMarker(latitude, longitude, category, "school", "A8236F");
 
-    }else if(category == "technology"){
-       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
+    // }else if(category == "technology"){
+    //    return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
 
-    }else{
-      return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, category, "heart", "548F79");
-    }
+    // }else{
+      return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, 'other', "heart", "548F79");
+    // }
+    console.log('we made it out of _buildMarker')
   },
 
   _reCenterMap: function(latitude, longitude){
