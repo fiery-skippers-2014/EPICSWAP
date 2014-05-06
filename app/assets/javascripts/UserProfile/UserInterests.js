@@ -5,18 +5,18 @@ var UserInterests = {
     $('a.delete-interest').on('ajax:success', this.removeInterest );
     $('a.delete-interest').on('ajax:error', this.showErrorInterest );
     $('form.new_interest input#interest_name').on('keyup', this.autoComplete.bind(this));
-    $('#interest_dropdown').on('click', 'li a', this.insertAutoComplete)
-    $('div.initial input.initial-interest-submit').on('click', this.redirectToUserPage)
+    $('#interest_dropdown').on('click', 'a', this.insertAutoComplete)
     $("#interest-dropdown-row").hide();
+    $('div.initial input.initial-interest-submit').on('click', this.redirectToUserPage)
   },
 
   removeInterest: function(e,data){
     var id = $(e.target).data('id')
-    $('li#interest_'+ id).remove()
+    $('tr#interest_'+ id).remove()
   },
 
   appendInterest: function(e, data){
-    $('ul.my-interests').append(data)
+    $('.my-interests').append(data)
     $('form.new_interest').each(function(){
       this.reset();
     });
@@ -54,6 +54,7 @@ var UserInterests = {
     $("#add_interest").trigger('submit');
     $("#interest-form").hide();
   },
+
   redirectToUserPage: function(e){
     window.location.replace("/")
   }

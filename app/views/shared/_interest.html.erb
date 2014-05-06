@@ -1,1 +1,9 @@
-<li><%= interest.name %></li>
+<tr id="interest_<%= interest.id %>">
+  <td><%= interest.name %></td>
+  <td>
+    <% unless corresponding_skill(interest.name).nil?  %>
+      (<%= link_to num_users_by_skills(interest.name),skill_path(corresponding_skill(interest.name))  %>)
+    <% end %>
+  </td>
+  <td><%= link_to 'delete', user_interest_path(@user, interest), remote: true, :method => :delete, class: 'delete-interest', id: "interest-#{interest.id}", :data => { :id => "#{interest.id}"} if current_user == @user %></td>
+</tr>
