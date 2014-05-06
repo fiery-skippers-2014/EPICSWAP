@@ -116,7 +116,12 @@ input, textarea, select {
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  font-size: 3vh; }
+  font-size: 4vh; }
+
+#map_filter_menu {
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 999;
+  position: absolute; }
 
 ul#filter_categories {
   list-style: none; }
@@ -128,7 +133,7 @@ span#menu_dropdown {
   cursor: pointer; }
 
 @media all and (orientation: portrait) {
-  #site_intro_container, #login_container, #header, #map, #filter {
+  #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: 96vw;
     margin: 1vw;
     padding: 1vw; }
@@ -139,9 +144,13 @@ span#menu_dropdown {
     background-position: center; }
 
   #site_intro_container, #login_container {
-    background-color: rgba(255, 255, 255, 0.5); } }
+    background-color: rgba(255, 255, 255, 0.5); }
+
+  #map_filter_menu {
+    bottom: 7vh;
+    height: 81vh; } }
 @media all and (orientation: landscape) {
-  #site_intro_container, #login_container, #header, #map, #filter {
+  #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: 98vw;
     margin: 0.5vw;
     padding: 0.5vw; }
@@ -159,4 +168,8 @@ span#menu_dropdown {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 40%, transparent 100%); }
 
   .stripe {
-    width: 39.2vw; } }
+    width: 39.2vw; }
+
+  #map_filter_menu {
+    bottom: 7vh;
+    height: 81.5vh; } }
