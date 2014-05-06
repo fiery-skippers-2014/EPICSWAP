@@ -1,3 +1,14 @@
+#user-page {
+  margin: 0 auto;
+  width: 75vw;
+  background-color: lighten($BACKGROUND_COLOR, 20%);
+  padding: 3vh 2vw;
+}
+
+.my-skills, .my-interests {
+  margin-left: 1vw;
+}
+
 #add_interest, #add_skill {
   margin-left: 2vw;
 }
@@ -12,13 +23,17 @@
 }
 
 .tagline {
-  font-style: italic;
   font-size: 90%;
   padding: 0.5vh 0;
+  font-variant: small-caps;
 }
 
 .description {
   font-size: 85%;
+}
+
+#bio {
+  vertical-align: top;
 }
 
 .user-header {
@@ -27,29 +42,27 @@
   padding-top: 3vh;
 }
 
-#user-profile-table {
-  vertical-align: middle;
-}
-
-#user-image-cell {
-  text-align: center;
-  margin-right: 2vw;
-}
-
 #user-image {
   @include border-radius(50%);
   margin-right: 1vw;
 }
 
-#edit-profile-link, #delete-profile-link {
-  text-align: right;
-  padding-right: 2.5vw;
+#rep-plus-button { // overwrite main.scss input styling
+  @include border-radius(0.25vw);
+  border-width: 0.1vw;
+  padding: 0.25vh 0.5vw;
+  margin-top: 0;
 }
 
 #add_interest_link, #add_skill_link {
-  padding-left: 2vw;
+  padding-left: 3vw;
   font-size: 85%;
   font-style: italic;
+}
+
+#user-functions {
+  font-size: 75%;
+  padding-right: 5vw;
 }
 
 #new_skill {
@@ -58,10 +71,6 @@
 
 #new_interest {
   padding-left: 3vw;
-}
-
-.user-page a {
-
 }
 
 a.delete-skill, a.delete-interest {
@@ -74,4 +83,9 @@ a.delete-skill, a.delete-interest {
 ul {
   list-style: none;
   padding-left: 2vw;
+}
+
+#map_button {
+  margin-top: 3vh;
+  margin: 0 auto;
 }

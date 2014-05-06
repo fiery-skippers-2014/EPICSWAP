@@ -1,10 +1,7 @@
-<p><%= @user.name %> Reputation</p>
-<p id="user-reputation"><%= @user.reputation %></p>
+<span>REP: <span id="user-reputation"><%= @user.reputation %></span></span>
 
 <% if reputation_given?(current_user, @user) %>
-  <p>You have already positvely affected <%= @user.name %>'s reputation.</p>
+  <p>You have already added to <%= @user.name %>'s reputation.</p>
 <% else %>
-  <%= form_for [@user, @reputation], remote: true do |f| %>
-    <%= f.submit 'Rep+' %>
-  <% end %>
+  <%= link_to "+1", user_reputations_path(@user), class: "new_reputation", id: "rep-plus-button", method: :post, remote: true %>
 <% end %>
