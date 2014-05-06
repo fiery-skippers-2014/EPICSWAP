@@ -1,0 +1,77 @@
+#add_interest, #add_skill {
+  margin-left: 2vw;
+}
+
+#interest-form, #skill-form {
+  margin-top: 2vh;
+}
+
+.user-name {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 90%;
+  padding: 0.5vh 0;
+}
+
+.description {
+  font-size: 85%;
+}
+
+.user-header {
+  font-weight: bold;
+  font-size: 115%;
+  padding-top: 3vh;
+}
+
+#user-profile-table {
+  vertical-align: middle;
+}
+
+#user-image-cell {
+  text-align: center;
+  margin-right: 2vw;
+}
+
+#user-image {
+  @include border-radius(50%);
+  margin-right: 1vw;
+}
+
+#edit-profile-link, #delete-profile-link {
+  text-align: right;
+  padding-right: 2.5vw;
+}
+
+#add_interest_link, #add_skill_link {
+  padding-left: 2vw;
+  font-size: 85%;
+  font-style: italic;
+}
+
+#new_skill {
+  padding-left: 3vw;
+}
+
+#new_interest {
+  padding-left: 3vw;
+}
+
+.user-page a {
+
+}
+
+a.delete-skill, a.delete-in {
+  color: red;
+  font-style: italic;
+  font-size: 80%;
+  padding-left: 1vw;
+}
+
+ul {
+  list-style: none;
+  padding-left: 2vw;
+}

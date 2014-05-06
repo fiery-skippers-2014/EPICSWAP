@@ -2,7 +2,7 @@
 
   // SHARED
 
-  #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
+  #container, #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: $SITE_WIDTH;
     margin: 0.5vw;
     padding: 0.5vw;
@@ -12,7 +12,7 @@
 
   body.welcome {
     background-image: url('/assets/skating_landscape.jpg');
-    background-size: auto 100vh;
+    @include background_size(auto 100vh);
     background-position: top right;
   }
 

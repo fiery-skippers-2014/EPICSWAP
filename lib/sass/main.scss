@@ -2,6 +2,13 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
 
+// MIXINS
+
+@import '__border_radius';
+@import '__background_size';
+@import '__background_image';
+@import '__transition';
+
 // CONSTANTS
 
 $STANDARD_FONT: 'Avenir';
@@ -25,8 +32,22 @@ body {
   background-attachment: fixed;
 }
 
+a {
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: yellow;
+  }
+
+  &:hover, &:active {
+    color: red;
+  }
+}
+
 #container {
   position: relative;
+  overflow: scroll;
+  height: $SITE_HEIGHT - $LOGO_SIZE - 2;
 }
 
 .heading {
@@ -38,11 +59,43 @@ body {
 }
 
 input, textarea, select {
-  color: black;
+  background-color: lighten($BACKGROUND_COLOR, 35%);
+  @include border-radius(0.5vw);
+  border-width: 0.25vw;
+  outline: none;
+  border-color: white;
+}
+
+textarea:hover, textarea:focus, input:hover, input:focus {
+  border-color: $ACCENT_COLOR;
+  box-shadow: 0 0 1vw $ACCENT_COLOR;
+  @include transition(box-shadow linear 0.2s);
+}
+
+input[type=submit] {
+  padding: 0.5vh 1vw;
+  margin-top: 0.5vh;
+}
+
+td {
+  padding: 0.5vh;
 }
 
 .hidden {
   display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.table_header {
+  font-weight: bold;
+  padding-right: 2vw;
 }
 
 // SVG

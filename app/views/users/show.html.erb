@@ -1,33 +1,47 @@
- <h1 id ="user_name"><%= @user.name %></h1>
-<img src="<%= @user.image %>">
-<% if current_user == @user %>
-  <%= link_to "Edit Profile", edit_user_path(@user), class: 'edit-profile-link'  %>
-  <%= link_to "Delete Profile", user_path, confirm: "Are you sure you want to delete your profile?", method: :delete %>
-  <div class='edit-user-form hidden'>
-    <%= render 'shared/edit_profile' %>
+<div id="container" class="user-page">
+  <div id="user-profile">
+    <table id="user-profile-table">
+      <tr>
+        <td id="user-image-cell"><img id="user-image" src="<%= @user.image %>"></td>
+        <td>
+          <div class="user-name"><%= @user.name %></div>
+          <div class="tagline"><%= @user.tagline %></div>
+          <div class="description">Bio: <%= @user.description %></div>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <% if current_user == @user %>
+            <span id="edit-profile-link"><%= link_to "Edit Profile", edit_user_path(@user), class: 'edit-profile-link'  %></span>
+            <span id="delete-profile-link"><%= link_to "Delete Profile", user_path, confirm: "Are you sure you want to delete your profile?", method: :delete %></span>
+            <div class='edit-user-form hidden'>
+              <%= render 'shared/edit_profile' %>
+            </div>
+          <% else %>
+
+              <p><%= @user.name %> is <%= @distance %> miles away.</p>
+              <%= render '/shared/reputation' %>
+
+              <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
+          <% end %>
+        </td>
+      </tr>
+    </table>
   </div>
-<% else %>
 
-    <p><%= @user.name %> is <%= @distance %> miles away.</p>
-    <%= render '/shared/reputation' %>
+  <%= render 'shared/user_skills' %>
+    <% if current_user == @user && @user.less_than_max? %>
+      <%= link_to 'Add a Skill', '#', id: 'add_skill_link' %>
+      <%= render 'shared/skills_form' %>
+    <% elsif current_user == @user%>
+      <p>You can have a maximum of 3 skills</p>
+    <% end %>
 
-    <p><%= mail_to @user.email, "Email #{@user.name}", subject: "EpicSwap - Meetup Request" %></p>
-<% end %>
+    <%= render 'shared/user_interests' %>
 
-<h3 class="tagline"><%= @user.tagline %></h3>
-<p class="description"><%= @user.description %></p>
-
-<%= render 'shared/user_skills' %>
-  <% if current_user == @user && @user.less_than_max? %>
-    <%= link_to 'Add a Skill', '#', id: 'add_skill_link' %>
-    <%= render 'shared/skills_form' %>
-  <% elsif current_user == @user%>
-    <p>You can have a maximum of 3 skills</p>
-  <% end %>
-
-  <%= render 'shared/user_interests' %>
-
-  <% if current_user == @user %>
-    <%= link_to 'Add a Interest', '#', id: 'add_interest_link' %>
-    <%= render 'shared/interests_form' %>
-  <% end %>
+    <% if current_user == @user %>
+      <%= link_to 'Add a Interest', '#', id: 'add_interest_link' %>
+      <%= render 'shared/interests_form' %>
+    <% end %>
+</div>

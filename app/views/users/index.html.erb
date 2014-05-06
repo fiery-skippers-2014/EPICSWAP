@@ -1,13 +1,9 @@
+  <div id="map"></div>
+  <%= render '/shared/map_filter' %>
 
-<div id="map"></div>
-<%= render '/shared/map_filter' %>
-
-<div id="filter">
-  FILTER
-</div>
-
-<%# <!-- TEMPLATES --> %>
-
+  <div id="filter">
+    SEARCH
+  </div>
 <script id="userMarkerContentTemplate" type="text/x-handlebars-template">
     <img src="{{profileImage}}" alt={{name}}><br>
     <a href="/users/{{userId}}">{{Name}}</a></b><br>

@@ -1,10 +1,17 @@
-
-<ul class='interest-form hidden'>
-  <%= form_for [@user, @interest], remote: true do |f| %>
-    <li><%= f.label :name, 'Interest'%>
-      <%= f.text_field :name, placeholder: 'What do you want to learn?' %></li>
-      <div class='interest_dropdown'>
-      </div>
-      <li><%= f.submit 'Add Interest', id: 'add_interest', class: 'initial-interest-submit' %></li>
-  <% end %>
-</ul>
+<%= form_for [@user, @interest], remote: true do |f| %>
+  <table id="interest-form" class="hidden">
+    <tr>
+      <td><span class="table_header"><%= f.label :name, "Interest"%></span></td>
+      <td>
+        <%= f.text_field :name, placeholder: "What do you want to learn?" %>
+        <div id="interest_errors"></div>
+      </td>
+      <td><%= f.submit "Add Interest", id: "add_interest", class: "initial-interest-submit" %></td>
+    </tr>
+    <tr id="interest-dropdown-row">
+      <td>&nbsp;</td>
+      <td><div id="interest_dropdown"></div></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+<% end %>

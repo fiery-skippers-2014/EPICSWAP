@@ -4,7 +4,7 @@ feature 'view a user profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
   before(:each) do
-    ApplicationController.any_instance.stub(:current_user) { user }
+    stub_current_user(user)
   end
   scenario 'a logged in user can view their profile page' do
     visit root_path
@@ -55,7 +55,7 @@ end
 
 feature 'skills on the user profile' do
   before(:each) do
-    ApplicationController.any_instance.stub(:current_user) { user }
+    stub_current_user(user)
   end
   let!(:user) { FactoryGirl.create :user }
   scenario 'a user can add skills they can teach', js: true do
@@ -95,24 +95,11 @@ feature 'skills on the user profile' do
   end
 end
 
-# feature 'add number of interested users for a skill' do
-#   let!(:user) {FactoryGirl.create :user}
-#   let!(:skill) {FactoryGirl.create :skill}
-#   let!(:interest) {FactoryGirl.create :interest}
-#   skill_id: skill.id, interest_id: interest.id
-#   skill_id = interest_id
-#   scenario 'link from skill on users profile to interest page' do
-#   visit user_path(user)
-#   click_on num_users_by_interests(skill)
-#   expect(page).to eq skill.name
-#   end
-# end
-
 feature 'interests on the user profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
   before(:each) do
-    ApplicationController.any_instance.stub(:current_user) { user }
+    stub_current_user(user)
   end
 
   scenario 'a user can add interests they can teach', js: true  do
@@ -151,12 +138,10 @@ feature 'edit profile' do
   let!(:user) { FactoryGirl.create :user }
   let!(:second_user) { FactoryGirl.create :user }
 
-
   before(:each) do
-    ApplicationController.any_instance.stub(:current_user) { user }
-
-
+    stub_current_user(user)
   end
+
   scenario 'a logged in user can edit' do
     Location.should_receive(:geocode) {[37.8010187, -122.412323]}
     visit user_path(user)
@@ -178,7 +163,7 @@ feature 'delete profile' do
   let!(:second_user) { FactoryGirl.create :user }
 
   before(:each) do
-    ApplicationController.any_instance.stub(:current_user) { user }
+    stub_current_user(user)
   end
   scenario 'a logged in user can delete their profile' do
     visit user_path(user)

@@ -5,8 +5,9 @@ var UserInterests = {
     $('a.delete-interest').on('ajax:success', this.removeInterest );
     $('a.delete-interest').on('ajax:error', this.showErrorInterest );
     $('form.new_interest input#interest_name').on('keyup', this.autoComplete.bind(this));
-    $('div.interest_dropdown').on('click', 'li a', this.insertAutoComplete)
+    $('#interest_dropdown').on('click', 'li a', this.insertAutoComplete)
     $('div.initial input.initial-interest-submit').on('click', this.redirectToUserPage)
+    $("#interest-dropdown-row").hide();
   },
 
   removeInterest: function(e,data){
@@ -23,10 +24,13 @@ var UserInterests = {
   },
 
   appendError: function(e, data){
-    $('ul.my-interests').append(data)
+    console.log('error')
+    console.log(data.responseText)
+    $('#interest_errors').html(data.responseText)
   },
 
   autoComplete: function(e){
+    $("#interest-dropdown-row").show();
     var searchLetters   = $("#interest_name").val();
     var checkDBforInterest = new AjaxClient("get", "/interests/autocomplete")
     checkDBforInterest.request(searchLetters)
@@ -35,7 +39,7 @@ var UserInterests = {
   },
 
   onDataCompleteSuccess: function(data){
-    $('div.interest_dropdown').html(data);
+    $('#interest_dropdown').html(data);
   },
 
   onDataCompleteFail: function(data){
@@ -46,6 +50,9 @@ var UserInterests = {
     e.preventDefault();
     var interest = $(this).html()
     $('input#interest_name').val(interest)
+    $('#interest-dropdown-row').hide();
+    $("#add_interest").trigger('submit');
+    $("#interest-form").hide();
   },
   redirectToUserPage: function(e){
     window.location.replace("/")
