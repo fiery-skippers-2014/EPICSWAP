@@ -1,12 +1,16 @@
-<ul class='skill-form hidden'>
-  <%= form_for [@user, @skill], remote: true do |f| %>
-    <li><%= f.label :category %>
-      <%= f.select(:category_id, @categories)%>
-    </li>
-    <li><%= f.label :name, 'Skill' %>
-      <%= f.text_field :name, placeholder: "What can you teach?" %></li>
-      <div class='skill_dropdown'>
-      </div>
-    <li><%= f.submit 'Add Skill', id: 'add_skill' %></li>
-  <% end %>
-</ul>
+<%= form_for [@user, @skill], remote: true do |f| %>
+  <table id="skill-form" class="hidden">
+    <tr>
+      <td><span class="table_header"><%= f.label :category %></span></td>
+      <td colspan="2"><%= f.select(:category_id, @categories)%></td>
+    <tr>
+    <tr>
+      <td><span class="table_header"><%= f.label :name, "Skill" %></span></td>
+      <td>
+        <%= f.text_field :name, placeholder: "What can you teach?" %>
+        <div id="skill_dropdown"></div>
+      </td>
+      <td><%= f.submit "Add Skill", id: "add_skill" %></td>
+    </tr>
+  </table>
+<% end %>

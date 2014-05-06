@@ -5,7 +5,7 @@ var UserSkills = {
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
     $('form.new_skill input#skill_name').on('keyup', this.autoComplete.bind(this))
-    $('div.skill_dropdown').on('click', 'li a', this.insertAutoComplete)
+    $('#skill_dropdown').on('click', 'li a', this.insertAutoComplete)
   },
   removeSkill: function(e,data){
     var id = $(e.target).data('id');
@@ -24,7 +24,7 @@ var UserSkills = {
   },
 
   appendError: function(e, data, f, g){
-    $('ul.skill-form').prepend(data)
+    $('#skill-form').prepend(data)
   },
 
   showError: function(e, data){
@@ -40,7 +40,7 @@ var UserSkills = {
   },
 
   onDataCompleteSuccess: function(data){
-    $('div.skill_dropdown').html(data)
+    $('#skill_dropdown').html(data)
   },
 
   onDataCompleteFail: function(data){

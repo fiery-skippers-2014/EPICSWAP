@@ -25,8 +25,22 @@ body {
   background-attachment: fixed;
 }
 
+a {
+  text-decoration: none;
+
+  &:link, &:visited {
+    color: yellow;
+  }
+
+  &:hover, &:active {
+    color: red;
+  }
+}
+
 #container {
   position: relative;
+  overflow: scroll;
+  height: $SITE_HEIGHT - $LOGO_SIZE - 2;
 }
 
 .heading {
@@ -41,8 +55,25 @@ input, textarea, select {
   color: black;
 }
 
+td {
+  padding: 0.5vh;
+}
+
 .hidden {
   display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.table_header {
+  font-weight: bold;
+  padding-right: 2vw;
 }
 
 // SVG
