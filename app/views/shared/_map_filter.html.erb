@@ -2,7 +2,7 @@
   <p>Click to Turn off a Category</p>
   <ul id='filter_categories'>
     <% @categories.each do |category|  %>
-      <li id="catetgory_<%= category.id %>"><%=link_to category.name, "#", data: {title: "#{category.name}"}, class: 'filter_link' %></li>
+      <li id="catetgory_<%= category.id %>"><%=link_to category.name, "#", data: {title: "#{category.name}"}, class: 'filter_link check_mark' %></li>
     <% end %>
   </ul>
 </div>
