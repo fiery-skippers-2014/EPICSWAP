@@ -9,7 +9,9 @@ var MapFilter = {
     $('div#map_filter_menu').slideToggle();
   },
   filterCategories: function(e){
+    e.preventDefault()
     var cat_title = $(e.target).data('title')
+    $('[title=' + cat_title + ']').toggle()
 
   }
 };
