@@ -98,7 +98,7 @@ MapController.prototype = {
     //    return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
 
     // }else{
-      return this.COOL_MARKER.categoryDEFAULT(latitude, longitude, 'other', "heart", "548F79");
+      return this.COOL_MARKER.styleMarker(latitude, longitude, 'other', "heart", "548F79");
     // }
     console.log('we made it out of _buildMarker')
   },
