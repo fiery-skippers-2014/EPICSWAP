@@ -10,7 +10,7 @@ class SkillsController < ApplicationController
     @skill = Skill.find_or_create_by_name(skill_name)
 
     if @skill.category_id == nil && @skill.name != nil
-      @skill.update_attribute("category_id", params[:skill][:category_id])
+      @skill.update_attribute("category_id", category_id)
     end
 
     if @skill.save
