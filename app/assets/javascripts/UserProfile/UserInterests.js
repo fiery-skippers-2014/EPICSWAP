@@ -5,7 +5,7 @@ var UserInterests = {
     $('a.delete-interest').on('ajax:success', this.removeInterest );
     $('a.delete-interest').on('ajax:error', this.showErrorInterest );
     $('form.new_interest input#interest_name').on('keyup', this.autoComplete.bind(this));
-    $('div.interest_dropdown').on('click', 'li a', this.insertAutoComplete)
+    $('#interest_dropdown').on('click', 'li a', this.insertAutoComplete)
     $('div.initial input.initial-interest-submit').on('click', this.redirectToUserPage)
   },
 
@@ -35,7 +35,7 @@ var UserInterests = {
   },
 
   onDataCompleteSuccess: function(data){
-    $('div.interest_dropdown').html(data);
+    $('#interest_dropdown').html(data);
   },
 
   onDataCompleteFail: function(data){

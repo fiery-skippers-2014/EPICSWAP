@@ -1,16 +1,27 @@
-<ul>
-  <%= form_for @user, remote: true do |f| %>
-    <li><%= f.label :street %>
-      <%= f.text_field :street, required: true %></li>
-      <li><%= f.label :city %>
-      <%= f.text_field :city, required: true %></li>
-      <li><%= f.label :state %>
-      <%= f.text_field :state, required: true %></li>
-      <li><%= f.label :tagline, :size => '140' %>
-      <%= f.text_field :tagline %></li>
-      <li><%= f.label :description, "Bio" %>
-      <%= f.text_area :description, cols: 20, rows: 4 %></li>
-      <li>
-      <%= f.submit  %></li>
-  <% end %>
-</ul>
+<%= form_for @user, remote: true do |f| %>
+  <table>
+    <tr>
+      <td><span class="table_header"><%= f.label :street %></span></td>
+      <td><%= f.text_field :street, required: true %></td>
+    </tr>
+    <tr>
+      <td><span class="table_header"><%= f.label :city %></span></td>
+      <td><%= f.text_field :city, required: true %></td>
+    </tr>
+    <tr>
+      <td><span class="table_header"><%= f.label :state %></span></td>
+      <td><%= f.text_field :state, required: true %></td>
+    </tr>
+    <tr>
+      <td><span class="table_header"><%= f.label :tagline, :size => '140' %></span></td>
+      <td><%= f.text_field :tagline %></td>
+    </tr>
+    <tr>
+      <td><span class="table_header"><%= f.label :description, "Bio" %></span></td>
+      <td><%= f.text_area :description, cols: 35, rows: 4 %></td>
+    </tr>
+    <tr>
+      <td class="center" colspan="2"><%= f.submit  %></td>
+    </tr>
+  </table>
+<% end %>

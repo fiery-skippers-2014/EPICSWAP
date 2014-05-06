@@ -8,8 +8,17 @@ body {
   overflow: hidden;
   background-attachment: fixed; }
 
+a {
+  text-decoration: none; }
+  a:link, a:visited {
+    color: yellow; }
+  a:hover, a:active {
+    color: red; }
+
 #container {
-  position: relative; }
+  position: relative;
+  overflow: scroll;
+  height: 91vh; }
 
 .heading {
   font-family: "Lato"; }
@@ -20,8 +29,21 @@ body {
 input, textarea, select {
   color: black; }
 
+td {
+  padding: 0.5vh; }
+
 .hidden {
   display: none; }
+
+.center {
+  text-align: center; }
+
+.right {
+  text-align: right; }
+
+.table_header {
+  font-weight: bold;
+  padding-right: 2vw; }
 
 .ontop {
   z-index: 1000; }
@@ -75,6 +97,58 @@ input, textarea, select {
 .leaflet-bar {
   background-color: gray; }
 
+#add_interest, #add_skill {
+  margin-left: 2vw; }
+
+#interest-form, #skill-form {
+  margin-top: 2vh; }
+
+.user-name {
+  font-size: 120%;
+  font-weight: bold; }
+
+.tagline {
+  font-style: italic;
+  font-size: 90%;
+  padding: 0.5vh 0; }
+
+.description {
+  font-size: 85%; }
+
+.user-header {
+  font-weight: bold;
+  font-size: 115%;
+  padding-top: 3vh; }
+
+#user-profile-table {
+  vertical-align: middle; }
+
+#user-image-cell {
+  text-align: center;
+  margin-right: 2vw; }
+
+#user-image {
+  border-radius: 50%; }
+
+#edit-profile-link, #delete-profile-link {
+  text-align: right;
+  padding-right: 2.5vw; }
+
+#add_interest_link, #add_skill_link {
+  padding-left: 2vw;
+  font-size: 85%;
+  font-style: italic; }
+
+a[class^=delete], a[id^=delete] {
+  color: red;
+  font-style: italic;
+  font-size: 80%;
+  padding-left: 1vw; }
+
+ul {
+  list-style: none;
+  padding-left: 2vw; }
+
 #header, #filter {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5); }
@@ -92,7 +166,9 @@ input, textarea, select {
   height: 4vh;
   position: fixed;
   bottom: 0vh;
-  font-size: 3.5vh; }
+  font-size: 3.5vh;
+  cursor: pointer;
+  cursor: hand; }
 
 #dropdown_menu {
   position: absolute;
@@ -133,7 +209,7 @@ span#menu_dropdown {
   cursor: pointer; }
 
 @media all and (orientation: portrait) {
-  #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
+  #container, #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: 96vw;
     margin: 1vw;
     padding: 1vw; }
@@ -150,7 +226,7 @@ span#menu_dropdown {
     bottom: 7vh;
     height: 81vh; } }
 @media all and (orientation: landscape) {
-  #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
+  #container, #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: 98vw;
     margin: 0.5vw;
     padding: 0.5vw; }
