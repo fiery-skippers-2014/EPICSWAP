@@ -1,9 +1,6 @@
 module OmniauthMacros
   require 'spec_helper'
   def mock_auth_hash
-    # The mock_auth configuration allows you to set per-provider (or default)
-    # authentication hashes to return during integration testing.
-    #https://gist.github.com/kinopyo/1338738
     OmniAuth.config.mock_auth[:facebook] = OmniAuth::AuthHash.new({
       'provider' => 'facebook',
       'uid' => '123545',
@@ -32,6 +29,6 @@ module OmniauthMacros
         'secret' => 'mock_secret',
         'expires_at' => 946688400
       }
-    })    
+    })
   end
 end

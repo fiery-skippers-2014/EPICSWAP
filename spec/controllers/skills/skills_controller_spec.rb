@@ -18,12 +18,15 @@ describe SkillsController do
     end
   end
 
-  # context '#destroy' do
-  #   let!(:skill) { FactoryGirl.create :skill }
-  #   it 'deletes a skill' do
-  #     expect{
-  #       delete :destroy, user_id: user.id, id: skill.id
-  #     }.to change { UserSkill.count }.by(-1)
-  #   end
-  # end
+  context '#destroy' do #ask Shadi
+    let!(:user) { FactoryGirl.create :user_with_skill}
+    let(:skill) { user.skills.first }
+    it 'deletes a skill' do
+      stub_current_user(user)
+      expect{
+        delete :destroy, :id => skill
+      }.to change { UserSkill.count }.by(-1)
+      expect(user.reload.skills).to_not include(skill)
+    end
+  end
 end

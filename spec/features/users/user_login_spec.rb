@@ -1,12 +1,11 @@
 require 'spec_helper'
 
-# in spec/requests/top_spec.rb
 describe "access users page" do
   it "can sign in user with Facebook account" do
     visit '/'
     mock_auth_hash
     page.find_by_id('facebook_button').click
-    expect(page).to have_content("mockuser")  # user name
+    expect(page).to have_content("mockuser")
   end
 
   it "can handle authentication error" do

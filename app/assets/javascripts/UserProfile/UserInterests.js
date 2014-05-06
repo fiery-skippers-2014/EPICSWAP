@@ -24,7 +24,9 @@ var UserInterests = {
   },
 
   appendError: function(e, data){
-    $('ul.my-interests').append(data)
+    console.log('error')
+    console.log(data.responseText)
+    $('#interest_errors').html(data.responseText)
   },
 
   autoComplete: function(e){

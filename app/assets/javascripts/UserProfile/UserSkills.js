@@ -25,7 +25,9 @@ var UserSkills = {
   },
 
   appendError: function(e, data, f, g){
-    $('#skill-form').prepend(data)
+    console.log('error')
+    console.log(data.responseText)
+    $('#skill_errors').html(data.responseText)
   },
 
   showError: function(e, data){
