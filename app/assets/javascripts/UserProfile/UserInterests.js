@@ -7,7 +7,7 @@ var UserInterests = {
     $('form.new_interest input#interest_name').on('keyup', this.autoComplete.bind(this));
     $('#interest_dropdown').on('click', 'a', this.insertAutoComplete)
     $("#interest-dropdown-row").hide();
-    $('div.initial input.initial-interest-submit').on('click', this.redirectToUserPage)
+    $('div.initial input.initial-interest-submit').on('submit', this.redirectToUserPage)
   },
 
   removeInterest: function(e,data){
