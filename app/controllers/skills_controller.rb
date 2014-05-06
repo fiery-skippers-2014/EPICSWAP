@@ -37,7 +37,7 @@ class SkillsController < ApplicationController
 
   def autocomplete
     word = params.keys.first.downcase
-    word = "#{word}%"
+    word = "%#{word}%"
     @words = Skill.where("name like ?", word)
     render partial: 'shared/autocomplete', locals: { words: @words }
   end
