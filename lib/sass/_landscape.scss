@@ -12,7 +12,7 @@
 
   body.welcome {
     background-image: url('/assets/skating_landscape.jpg');
-    background-size: auto 100vh;
+    @include background_size(auto 100vh);
     background-position: top right;
   }
 
