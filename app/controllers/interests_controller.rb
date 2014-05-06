@@ -29,7 +29,7 @@ class InterestsController < ApplicationController
 
   def autocomplete #Ask SHADI ABOUT THIS
     word = params.keys.first.downcase
-    word = "#{word}%"
+    word = "%#{word}%"
     @words = Interest.where("name like ?", word)
     render partial: 'shared/autocomplete', locals: { words: @words }
   end
