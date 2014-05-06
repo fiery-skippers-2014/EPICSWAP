@@ -27,7 +27,28 @@ a {
   height: 5vh; }
 
 input, textarea, select {
-  color: black; }
+  background-color: #595959;
+  -webkit-border-radius: 0.5vw;
+  -moz-border-radius: 0.5vw;
+  -ms-border-radius: 0.5vw;
+  -o-border-radius: 0.5vw;
+  border-radius: 0.5vw;
+  border-width: 0.25vw;
+  outline: none;
+  border-color: white; }
+
+textarea:hover, textarea:focus, input:hover, input:focus {
+  border-color: #0085ef;
+  box-shadow: 0 0 1vw #0085ef;
+  -webkit-transition: box-shadow linear 0.2s;
+  -moz-transition: box-shadow linear 0.2s;
+  -ms-transition: box-shadow linear 0.2s;
+  -o-transition: box-shadow linear 0.2s;
+  transition: box-shadow linear 0.2s; }
+
+input[type=submit] {
+  padding: 0.5vh 1vw;
+  margin-top: 0.5vh; }
 
 td {
   padding: 0.5vh; }
@@ -128,7 +149,12 @@ td {
   margin-right: 2vw; }
 
 #user-image {
-  border-radius: 50%; }
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin-right: 1vw; }
 
 #edit-profile-link, #delete-profile-link {
   text-align: right;
@@ -139,7 +165,13 @@ td {
   font-size: 85%;
   font-style: italic; }
 
-a[class^=delete], a[id^=delete] {
+#new_skill {
+  padding-left: 3vw; }
+
+#new_interest {
+  padding-left: 3vw; }
+
+a.delete-skill, a.delete-in {
   color: red;
   font-style: italic;
   font-size: 80%;
@@ -216,6 +248,10 @@ span#menu_dropdown {
 
   body.welcome {
     background-image: url("/assets/skating_portrait.jpg");
+    -webkit-background-size: 100vh;
+    -moz-background-size: 100vh;
+    -ms-background-size: 100vh;
+    -o-background-size: 100vh;
     background-size: 100vh;
     background-position: center; }
 
@@ -233,6 +269,10 @@ span#menu_dropdown {
 
   body.welcome {
     background-image: url("/assets/skating_landscape.jpg");
+    -webkit-background-size: auto 100vh;
+    -moz-background-size: auto 100vh;
+    -ms-background-size: auto 100vh;
+    -o-background-size: auto 100vh;
     background-size: auto 100vh;
     background-position: top right; }
 

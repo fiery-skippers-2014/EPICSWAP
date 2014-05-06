@@ -5,16 +5,17 @@ var UserSkills = {
     $('a.delete-skill').on('ajax:success', this.removeSkill )
     $('a.delete-skill').on('ajax:error', this.showError )
     $('form.new_skill input#skill_name').on('keyup', this.autoComplete.bind(this))
-    $('#skill_dropdown').on('click', 'li a', this.insertAutoComplete)
+    $('#skill_dropdown').on('click', 'tr a', this.insertAutoComplete)
+    $("#skill-dropdown-row").hide();
   },
   removeSkill: function(e,data){
     var id = $(e.target).data('id');
-    $('li#skill_'+ id).remove();
+    $('tr#skill_'+ id).remove();
   },
 
   appendSkill: function(e, data){
     console.log(data)
-    $('ul.my-skills').append(data);
+    $('.my-skills').append(data);
     $('form.new_skill').each(function(){
       this.reset();
     });
@@ -32,6 +33,7 @@ var UserSkills = {
   },
 
   autoComplete: function(e){
+    $("#skill-dropdown-row").show();
     var searchLetters   = $("#skill_name").val();
     var checkDBforSkill = new AjaxClient("get", "/skills/autocomplete")
     checkDBforSkill.request(searchLetters)
@@ -51,5 +53,8 @@ var UserSkills = {
     e.preventDefault();
     var skill = $(this).html()
     $('input#skill_name').val(skill)
+    $("#skill-dropdown-row").hide();
+    $("#add_skill").trigger('submit');
+    $("#skill-form").hide();
   }
 }
