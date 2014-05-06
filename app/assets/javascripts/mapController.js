@@ -76,30 +76,27 @@ MapController.prototype = {
     console.log(longitude)
     console.log('category below-------------------')
     console.log(category)
-    // if(category == "language"){
-    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
+    if(category == "language"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
 
-    // }else if(category == "sport"){
-    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "17750D");
+    }else if(category == "sport"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "17750D");
 
-    // }else if(category == "dance"){
-    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "0C0A45");
+    }else if(category == "finance"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "0C0A45");
 
-    // }else if(category == "art"){
-    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "75391B");
+    }else if(category == "arts"){
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "75391B");
 
-    // }else if(category == "cooking"){
-    //   return this.COOL_MARKER.styleMarker(latitude, longitude, category, "fast-food", "72751B");
+    }else if(category == "fitness"){
+       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "school", "A8236F");
 
-    // }else if(category == "fitness"){
-    //    return this.COOL_MARKER.styleMarker(latitude, longitude, category, "school", "A8236F");
+    }else if(category == "technology"){
+       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
 
-    // }else if(category == "technology"){
-    //    return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
-
-    // }else{
+    }else{
       return this.COOL_MARKER.styleMarker(latitude, longitude, 'other', "heart", "548F79");
-    // }
+    }
     console.log('we made it out of _buildMarker')
   },
 
