@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.leaflet-control-zoom, .leaflet-bar, .leaflet-control, .leaflet-top, .leaflet-bottom {
+  z-index: 2;
+}
+
 .leaflet-bar {
   background-color: gray;
 }

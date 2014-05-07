@@ -72,9 +72,6 @@ td {
   font-weight: bold;
   padding-right: 2vw; }
 
-.ontop {
-  z-index: 1000; }
-
 #epicswap_logo_top {
   fill: #000000; }
 
@@ -120,6 +117,9 @@ td {
 #map {
   height: 98vh;
   overflow: hidden; }
+
+.leaflet-control-zoom, .leaflet-bar, .leaflet-control, .leaflet-top, .leaflet-bottom {
+  z-index: 2; }
 
 .leaflet-bar {
   background-color: gray; }
@@ -279,7 +279,7 @@ ul {
 #dropdown_menu {
   position: absolute;
   background-color: white;
-  z-index: 1000;
+  z-index: 4;
   list-style: none;
   float: right;
   right: 1vw;
@@ -303,7 +303,6 @@ ul {
 
 #map_filter_menu {
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 999;
   position: absolute; }
 
 ul#filter_categories {
@@ -338,7 +337,8 @@ span#menu_dropdown {
 
   #map_filter_menu {
     bottom: 7vh;
-    height: 81vh; }
+    height: 81vh;
+    z-index: 3; }
 
   #user-page {
     width: 85vw; }
@@ -375,7 +375,8 @@ span#menu_dropdown {
 
   #map_filter_menu {
     bottom: 7vh;
-    height: 81.5vh; }
+    height: 81.5vh;
+    z-index: 3; }
 
   #user-page {
     width: 65vw; }
