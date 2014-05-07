@@ -7,11 +7,15 @@ var UserSkills = {
     $('form.new_skill input#skill_name').on('keyup', this.autoComplete.bind(this))
     $('#skill_dropdown').on('click', 'a', this.insertAutoComplete)
     $("#skill-dropdown-row").hide();
+    $("table.my-skills").on('click', 'a.delete-skill', this.removeSkill );
   },
 
   removeSkill: function(e,data){
+    console.log(data)
     var id = $(e.target).data('id');
     $('tr#skill_'+ id).remove();
+    $('.max_skills').html("");
+    $('#add_skill_link').show();
   },
 
   appendSkill: function(e, data){
@@ -20,12 +24,10 @@ var UserSkills = {
     $('form.new_skill').each(function(){
       this.reset();
     });
-    $('div.skill_dropdown').html('');
+    $('div.skill_dropdown').hide();
     $('div.initial.add-skill').hide()
     $('div.initial.add-interests').slideDown()
-    if (numSkills == 2) {
-      this.maxSkills()
-    };
+    if (numSkills == 2) { this.maxSkills() }
   },
 
   appendError: function(e, data, f, g){
