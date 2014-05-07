@@ -42,3 +42,25 @@
 #site_name, #tagline, #login_text {
   color: black;
 }
+
+#more-info-link {
+  font-style: italic;
+}
+
+#more-info {
+  margin-top: 1.75vh;
+  display: none;
+  color: #333;
+  font-size: 2.75vh;
+  font-style: italic;
+}
+
+ a#more-info-link:link,
+ a#more-info-link:visited {
+  color: $ACCENT_COLOR;
+ }
+
+ a#more-info-link:hover,
+ a#more-info-link:active {
+  color: lighten($ACCENT_COLOR, 12%);
+}

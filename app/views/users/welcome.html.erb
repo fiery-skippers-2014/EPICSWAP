@@ -7,6 +7,8 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <link rel="stylesheet" type="text/css" href="assets/main.css">
 
+    <%= javascript_include_tag "application" %>
+
     <title>EPIC SWAP</title>
   </head>
 
@@ -15,7 +17,10 @@
       <div id="site_intro" class="stripe">
         <div id="site_name" class="heading">EPIC SWAP</div>
         <object id="logo" class="welcome" type="image/svg+xml" data="assets/epicswap.svg"></object>
-        <div id="tagline" class="heading">Sharing skills, knowledge, and building community</div>
+        <div id="tagline" class="heading">share skills &amp; build community</div>
+
+        <%= link_to "click to learn more", root_path, id: "more-info-link" %>
+        <div id="more-info">Ever wanted to learn to whitewater kayak? EPIC SWAP is a place for people who love to teach and those who want to learn. EPIC SWAP is designed to introduce you to like minded individuals in your area and quickly get you out learning and teaching new things.<br><br>We value privacy and only use your social network login to get your photo. No passwords will be saved.</div>
       </div>
     </div>
     <div id="login_container">
