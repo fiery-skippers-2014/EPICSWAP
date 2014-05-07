@@ -24,6 +24,7 @@ var UserSkills = {
     $('form.new_skill').each(function(){
       this.reset();
     });
+    $("#skill-form").hide();
     $('div.skill_dropdown').hide();
     $('div.initial.add-skill').hide()
     $('div.initial.add-interests').slideDown()
@@ -63,7 +64,7 @@ var UserSkills = {
     $('input#skill_name').val(skill)
     $("#skill-dropdown-row").hide();
     $("#add_skill").trigger('submit');
-    $("#skill-form").hide();
+
   },
   maxSkills: function(){
     $('#add_skill_link').hide()
