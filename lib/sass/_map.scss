@@ -7,4 +7,43 @@
   background-color: gray;
 }
 
+.leaflet-popup-tip {
+  border-top-color: rgba(70, 73, 78, 0.7);
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+  background-color: rgba(70, 73, 78, 0.85);
+  font-weight: 100;
+  letter-spacing: 0.1vw;
+  font-size: 2.5vh;
+  line-height: 2.4vh;
+  color: rgba(201, 201, 201, 1);
+}
+
+.map-user-image {
+  @include border-radius(50%);
+  height: 8vh;
+}
+
+.map-user-name {
+  font-size: 110%;
+  padding-bottom: 0.2vh;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  @include background-image-linear-gradient(left, rgba(180,180,180,0), rgba(180,180,180,0.5));
+}
+
+.teach-tagline {
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.popup-skills {
+  text-transform: capitalize;
+}
+
 // <a href='https://www.mapbox.com/about/maps/' target='_blank'>Maps &copy; Mapbox &copy; OpenStreetMap</a>

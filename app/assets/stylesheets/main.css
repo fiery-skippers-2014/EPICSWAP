@@ -1,13 +1,18 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 body {
   background-color: black;
-  font-family: "Avenir";
+  font-family: "Lato";
   height: 98vh;
   width: 98vw;
   color: white;
   overflow: hidden;
   background-attachment: fixed;
   font-size: 3vh; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
 
 a {
   text-decoration: none; }
@@ -29,11 +34,11 @@ a {
 
 input, textarea, select {
   background-color: #595959;
-  -webkit-border-radius: 0.5vw;
-  -moz-border-radius: 0.5vw;
-  -ms-border-radius: 0.5vw;
-  -o-border-radius: 0.5vw;
-  border-radius: 0.5vw;
+  -webkit-border-radius: 0.25vw;
+  -moz-border-radius: 0.25vw;
+  -ms-border-radius: 0.25vw;
+  -o-border-radius: 0.25vw;
+  border-radius: 0.25vw;
   border-width: 0.25vw;
   outline: none;
   border-color: white; }
@@ -118,6 +123,46 @@ td {
 
 .leaflet-bar {
   background-color: gray; }
+
+.leaflet-popup-tip {
+  border-top-color: rgba(70, 73, 78, 0.7); }
+
+.leaflet-popup-content-wrapper {
+  text-align: center;
+  background-color: rgba(70, 73, 78, 0.85);
+  font-weight: 100;
+  letter-spacing: 0.1vw;
+  font-size: 2.5vh;
+  line-height: 2.4vh;
+  color: #c9c9c9; }
+
+.map-user-image {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  height: 8vh; }
+
+.map-user-name {
+  font-size: 110%;
+  padding-bottom: 0.2vh; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(180, 180, 180, 0), rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0));
+  background-image: -moz-linear-gradient(left, rgba(180, 180, 180, 0), rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0));
+  background-image: -ms-linear-gradient(left, rgba(180, 180, 180, 0), rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0));
+  background-image: -o-linear-gradient(left, rgba(180, 180, 180, 0), rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0));
+  background-image: linear-gradient(left, rgba(180, 180, 180, 0), rgba(180, 180, 180, 0.5), rgba(180, 180, 180, 0)); }
+
+.teach-tagline {
+  text-transform: capitalize;
+  font-weight: 400; }
+
+.popup-skills {
+  text-transform: capitalize; }
 
 #user-page {
   margin: 0 auto;

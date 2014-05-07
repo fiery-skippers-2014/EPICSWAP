@@ -5,13 +5,12 @@
     SEARCH
   </div>
 <script id="userMarkerContentTemplate" type="text/x-handlebars-template">
-    <img src="{{profileImage}}" alt={{name}}><br>
-    <a href="/users/{{userId}}">{{Name}}</a></b><br>
-    {{Tagline}}</br>
-    <p>I can teach:</p>
-    <ul>
+    <img class="map-user-image" src="{{profileImage}}" alt={{name}}><br>
+    <div class="map-user-name"><a href="/users/{{userId}}">{{Name}}</a></div>
+    {{Tagline}}
+    <hr>
+    <div class="teach-tagline">I can teach you:</div>
       {{#skillList}}
-      <li>{{.}}</li>
+      <div class="popup-skills">{{.}}</div>
       {{/skillList}}
-    </ul>
 </script>
