@@ -104,7 +104,7 @@ feature 'interests on the user profile' do
 
   scenario 'a user can add interests they can teach', js: true  do
     visit user_path(user)
-    click_on 'Add a Interest'
+    click_on 'Add an Interest'
     fill_in 'Interest', :with => 'white water rafting'
     click_link_or_button "Add Interest"
     expect(page).to have_content 'My Interests'
@@ -114,7 +114,7 @@ feature 'interests on the user profile' do
 
   scenario 'a user can delete interests', js: true do
     visit user_path(user)
-    click_on 'Add a Interest'
+    click_on 'Add an Interest'
     fill_in 'Interest', :with => 'basketball'
     click_link_or_button "Add Interest"
     visit root_path

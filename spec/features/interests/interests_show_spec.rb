@@ -9,7 +9,7 @@ feature 'interest page' do
   end
   scenario 'a logged in user can view an interest page', js: true do
     visit user_path(user)
-    click_on 'Add a Interest'
+    click_on 'Add an Interest'
     fill_in 'Interest', with: 'basketball'
     click_on 'Add Interest'
     click_on 'Add a Skill'
