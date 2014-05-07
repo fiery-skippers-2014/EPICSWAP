@@ -21,8 +21,8 @@ MapController.prototype = {
   },
 
   _createMarkerByUser: function(userData){
-    var latitude        = userData["user"].latitude;
-    var longitude       = userData["user"].longitude;
+    var latitude        = this._shuffleValue(userData["user"].latitude);
+    var longitude       = this._shuffleValue(userData["user"].longitude);
     var category        = userData['category'];
     var html            = this._buildMustacheTemplate(userData);
     var currentMarker   = this._buildMarker(latitude, longitude, category);
@@ -33,12 +33,12 @@ MapController.prototype = {
   },
 
   _shuffleValue: function(coordinate){
-    var decimalToManipulate = 1000000;
-    var random = Math.floor((Math.random() * 10));
+    var decimalToManipulate = 10000; 
+    var random = Math.floor((Math.random() * 10) + 1);
     if (random > 5){
-      var newCoord = random/decimalToManipulate + coordinate;
+      var newCoord = coordinate + (random/decimalToManipulate);
     }else{
-      var newCoord = random/decimalToManipulate - coordinate;
+      var newCoord = coordinate - (random/decimalToManipulate);
     }
      return Math.round(newCoord * decimalToManipulate) / decimalToManipulate; 
   },
