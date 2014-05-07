@@ -74,5 +74,3 @@ class User < ActiveRecord::Base
     { user: {name: self.name, tagline: self.tagline, image: self.image, latitude: self.latitude, longitude: self.longitude}, skills: self.skills.map(&:name), category: self.skills.sample(1).first.category.name }
   end
 end
-
-# [user: ]
