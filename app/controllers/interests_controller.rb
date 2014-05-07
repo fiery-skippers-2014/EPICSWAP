@@ -8,7 +8,7 @@ class InterestsController < ApplicationController
     @user = User.find(params[:user_id])
     @interest = Interest.find_or_create_by_name(params[:interest][:name])
     if @interest.save
-      if Interest.relationship_exists(@user, @interest)
+      if @user.already_interested_in?(@interest)
         @errors = "You already have #{@interest.name} in your interest list"
         render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
       else
