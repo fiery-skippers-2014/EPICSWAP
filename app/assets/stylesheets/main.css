@@ -114,18 +114,23 @@ td {
 #site_name, #tagline, #login_text {
   color: black; }
 
-#more-info-container {
-  margin-top: 0.75vh; }
-
 #more-info-link {
   font-style: italic; }
 
 #more-info {
+  margin-top: 1.75vh;
   display: none;
   color: #333;
   font-size: 2.75vh;
-  font-style: italic;
-  padding-top: 1vh; }
+  font-style: italic; }
+
+a#more-info-link:link,
+a#more-info-link:visited {
+  color: #0085ef; }
+
+a#more-info-link:hover,
+a#more-info-link:active {
+  color: #56b4ff; }
 
 #map {
   height: 98vh;
