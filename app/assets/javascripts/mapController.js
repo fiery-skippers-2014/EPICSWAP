@@ -30,8 +30,8 @@ MapController.prototype = {
     console.log(userData)
     console.log("--------------_userData[user] in _createMarkerByUser")
     console.log(userData['user'])
-    var latitude        = userData["user"].latitude;
-    var longitude       = userData["user"].longitude;
+    var latitude        = this._shuffleValue(userData["user"].latitude);
+    var longitude       = this._shuffleValue(userData["user"].longitude);
     var category        = userData['category'];
     console.log("--------------_userData[cate] in _createMarkerByUser")
     console.log(userData['category'])
@@ -47,6 +47,17 @@ MapController.prototype = {
                  .openPopup();
     $(currentMarker).click(function(){this._reCenterMap(latitude, longitude)}.bind(this));
     console.log('made it to the end of _createMarkerByUser')
+  },
+
+  _shuffleValue: function(coordinate){
+    var decimalToManipulate = 100000;
+    var random = Math.floor((Math.random() * 10));
+    if (random > 5){
+      var newCoord = random/decimalToManipulate + coordinate;
+    }else{
+      var newCoord = random/decimalToManipulate + coordinate;
+    }
+     return Math.round(newCoord * decimalToManipulate) / decimalToManipulate; 
   },
 
   _buildMustacheTemplate: function(userData){
@@ -70,7 +81,7 @@ MapController.prototype = {
 
   _buildMarker: function(latitude, longitude, category){
     console.log('we made it to _buildMarker')
-     console.log('latitude below-------------------')
+    console.log('latitude below-------------------')
     console.log(latitude)
     console.log('longitude below-------------------')
     console.log(longitude)
