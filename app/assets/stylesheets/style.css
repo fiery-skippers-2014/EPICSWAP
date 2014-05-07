@@ -1,40 +1,13 @@
-a.check_mark:after {
-    content: "";
-    display: block;
-    background: url("check_mark_green.png") no-repeat;
-    width: 30px;
-    height: 30px;
-    margin: 0 6px 0 0;
-    z-index: 1000;
-}
-
-li a.check_mark {
-  color: green;
-}
-
 a.svg {
   position: relative;
-  display: inline-block; 
+  display: inline-block;
   float: left;
 }
 a.svg:after {
-  content: ""; 
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left:0;
-}
-.filtered_off:after {
-    content: "";
-    display: block;
-    background: url("red-x-icon.png") no-repeat;
-    width: 30px;
-    height: 30px;
-    margin: 0 6px 0 0;
-    z-index: 1000;
-}
-
-li a.filtered_off {
-  color: red;
 }
