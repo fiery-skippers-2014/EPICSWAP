@@ -21,5 +21,6 @@ EpicSwap::Application.routes.draw do
 	match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
   match 'privacy', to: 'static_pages#privacy'
+  match 'about', to: 'static_pages#about'
 	match 'signout', to: 'sessions#destroy', via: [ :get, :post]
 end
