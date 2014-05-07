@@ -33,7 +33,7 @@ MapController.prototype = {
   },
 
   _shuffleValue: function(coordinate){
-    var decimalToManipulate = 10000;
+    var decimalToManipulate = 1000000;
     var random = Math.floor((Math.random() * 10));
     if (random > 5){
       var newCoord = random/decimalToManipulate + coordinate;
