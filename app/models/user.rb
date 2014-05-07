@@ -40,6 +40,22 @@ class User < ActiveRecord::Base
     self.street.nil?
   end
 
+  def update_lat_and_long(data)
+    if self.latitude == nil && self.longitude == nil
+      self.latitude = data['latitude']
+      self.longitude = data['longitude']
+      self.save
+    end
+  end
+
+  def already_interested_in?(interest)
+    self.interests.include?(interest)
+  end
+
+  def already_skilled_in?(skill)
+    self.skills.include?(skill)
+  end
+
   def self.all_with_skills
     skilled_users = User.find_users_with_skills
     skilled_users.map { |user| user.with_skills }

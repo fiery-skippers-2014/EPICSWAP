@@ -21,6 +21,7 @@ var UserInterests = {
       this.reset();
     });
     $('div.interest_dropdown').html('');
+    $("#interest-form").hide();
   },
 
   appendError: function(e, data){
@@ -52,7 +53,7 @@ var UserInterests = {
     $('input#interest_name').val(interest)
     $('#interest-dropdown-row').hide();
     $("#add_interest").trigger('click');
-    $("#interest-form").hide();
+
   },
 
   redirectToUserPage: function(e){

@@ -7,16 +7,16 @@ class SkillsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     skill_name = params[:skill][:name]
-    category_id = params[:skill][:category_id]
-    # CreateSkill.call({skill_name: skill_name, user: @user, category_id: category_id})
-
     skill_name = skill_name.downcase unless skill_name.nil?
+    category_id = params[:skill][:category_id]
     @skill = Skill.find_or_create_by_name(skill_name)
 
-    @skill.update_category(category_id)
+    if @skill.category_id.nil? && @skill.name != nil
+      @skill.update_attribute("category_id", category_id)
+    end
 
     if @skill.save
-      if Skill.relationship_exists(@user, @skill)
+      if @user.already_skilled_in?(@skill)
         @errors = "You already have #{@skill.name} in your skill list"
         render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
       else
