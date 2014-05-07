@@ -6,12 +6,10 @@ class SkillsController < ApplicationController
     category_id = params[:skill][:category_id]
     # CreateSkill.call({skill_name: skill_name, user: @user, category_id: category_id})
 
-    skill_name = skill_name.downcase if skill_name != nil
+    skill_name = skill_name.downcase unless skill_name.nil?
     @skill = Skill.find_or_create_by_name(skill_name)
 
-    if @skill.category_id == nil && @skill.name != nil
-      @skill.update_attribute("category_id", category_id)
-    end
+    @skill.update_category(category_id)
 
     if @skill.save
       if Skill.relationship_exists(@user, @skill)
@@ -26,31 +24,6 @@ class SkillsController < ApplicationController
       render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
     end
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   def show
     @skill = Skill.find(params[:id])
