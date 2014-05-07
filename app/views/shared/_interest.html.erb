@@ -1,7 +1,7 @@
 <tr id="interest_<%= interest.id %>">
   <td class="interest-name"><%= interest.name %></td>
   <td class="counter">
-    <% if corresponding_skill(interest.name).blank?  %>
+    <% if corresponding_skill(interest.name).blank? || corresponding_skill(interest.name).length == 0  %>
       0 teachers
     <% else %>
     <%= link_to num_users_by_skills(interest.name),skill_path(corresponding_skill(interest.name)) %> <%= 'teacher'.pluralize(num_users_by_skills(interest.name)) %>
