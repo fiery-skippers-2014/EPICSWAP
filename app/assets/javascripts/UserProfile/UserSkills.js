@@ -15,7 +15,7 @@ var UserSkills = {
   },
 
   appendSkill: function(e, data){
-    console.log(data)
+    var numSkills = $('table.my-skills tr').length
     $('.my-skills').append(data);
     $('form.new_skill').each(function(){
       this.reset();
@@ -23,6 +23,9 @@ var UserSkills = {
     $('div.skill_dropdown').html('');
     $('div.initial.add-skill').hide()
     $('div.initial.add-interests').slideDown()
+    if (numSkills == 2) {
+      this.maxSkills()
+    };
   },
 
   appendError: function(e, data, f, g){
@@ -59,5 +62,10 @@ var UserSkills = {
     $("#skill-dropdown-row").hide();
     $("#add_skill").trigger('submit');
     $("#skill-form").hide();
+  },
+  maxSkills: function(){
+    $('#add_skill_link').hide()
+    $('form.new_skill').hide()
+    $('#max_skills_dynamic').html('You can have a maximum of 3 skills')
   }
 }
