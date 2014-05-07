@@ -166,15 +166,21 @@ hr {
 
 #user-page {
   margin: 0 auto;
-  width: 75vw;
   background-color: #333333;
-  padding: 3vh 2vw; }
+  padding: 3vh 2vw;
+  font-weight: 100;
+  text-align: center; }
+
+#user-profile {
+  margin: 0 auto; }
 
 .my-skills, .my-interests {
-  margin-left: 1vw; }
+  margin-left: 1vw;
+  margin: 0 auto;
+  width: 95%; }
 
-#add_interest, #add_skill {
-  margin-left: 2vw; }
+.my-skills td, .my-interests td {
+  width: 33%; }
 
 #interest-form, #skill-form {
   margin-top: 2vh; }
@@ -195,17 +201,17 @@ hr {
   vertical-align: top; }
 
 .user-header {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 115%;
-  padding-top: 3vh; }
+  padding-top: 3vh;
+  text-align: center; }
 
 #user-image {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-  border-radius: 50%;
-  margin-right: 1vw; }
+  border-radius: 50%; }
 
 #rep-plus-button {
   -webkit-border-radius: 0.25vw;
@@ -223,28 +229,30 @@ hr {
   font-style: italic; }
 
 #user-functions {
-  font-size: 75%;
-  padding-right: 5vw; }
+  font-size: 75%; }
 
-#new_skill {
-  padding-left: 3vw; }
+#new_skill, #new_interest {
+  padding-left: 3vw;
+  text-align: left;
+  width: 80%; }
 
-#new_interest {
-  padding-left: 3vw; }
+.skill-name, .interest-name {
+  text-align: right; }
+
+.delete-skill, .delete-interest {
+  text-align: left; }
 
 a.delete-skill, a.delete-interest {
   color: red;
   font-style: italic;
-  font-size: 80%;
-  padding-left: 1vw; }
+  font-size: 80%; }
 
 ul {
   list-style: none;
   padding-left: 2vw; }
 
 #map_button {
-  margin-top: 3vh;
-  margin: 0 auto; }
+  margin-top: 2vh; }
 
 #header, #filter {
   text-align: center;
@@ -328,7 +336,13 @@ span#menu_dropdown {
 
   #map_filter_menu {
     bottom: 7vh;
-    height: 81vh; } }
+    height: 81vh; }
+
+  #user-page {
+    width: 85vw; }
+
+  #user-profile {
+    width: 100%; } }
 @media all and (orientation: landscape) {
   #container, #site_intro_container, #login_container, #header, #map, #filter, #map_filter_menu {
     width: 98vw;
@@ -356,4 +370,15 @@ span#menu_dropdown {
 
   #map_filter_menu {
     bottom: 7vh;
-    height: 81.5vh; } }
+    height: 81.5vh; }
+
+  #user-page {
+    width: 65vw; }
+
+  #user-profile {
+    width: 75%; }
+
+  .my-skills, .my-interests {
+    margin-left: 1vw;
+    margin: 0 auto;
+    width: 90%; } }
