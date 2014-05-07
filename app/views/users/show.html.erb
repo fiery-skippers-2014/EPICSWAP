@@ -1,40 +1,30 @@
 <div id="container" class="user-page">
   <div id="user-page">
     <div id="user-profile">
-      <table id="user-profile-table">
-        <tr>
-          <td id="user-image-cell"><img id="user-image" src="<%= @user.image %>"></td>
-          <td>
-            <div class="user-name"><%= @user.name %></div>
-            <div class="tagline"><%= @user.tagline %></div>
-          </td>
-        </tr>
-        <tr>
-          <td id="user-functions">
-            <% if current_user == @user %>
+      <img id="user-image" src="<%= @user.image %>">
+      <div class="user-name"><%= @user.name %></div>
+      <div class="tagline"><%= @user.tagline %></div>
+      <div id="user-functions">
+        <div class="description">BIO: <%= @user.description %></div>
 
-              <div id="edit-profile-link"><%= link_to "Edit Profile", edit_user_path(@user), class: 'edit-profile-link'  %></div>
+        <% if current_user == @user %>
+          <div id="edit-profile-link"><%= link_to "Edit Profile", edit_user_path(@user), class: 'edit-profile-link' %></div>
 
-              <div id="delete-profile-link"><%= link_to "Delete Profile", user_path, confirm: "Are you sure you want to delete your profile?", method: :delete %></div>
+          <div id="delete-profile-link"><%= link_to "Delete Profile", user_path, confirm: "Are you sure you want to delete your profile?", method: :delete %></div>
 
-              <div class='edit-user-form hidden'>
-                <%= render 'shared/edit_profile' %>
-              </div>
+          <div class='edit-user-form hidden'>
+            <%= render 'shared/edit_profile' %>
+          </div>
+        <% end %>
 
-            <% else %>
+        <% if current_user != @user %>
+          <span><%= @distance %> miles away</span>
 
-              <span><%= @distance %> miles away</span>
+          <div><%= mail_to @user.email, "Email", subject: "EpicSwap - Meetup Request" %></div>
 
-              <div><%= mail_to @user.email, "Email", subject: "EpicSwap - Meetup Request" %></div>
-
-              <%= render '/shared/reputation' %>
-
-            <% end %>
-          </td>
-          <td id="bio"><div class="description">BIO: <%= @user.description %></div></td>
-        </tr>
-      </table>
-    </div>
+          <%= render '/shared/reputation' %>
+        <% end %>
+      </div>
 
     <%= render 'shared/user_skills' %>
 

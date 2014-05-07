@@ -3,5 +3,5 @@
 <% if reputation_given?(current_user, @user) %>
   <p>You have already added to <%= @user.name %>'s reputation.</p>
 <% else %>
-  <%= link_to "+1", user_reputations_path(@user), class: "new_reputation", id: "rep-plus-button", method: :post, remote: true %>
+  <%= link_to "+♥", user_reputations_path(@user), class: "new_reputation", id: "rep-plus-button", method: :post, remote: true %>
 <% end %>
