@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper :all
 
   private
   def current_user
@@ -10,11 +9,5 @@ class ApplicationController < ActionController::Base
   def signed_in?
     current_user.present?
   end
-
-  def sign_out
-    current_user = nil
-    cookies.delete(:remember_token)
-  end
-
   helper_method :current_user
 end
