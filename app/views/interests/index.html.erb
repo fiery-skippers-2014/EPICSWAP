@@ -1,0 +1,9 @@
+<div id="container">
+
+  <h2>All Interests</h2>
+  <ul>
+    <% @interests.each do |interest| %>
+      <li><%= link_to interest.name, interest_path(interest) %> <%= pluralize(interest.users.count, 'teacher') %></li>
+    <% end %>
+  </ul>
+</div>
