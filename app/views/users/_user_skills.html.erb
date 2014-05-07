@@ -1,6 +1,6 @@
 <div class="user-header">My Skills</div>
 <table class="my-skills">
   <% @user.skills.each do |skill| %>
-    <%= render partial: "shared/skill", locals: { skill: skill } %>
+    <%= render partial: "skills/skill", locals: { skill: skill } %>
   <% end %>
 </table>
