@@ -27,6 +27,8 @@ $(document).ready(function(){
     //////////////////////
     ///  MAP BUILDER   ///
     //////////////////////
+
+    // we need to pass default lon and lats in case we fail to set location
     var mapOpts = {
       startLatitude:   37.785128,
       startLongitude: -122.397308,

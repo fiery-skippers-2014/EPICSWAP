@@ -1,3 +1,4 @@
+# REVIEW: it's a high risk refactor, but it would be great to merge skills and interests as STI.
 class UserInterest < ActiveRecord::Base
   belongs_to :user
   belongs_to :interest

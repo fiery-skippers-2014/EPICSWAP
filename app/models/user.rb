@@ -28,6 +28,16 @@ class User < ActiveRecord::Base
       user.update_attribute(:longitude, coords[1])
   end
 
+  def interested_in? interest
+    self.interests.include? interest
+  end
+
+  def update_long_and_lat data
+    if self.latitude.blank? && self.longitude.blank?
+      self.update_attributes :latitude => data['latitude'], :longitude =>  data['longitude']
+    end
+  end
+
   def distance(user)
     Geocoder::Calculations.distance_between([self.latitude, self.longitude],[user.latitude, user.longitude])
   end
@@ -45,9 +55,10 @@ class User < ActiveRecord::Base
     skilled_users.map { |user| user.with_skills }
   end
 
+  # REVIEW:
   def self.find_users_with_skills
     users_with_skills = []
-    User.all.each do |user|
+    self.all.each do |user|
       users_with_skills << user if user.skills.length > 0
     end
     return users_with_skills.uniq

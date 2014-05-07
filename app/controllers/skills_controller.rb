@@ -1,5 +1,6 @@
 class SkillsController < ApplicationController
 
+  # REVIEW: create a method object, pair with shadi on it.
   def create
     @user = User.find(params[:user_id])
     skill_name = params[:skill][:name]

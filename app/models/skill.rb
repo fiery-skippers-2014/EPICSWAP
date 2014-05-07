@@ -7,14 +7,16 @@ class Skill < ActiveRecord::Base
   validates_uniqueness_of :name
 
   def skill_cooresponding_interest
+    # REVIEW: this smells bad
     Interest.where('name = ?', self.name).uniq
   end
 
+  # same as interest, remove this and ask the user for his/her skill
   def self.relationship_exists(user, skill)
     UserSkill.where('user_id = ? AND skill_id = ?', user.id, skill.id).length > 0
   end
 
-
+  # REVIEW: we might want to move the distance logic on it's own class and user it in interest and skill models.
   def sort_users_by_distance(current_user)
     users_by_distance = {}
     self.users.each do |user|
@@ -23,8 +25,9 @@ class Skill < ActiveRecord::Base
     return users_by_distance.sort_by{ |user, distance| distance }
   end
 
+  # move this back to controller.
   def update_category(category_id)
-     if self.category_id.nil? && self.name != nil
+     if self.category_id.nil? && !self.name.nil?
       self.update_attribute("category_id", category_id)
     end
   end
