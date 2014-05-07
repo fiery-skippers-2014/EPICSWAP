@@ -114,6 +114,19 @@ td {
 #site_name, #tagline, #login_text {
   color: black; }
 
+#more-info-container {
+  margin-top: 0.75vh; }
+
+#more-info-link {
+  font-style: italic; }
+
+#more-info {
+  display: none;
+  color: #333;
+  font-size: 2.75vh;
+  font-style: italic;
+  padding-top: 1vh; }
+
 #map {
   height: 98vh;
   overflow: hidden; }

@@ -5,7 +5,8 @@ $(document).ready(function(){
   //////////////////////
 
   window.viewportUnitsBuggyfill.init(); // to solve iPhone issues
-  DropDownMenu.init()
+  DropDownMenu.init();
+  WelcomePage.init();
 
   //////////////////////
   ///  USER PROFILE  ///
