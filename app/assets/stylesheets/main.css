@@ -218,6 +218,13 @@ hr {
 #category_other a:active {
   color: #34495e; }
 
+a.filtered_off:link,
+a.filtered_off:visited,
+a.filtered_off:hover,
+a.filtered_off:active {
+  color: #a1a1a1 !important;
+  text-decoration: line-through; }
+
 #user-page {
   margin: 0 auto;
   background-color: #333333;
