@@ -22,12 +22,4 @@ module ApplicationHelper
     skill = Skill.where('name = ?', interest).first
   end
 
-  def sort_users_by_distance(current_user, skill)
-    users_by_distance = {}
-    skill.users.each do |user|
-      users_by_distance[user] = user.distance(current_user).round(2)
-    end
-    return users_by_distance.sort_by{ |user, distance| distance }
-  end
-
 end
