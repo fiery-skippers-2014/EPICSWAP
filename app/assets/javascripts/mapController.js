@@ -91,22 +91,22 @@ MapController.prototype = {
       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "airport", "BA29B5");
 
     }else if(category == "sport"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "17750D");
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "skiing", "f39c12");
 
     }else if(category == "finance"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "0C0A45");
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "bank", "2ecc71");
 
     }else if(category == "arts"){
-      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "75391B");
+      return this.COOL_MARKER.styleMarker(latitude, longitude, category, "art-gallery", "9b59b6");
 
     }else if(category == "fitness"){
-       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "school", "A8236F");
+       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "pitch", "e74c3c");
 
     }else if(category == "technology"){
-       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "6150B3");
+       return this.COOL_MARKER.styleMarker(latitude, longitude, category, "chemist", "516fd2");
 
     }else{
-      return this.COOL_MARKER.styleMarker(latitude, longitude, 'other', "heart", "548F79");
+      return this.COOL_MARKER.styleMarker(latitude, longitude, 'other', "heart", "34495e");
     }
     console.log('we made it out of _buildMarker')
   },
