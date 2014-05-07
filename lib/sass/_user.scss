@@ -71,12 +71,10 @@
   font-size: 75%;
 }
 
-#new_skill {
+#new_skill, #new_interest {
   padding-left: 3vw;
-}
-
-#new_interest {
-  padding-left: 3vw;
+  text-align: left;
+  width: 80%;
 }
 
 .skill-name, .interest-name {
@@ -100,8 +98,4 @@ ul {
 
 #map_button {
   margin-top: 2vh;
-}
-
-#skill-form, #interest-form {
-  text-align: left;
 }
