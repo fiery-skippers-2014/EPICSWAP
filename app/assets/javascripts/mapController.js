@@ -21,8 +21,8 @@ MapController.prototype = {
   },
 
   _createMarkerByUser: function(userData){
-    var latitude        = this._shuffleValue(userData["user"].latitude);
-    var longitude       = this._shuffleValue(userData["user"].longitude);
+    var latitude        = userData["user"].latitude;
+    var longitude       = userData["user"].longitude;
     var category        = userData['category'];
     var html            = this._buildMustacheTemplate(userData);
     var currentMarker   = this._buildMarker(latitude, longitude, category);
