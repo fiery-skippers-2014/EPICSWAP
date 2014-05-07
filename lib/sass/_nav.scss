@@ -28,15 +28,14 @@
 #dropdown_menu {
   position: absolute;
   background-color: white;
-  width: 10vw;
   z-index: 1000;
   list-style: none;
   float: right;
-  top: $LOGO_SIZE;
   right: 1vw;
   text-align: center;
-  padding-left: 0;
-  font-size: 3vh;
+  padding: 0.5vh 1vw;
+  font-size: 2.5vh;
+  white-space: nowrap;
 
   li:hover {
     background-color: #444444;

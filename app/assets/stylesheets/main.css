@@ -279,15 +279,14 @@ ul {
 #dropdown_menu {
   position: absolute;
   background-color: white;
-  width: 10vw;
   z-index: 1000;
   list-style: none;
   float: right;
-  top: 5vh;
   right: 1vw;
   text-align: center;
-  padding-left: 0;
-  font-size: 3vh; }
+  padding: 0.5vh 1vw;
+  font-size: 2.5vh;
+  white-space: nowrap; }
   #dropdown_menu li:hover {
     background-color: #444444; }
   #dropdown_menu li a {
@@ -322,6 +321,9 @@ span#menu_dropdown {
     margin: 1vw;
     padding: 1vw; }
 
+  #dropdown_menu {
+    top: 7vh; }
+
   body.welcome {
     background-image: url("/assets/skating_portrait.jpg");
     -webkit-background-size: 100vh;
@@ -348,6 +350,9 @@ span#menu_dropdown {
     width: 98vw;
     margin: 0.5vw;
     padding: 0.5vw; }
+
+  #dropdown_menu {
+    top: 9vh; }
 
   body.welcome {
     background-image: url("/assets/skating_landscape.jpg");
