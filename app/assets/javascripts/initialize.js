@@ -4,13 +4,12 @@ $(document).ready(function(){
   /// Homepage + Menu///
   //////////////////////
 
+  window.viewportUnitsBuggyfill.init(); // to solve iPhone issues
   DropDownMenu.init()
-
 
   //////////////////////
   ///  USER PROFILE  ///
   //////////////////////
-
   UserInterests.init();
   UserSkills.init();
   UserReputation.init();

@@ -129,7 +129,7 @@ td {
 
 .leaflet-popup-content-wrapper {
   text-align: center;
-  background-color: rgba(70, 73, 78, 0.7);
+  background-color: rgba(70, 73, 78, 0.85);
   font-weight: 100;
   letter-spacing: 0.1vw;
   font-size: 2vh;
