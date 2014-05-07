@@ -25,4 +25,14 @@ describe InterestsController do
         expect(assigns(:interest)).to eq(interest)
     end
   end
+
+  context '#index' do
+    let!(:user) { FactoryGirl.create :user}
+    let(:interest) { FactoryGirl.create :interest }
+    it 'assigns @interest to all interest' do
+      stub_current_user(user)
+      get :index
+      expect(assigns(:interests)).to eq(Interest.all)
+    end
+  end
 end

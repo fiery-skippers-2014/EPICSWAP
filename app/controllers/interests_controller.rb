@@ -1,4 +1,9 @@
 class InterestsController < ApplicationController
+
+  def index
+    @interests = Interest.order('name asc')
+  end
+
   def create
     @user = User.find(params[:user_id])
     @interest = Interest.find_or_create_by_name(params[:interest][:name])

@@ -9,8 +9,8 @@ EpicSwap::Application.routes.draw do
 
   match 'skills/autocomplete', to: 'skills#autocomplete', as: 'autocomplete', via: [:get]
   match 'interests/autocomplete', to: 'interests#autocomplete', as: 'interestauto', via: [:get]
-  resources :interests, only: [:show]
-  resources :skills, only: [:show]
+  resources :interests, only: [:show, :index]
+  resources :skills, only: [:show, :index]
 
   get '/usersData.:format', to: 'users#usersData', as: :usersData, constraints: { format: /json/ }
 

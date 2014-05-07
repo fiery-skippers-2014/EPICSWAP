@@ -23,4 +23,10 @@ class Skill < ActiveRecord::Base
     return users_by_distance.sort_by{ |user, distance| distance }
   end
 
+  def update_category(category_id)
+     if self.category_id.nil? && self.name != nil
+      self.update_attribute("category_id", category_id)
+    end
+  end
+
 end

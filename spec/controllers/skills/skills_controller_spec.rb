@@ -29,4 +29,14 @@ describe SkillsController do
       expect(user.reload.skills).to_not include(skill)
     end
   end
+
+  context '#index' do
+    let!(:user) { FactoryGirl.create :user_with_skill}
+    let(:skill) { user.skills.first }
+    it 'assigns @skills to all skills' do
+      stub_current_user(user)
+      get :index
+      expect(assigns(:skills)).to eq(Skill.all)
+    end
+  end
 end
