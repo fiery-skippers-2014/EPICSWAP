@@ -72,9 +72,6 @@ td {
   font-weight: bold;
   padding-right: 2vw; }
 
-.ontop {
-  z-index: 1000; }
-
 #epicswap_logo_top {
   fill: #000000; }
 
@@ -121,6 +118,9 @@ td {
   height: 98vh;
   overflow: hidden; }
 
+.leaflet-control-zoom, .leaflet-bar, .leaflet-control, .leaflet-top, .leaflet-bottom {
+  z-index: 2; }
+
 .leaflet-bar {
   background-color: gray; }
 
@@ -163,6 +163,67 @@ hr {
 
 .popup-skills {
   text-transform: capitalize; }
+
+#map_filter_menu {
+  text-align: center;
+  display: table; }
+
+#categories {
+  display: table-cell;
+  vertical-align: middle; }
+
+.category {
+  padding: 1vh 2vw;
+  font-weight: 300; }
+
+#category_language a:link,
+#category_language a:visited,
+#category_language a:hover,
+#category_language a:active {
+  color: #516fd2; }
+
+#category_sport a:link,
+#category_sport a:visited,
+#category_sport a:hover,
+#category_sport a:active {
+  color: #f39c12; }
+
+#category_finance a:link,
+#category_finance a:visited,
+#category_finance a:hover,
+#category_finance a:active {
+  color: #2ecc71; }
+
+#category_arts a:link,
+#category_arts a:visited,
+#category_arts a:hover,
+#category_arts a:active {
+  color: #9b59b6; }
+
+#category_fitness a:link,
+#category_fitness a:visited,
+#category_fitness a:hover,
+#category_fitness a:active {
+  color: #e67e22; }
+
+#category_technology a:link,
+#category_technology a:visited,
+#category_technology a:hover,
+#category_technology a:active {
+  color: #1abc9c; }
+
+#category_other a:link,
+#category_other a:visited,
+#category_other a:hover,
+#category_other a:active {
+  color: #34495e; }
+
+a.filtered_off:link,
+a.filtered_off:visited,
+a.filtered_off:hover,
+a.filtered_off:active {
+  color: #a1a1a1 !important;
+  text-decoration: line-through; }
 
 #user-page {
   margin: 0 auto;
@@ -279,15 +340,14 @@ ul {
 #dropdown_menu {
   position: absolute;
   background-color: white;
-  width: 10vw;
-  z-index: 1000;
+  z-index: 4;
   list-style: none;
   float: right;
-  top: 5vh;
   right: 1vw;
   text-align: center;
-  padding-left: 0;
-  font-size: 3vh; }
+  padding: 0.5vh 1vw;
+  font-size: 2.5vh;
+  white-space: nowrap; }
   #dropdown_menu li:hover {
     background-color: #444444; }
   #dropdown_menu li a {
@@ -303,8 +363,7 @@ ul {
   font-size: 4vh; }
 
 #map_filter_menu {
-  background-color: rgba(255, 255, 255, 0.5);
-  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
   position: absolute; }
 
 ul#filter_categories {
@@ -322,6 +381,9 @@ span#menu_dropdown {
     margin: 1vw;
     padding: 1vw; }
 
+  #dropdown_menu {
+    top: 7vh; }
+
   body.welcome {
     background-image: url("/assets/skating_portrait.jpg");
     -webkit-background-size: 100vh;
@@ -336,7 +398,8 @@ span#menu_dropdown {
 
   #map_filter_menu {
     bottom: 7vh;
-    height: 81vh; }
+    height: 81vh;
+    z-index: 3; }
 
   #user-page {
     width: 85vw; }
@@ -348,6 +411,9 @@ span#menu_dropdown {
     width: 98vw;
     margin: 0.5vw;
     padding: 0.5vw; }
+
+  #dropdown_menu {
+    top: 9vh; }
 
   body.welcome {
     background-image: url("/assets/skating_landscape.jpg");
@@ -370,7 +436,11 @@ span#menu_dropdown {
 
   #map_filter_menu {
     bottom: 7vh;
-    height: 81.5vh; }
+    height: 81.5vh;
+    z-index: 3; }
+
+  .category {
+    font-size: 12vh; }
 
   #user-page {
     width: 65vw; }
