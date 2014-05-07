@@ -1,8 +1,7 @@
 <div id="map_filter_menu">
-  <p>Click to Turn off a Category</p>
-  <ul id='filter_categories'>
+  <div id="categories">
     <% @categories.each do |category|  %>
-      <li id="catetgory_<%= category.id %>"><%=link_to category.name, "#", data: {title: "#{category.name}"}, class: 'filter_link check_mark' %></li>
+      <span class="category" id="category_<%= category.name %>"><%=link_to category.name, "#", data: {title: "#{category.name}"}, class: "filter_link" %></span>
     <% end %>
-  </ul>
+  </div>
 </div>

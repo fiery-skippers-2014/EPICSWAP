@@ -8,6 +8,10 @@
     padding: 0.5vw;
   }
 
+  #dropdown_menu {
+    top: $LOGO_SIZE + 4;
+  }
+
   // WELCOME
 
   body.welcome {
@@ -34,6 +38,11 @@
   #map_filter_menu {
     bottom: 7vh;
     height: 81.5vh;
+    z-index: 3;
+  }
+
+  .category {
+    font-size: 12vh;
   }
 
   // USER

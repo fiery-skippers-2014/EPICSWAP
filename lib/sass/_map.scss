@@ -3,6 +3,10 @@
   overflow: hidden;
 }
 
+.leaflet-control-zoom, .leaflet-bar, .leaflet-control, .leaflet-top, .leaflet-bottom {
+  z-index: 2;
+}
+
 .leaflet-bar {
   background-color: gray;
 }
@@ -44,6 +48,70 @@ hr {
 
 .popup-skills {
   text-transform: capitalize;
+}
+
+#map_filter_menu {
+  text-align: center;
+  display: table;
+}
+
+#categories {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.category {
+  padding: 1vh 2vw;
+  font-weight: 300;
+}
+
+#category_language a:link,
+#category_language a:visited,
+#category_language a:hover,
+#category_language a:active {
+  color: #516fd2;
+}
+
+#category_sport a:link,
+#category_sport a:visited,
+#category_sport a:hover,
+#category_sport a:active {
+  color: #f39c12;
+}
+
+#category_finance a:link,
+#category_finance a:visited,
+#category_finance a:hover,
+#category_finance a:active {
+  color: #2ecc71;
+}
+
+#category_arts a:link,
+#category_arts a:visited,
+#category_arts a:hover,
+#category_arts a:active {
+  color: #9b59b6;
+}
+
+#category_fitness a:link,
+#category_fitness a:visited,
+#category_fitness a:hover,
+#category_fitness a:active {
+  color: #e67e22;
+}
+
+#category_technology a:link,
+#category_technology a:visited,
+#category_technology a:hover,
+#category_technology a:active {
+  color: #1abc9c;
+}
+
+#category_other a:link,
+#category_other a:visited,
+#category_other a:hover,
+#category_other a:active {
+  color: #34495e;
 }
 
 // <a href='https://www.mapbox.com/about/maps/' target='_blank'>Maps &copy; Mapbox &copy; OpenStreetMap</a>

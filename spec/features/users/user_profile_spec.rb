@@ -29,13 +29,13 @@ feature 'view a user profile' do
 
   scenario 'a logged in user can give reputation to another user' do
     visit user_path(second_user)
-    expect(page).to have_content("+♥")
+    expect(page).to have_content("+1")
   end
 
   scenario 'a user cannot give reputation to the same user twice' do
     visit user_path(second_user)
-    click_on '+♥'
-    expect(page).to_not have_content('+♥')
+    click_on '+1'
+    expect(page).to_not have_content('+1')
   end
 end
 
