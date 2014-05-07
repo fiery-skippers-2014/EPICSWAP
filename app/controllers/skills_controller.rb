@@ -1,5 +1,9 @@
 class SkillsController < ApplicationController
 
+  def index
+    @skills = Skill.order('name asc')
+  end
+
   def create
     @user = User.find(params[:user_id])
     skill_name = params[:skill][:name]

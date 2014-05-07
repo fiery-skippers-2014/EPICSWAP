@@ -7,13 +7,13 @@ class UsersController < ApplicationController
   end
 
   def show
-    redirect_to root_path unless signed_in?
     @user       = User.find(params[:id])
     @skill      = Skill.new
     @interest   = Interest.new
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
     @distance   = @user.distance(current_user).round(2) if signed_in?
     @reputation = Reputation.new
+    redirect_to root_path unless signed_in?
     render 'first_time_user' if signed_in? && current_user.missing_address?
   end
 

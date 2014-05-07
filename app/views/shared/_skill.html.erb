@@ -1,7 +1,9 @@
 <tr id="skill_<%= skill.id %>">
   <td><%= skill.name %></td>
   <td>
-    <% unless corresponding_interest(skill.name).nil?  %>
+    <% if corresponding_interest(skill.name).blank?  %>
+      (0 students)
+    <% else %>
       (<%= link_to num_users_by_interests(skill.name),interest_path(corresponding_interest(skill.name)) ,id: 'interest_count' %><%= ' student'.pluralize(num_users_by_interests(skill.name)) %>)
     <% end %>
   </td>
