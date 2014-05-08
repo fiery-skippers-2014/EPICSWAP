@@ -1,11 +1,11 @@
 <tr id="skill_<%= skill.id %>">
   <td class="skill-name"><%= skill.name %></td>
   <td class="counter">
-    <% corr_interest = corresponding_interest(skill.name) %>
-    <% if corr_interest.blank? || corr_interest.users.length == 0  %>
+    <% interest = corresponding_interest(skill.name) %>
+    <% if interest.blank? || interest.users.length == 0  %>
       0 students
     <% else %>
-      <%= link_to num_users_by_interests(skill.name),interest_path(corr_interest) ,id: 'interest_count' %><%= ' student'.pluralize(num_users_by_interests(skill.name)) %>
+      <%= link_to interest.users.length, interest_path(interest), id: 'interest_count' %><%= ' student'.pluralize(interest.users.length ) %>
     <% end %>
   </td>
   <td class="delete-skill"><%= link_to 'delete', user_skill_path(@user, skill), remote: true, :method => :delete, class: 'delete-skill', id: "skill-#{skill.id}", :data => { :id => "#{skill.id}"} if current_user == @user %></td>
