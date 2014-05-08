@@ -13,7 +13,7 @@ Workflow:
 
 ![Imgur](http://i.imgur.com/FkRfykU.png?1)
 
-Technology used:
+Technologies used:
 * Rails
 * Ajax
 * Leaflet.js
