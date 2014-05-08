@@ -1,5 +1,8 @@
-<ul>
+<table>
   <% @sorted_users.each do |user, distance| %>
-    <li><%= link_to user.name, user_path(user) %> - <%= distance %> miles away</li>
+    <tr>
+      <td><%= link_to user.name, user_path(user) %></td>
+      <td><%= distance %> miles away</td>
+    </tr>
   <% end %>
-</ul>
+</table>
