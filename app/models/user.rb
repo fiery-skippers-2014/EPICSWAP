@@ -71,6 +71,6 @@ class User < ActiveRecord::Base
   end
 
   def with_skills
-    { user: {name: self.name, tagline: self.tagline, image: self.image, latitude: self.latitude, longitude: self.longitude}, skills: self.skills.map(&:name), category: self.skills.sample(1).first.category.name }
+    { user: {name: self.name, id: self.id, tagline: self.tagline, image: self.image, latitude: self.latitude, longitude: self.longitude}, skills: self.skills.map(&:name), category: self.skills.sample(1).first.category.name }
   end
 end

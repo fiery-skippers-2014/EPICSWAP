@@ -40,6 +40,6 @@ class UsersController < ApplicationController
   end
 
   def usersData
-    render json: { users: User.all_with_skills, current_user: {name: current_user.name, tagline: current_user.tagline, image: current_user.image, latitude: current_user.latitude, longitude: current_user.longitude} }.to_json if signed_in?
+    render json: { users: User.all_with_skills, current_user: {name: current_user.name, id: current_user.id, tagline: current_user.tagline, image: current_user.image, latitude: current_user.latitude, longitude: current_user.longitude} }.to_json if signed_in?
   end
 end
