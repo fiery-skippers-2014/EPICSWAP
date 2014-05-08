@@ -2,6 +2,11 @@
   height: $LOGO_SIZE * 2;
 }
 
+.logo {
+  height: $LOGO_SIZE;
+  padding: 0 2vw;
+}
+
 #site_intro_container, #login_container {
   text-align: center;
   position: fixed;

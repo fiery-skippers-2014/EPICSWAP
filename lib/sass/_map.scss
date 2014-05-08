@@ -63,6 +63,8 @@ hr {
 .category {
   padding: 1vh 2vw;
   font-weight: 300;
+  font-size: 10vh;
+  line-height: 15vh;
 }
 
 #category_language a:link,
@@ -121,5 +123,3 @@ hr {
   color: #a1a1a1 !important;
   text-decoration: line-through;
 }
-
-// <a href='https://www.mapbox.com/about/maps/' target='_blank'>Maps &copy; Mapbox &copy; OpenStreetMap</a>

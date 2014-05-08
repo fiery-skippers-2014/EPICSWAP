@@ -16,7 +16,7 @@
     <div id="site_intro_container">
       <div id="site_intro" class="stripe">
         <div id="site_name" class="heading">EPIC SWAP</div>
-        <object id="logo" class="welcome" type="image/svg+xml" data="assets/epicswap.svg"></object>
+        <%= link_to image_tag("epicswap.png", id: "logo", class: "welcome"), root_path %>
         <div id="tagline" class="heading">share skills &amp; build community</div>
 
         <%= link_to "click to learn more", root_path, id: "more-info-link" %>
@@ -26,8 +26,8 @@
     <div id="login_container">
       <div id="login" class="stripe">
         <div id="login_text" class="heading">Login</div>
-        <%= link_to image_tag("fb.svg"), "/auth/facebook", id: "facebook_button", class: "login_button" %>
-        <%= link_to image_tag("linkedin.svg"), "/auth/linkedin", id: "linkedin_button", class: "login_button" %>
+        <%= link_to image_tag("fb.png", id: "facebook_button", class: "login_button"), "/auth/facebook" %>
+        <%= link_to image_tag("linkedin.png", id: "linkedin_button", class: "login_button"), "/auth/linkedin" %>
       </div>
     </div>
   </body>
