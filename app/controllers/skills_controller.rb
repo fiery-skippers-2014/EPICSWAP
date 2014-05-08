@@ -5,7 +5,7 @@ class SkillsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     skill_name = params[:skill][:name]
     category_id = params[:skill][:category_id]
     @skill = Skill.find_or_create_by_name(skill_name.try(:downcase))

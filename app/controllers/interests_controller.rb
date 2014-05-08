@@ -5,7 +5,7 @@ class InterestsController < ApplicationController
   end
 
   def create
-    @user = User.find(params[:user_id])
+    @user = current_user
     interest_name = params[:interest][:name]
     @interest = Interest.find_or_create_by_name(interest_name.try(:downcase))
     if @interest.save
