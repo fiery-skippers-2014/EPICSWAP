@@ -11,13 +11,12 @@
 }
 
 .my-skills, .my-interests {
-  margin-left: 1vw;
   margin: 0 auto;
-  width: 95%;
+  width: 70vw;
 }
 
 .my-skills td, .my-interests td {
-  width: 33%;
+  width: 33% !important;
 }
 
 #interest-form, #skill-form {
@@ -52,6 +51,7 @@
 
 #user-image {
   @include border-radius(50%);
+  height: 13vh;
 }
 
 #rep-plus-button { // overwrite main.scss input styling
@@ -61,10 +61,16 @@
   margin-top: 0;
 }
 
-#add_interest_link, #add_skill_link {
-  padding-left: 3vw;
+#add_interest_link, #add_skill_link, #see-all-skills-link, #see-all-interests-link {
   font-size: 85%;
-  font-style: italic;
+}
+
+#see-all-skills-link, #see-all-interests-link {
+  padding-right: 1vw;
+}
+
+#add_skill_link, #add_interest_link {
+  padding-left: 1vw;
 }
 
 #user-functions {
@@ -72,9 +78,7 @@
 }
 
 #new_skill, #new_interest {
-  padding-left: 3vw;
   text-align: left;
-  width: 80%;
 }
 
 .skill-name, .interest-name {
@@ -98,6 +102,10 @@ ul {
 
 #map_button {
   margin-top: 2vh;
+  background-color: lighten($ACCENT_COLOR, 30%);
+  border: none;
+  font-weight: 300;
+  padding: 0.5vh 1vw;
 }
 
 #first-time-user-page{

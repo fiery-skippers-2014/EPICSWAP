@@ -7,7 +7,7 @@
     <tr>
       <td><span class="table_header"><%= f.label :name, "Skill" %></span></td>
       <td>
-        <%= f.text_field :name, placeholder: "What can you teach?" %>
+        <%= f.text_field :name, placeholder: "I can teach..." %>
         <div id="skill_errors"></div>
       </td>
       <td><%= f.submit "Add Skill", id: "add_skill" %></td>
@@ -15,6 +15,7 @@
     <tr id="skill-dropdown-row">
       <td>&nbsp;</div></td>
       <td><div id="skill_dropdown"></div></td>
+      <td>&nbsp;</td>
     </tr>
   </table>
 <% end %>

@@ -28,7 +28,7 @@
 
     <%= render 'users/user_skills' %>
 
-    <%= link_to 'See all skills', skills_path%>
+    <%= link_to 'See all skills', skills_path, id: "see-all-skills-link" %>
     <% if current_user == @user && @user.less_than_max? %>
       <%= link_to 'Add a Skill', '#', id: 'add_skill_link' %>
       <%= render 'skills/skills_form' %>
@@ -39,7 +39,7 @@
 
     <%= render 'users/user_interests' %>
 
-    <%= link_to 'See all interests', interests_path%>
+    <%= link_to 'See all interests', interests_path, id: "see-all-interests-link" %>
     <% if current_user == @user %>
       <%= link_to 'Add an Interest', '#', id: 'add_interest_link' %>
       <%= render 'interests/interests_form' %>
