@@ -1,26 +1,21 @@
 class SkillsController < ApplicationController
-
+  before_filter :authorize!
   def index
     @skills = Skill.order('name asc')
   end
 
   def create
-    @user = User.find(params[:user_id])
     skill_name = params[:skill][:name]
-    skill_name = skill_name.downcase unless skill_name.nil?
-    category_id = params[:skill][:category_id]
-    @skill = Skill.find_or_create_by_name(skill_name)
-
-    if @skill.category_id.nil? && @skill.name != nil
-      @skill.update_attribute("category_id", category_id)
-    end
+    category = Category.find params[:skill][:category_id]
+    @skill = Skill.find_or_initialize_by_name(skill_name.try(:downcase))
+    @skill.category = category unless @skill.category.present?
 
     if @skill.save
-      if @user.already_skilled_in?(@skill)
+      if current_user.already_skilled_in?(@skill)
         @errors = "You already have #{@skill.name} in your skill list"
         render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
       else
-        @user.skills << @skill
+        current_user.skills << @skill
         render partial: 'skills/skill', locals: { skill: @skill }
       end
     else

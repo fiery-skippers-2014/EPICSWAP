@@ -5,11 +5,9 @@ class Skill < ActiveRecord::Base
   has_many :user_skills, dependent: :destroy
   belongs_to :category
   attr_accessible :name, :category_id
-  validates_presence_of :name
-  validates_uniqueness_of :name
+  validates :name, :presence => true, :uniqueness => true
 
   def skill_cooresponding_interest
     Interest.where('name = ?', self.name).uniq
   end
-
 end

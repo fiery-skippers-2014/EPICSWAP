@@ -9,5 +9,9 @@ class ApplicationController < ActionController::Base
   def signed_in?
     current_user.present?
   end
+
+  def authorize!
+    redirect_to root_path, :notice => "you must be signed in" unless signed_in?
+  end
   helper_method :current_user
 end

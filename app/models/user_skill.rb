@@ -1,6 +1,7 @@
 class UserSkill < ActiveRecord::Base
   belongs_to :user
   belongs_to :skill
+  validates_uniqueness_of :skill_id, :scope => :user_id
 
   def self.delete_relationship(user_id, skill_id)
   	relationship = UserSkill.where('user_id = ? AND skill_id = ?', user_id, skill_id)

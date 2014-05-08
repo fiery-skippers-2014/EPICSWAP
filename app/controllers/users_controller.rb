@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_filter :authorize!, :only => [:show]
   def index
     render :welcome, layout: false unless signed_in?
     @categories = Category.all
@@ -13,7 +13,6 @@ class UsersController < ApplicationController
     @categories = Category.all.collect { |m| [m.name, m.id] }.sort
     @distance   = @user.distance(current_user).round(2) if signed_in?
     @reputation = Reputation.new
-    redirect_to root_path unless signed_in?
     render 'first_time_user' if signed_in? && current_user.missing_address?
   end
 
