@@ -1,9 +1,14 @@
 <div id="container">
 
   <h2>All Interests</h2>
-  <ul>
+
+  <table id="interests">
     <% @interests.each do |interest| %>
-      <li><%= link_to interest.name, interest_path(interest) %> <%= pluralize(interest.users.count, 'teacher') %></li>
+      <tr>
+        <td><%= link_to interest.name, interest_path(interest) %></td>
+        <td><%= pluralize(interest.users.count, 'teacher') %></td>
+      </tr>
     <% end %>
-  </ul>
+  </table>
+
 </div>

@@ -8,8 +8,9 @@
   text-align: center;
 }
 
-#logo.header {
+#header-logo {
   float: left;
+  height: $LOGO_SIZE;
 }
 
 #menu.header {

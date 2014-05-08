@@ -1,9 +1,13 @@
 <div id="container">
 
   <h2>All Skills</h2>
-  <ul>
+
+  <table id="skills">
     <% @skills.each do |skill| %>
-      <li><%= link_to skill.name, skill_path(skill) %> <%= pluralize(skill.users.count, 'teacher') %></li>
+      <tr>
+        <td><%= link_to skill.name, skill_path(skill) %></td>
+        <td><%= pluralize(skill.users.count, 'teacher') %></td>
+      </tr>
     <% end %>
-  </ul>
+  </table>
 </div>
