@@ -1,0 +1,12 @@
+<div id='container'>
+  <h1>Admin Panel</h1>
+  <p>Total Users: <%= @users.length %></p>
+  <table>
+    <tr><th>Name</th><th>Email</th><th>Profile</th></tr>
+    <% @users.each do |user| %>
+    <tr><td><%= user.name %></td><td><%= user.email %></td><td><%= link_to 'Profile', user_path(user) %></td></tr>
+    <% end %>
+
+
+  </table>
+</div>

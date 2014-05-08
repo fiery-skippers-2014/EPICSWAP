@@ -1,5 +1,4 @@
 EpicSwap::Application.routes.draw do
-  root :to => 'users#index'
 
   resources :users do
     resources :skills, only: [:create, :destroy]
@@ -18,9 +17,11 @@ EpicSwap::Application.routes.draw do
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
 
-	match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
 
   match 'privacy', to: 'static_pages#privacy'
   match 'about', to: 'static_pages#about'
-	match 'signout', to: 'sessions#destroy', via: [ :get, :post]
+  match 'signout', to: 'sessions#destroy', via: [ :get, :post]
+  match 'admin', to: 'admin#index', via: [:get, :post]
+  root :to => 'users#index'
 end

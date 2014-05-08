@@ -40,6 +40,10 @@ class User < ActiveRecord::Base
     self.street.nil?
   end
 
+  def is_admin?
+    self.admin == true
+  end
+
   def update_lat_and_long(data)
     if self.latitude == nil && self.longitude == nil
       self.latitude = data['latitude']
