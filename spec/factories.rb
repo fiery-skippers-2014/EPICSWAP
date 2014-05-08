@@ -10,6 +10,7 @@ FactoryGirl.define do
     description { Faker::Lorem.paragraph }
     latitude { nil }
     longitude { nil }
+    admin { false }
     factory :user_with_skill do
       after(:create) do |user|
         user.skills << FactoryGirl.create(:skill)

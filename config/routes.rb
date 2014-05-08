@@ -22,6 +22,6 @@ EpicSwap::Application.routes.draw do
   match 'privacy', to: 'static_pages#privacy'
   match 'about', to: 'static_pages#about'
   match 'signout', to: 'sessions#destroy', via: [ :get, :post]
-  match 'admin', to: 'admin#index', via: [:get, :post]
+  match 'admin', to: 'admins#index', via: [:get, :post]
   root :to => 'users#index'
 end
