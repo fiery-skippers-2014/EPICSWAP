@@ -34,6 +34,10 @@ body {
   font-size: $STANDARD_FONT_SIZE;
 }
 
+table {
+  margin: 0 auto;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -68,21 +72,24 @@ a {
 
 input, textarea, select {
   background-color: lighten($BACKGROUND_COLOR, 35%);
-  @include border-radius(0.25vw);
-  border-width: 0.25vw;
+  @include border-radius(0.2vw);
+  border-width: 0.05vw;
   outline: none;
   border-color: white;
+  padding: 0.2vh 0.8vw;
+  width: 30vw;
 }
 
 textarea:hover, textarea:focus, input:hover, input:focus {
   border-color: $ACCENT_COLOR;
-  box-shadow: 0 0 1vw $ACCENT_COLOR;
+  box-shadow: 0 0 0.5vw $ACCENT_COLOR;
   @include transition(box-shadow linear 0.2s);
 }
 
 input[type=submit] {
   padding: 0.5vh 1vw;
   margin-top: 0.5vh;
+  width: initial;
 }
 
 td {
@@ -102,7 +109,7 @@ td {
 }
 
 .table_header {
-  font-weight: bold;
+  font-weight: 300;
   padding-right: 2vw;
 }
 
