@@ -1,6 +1,6 @@
 <div class="user-header">My Interests</div>
 <table class='my-interests'>
   <% @user.interests.each do |interest| %>
-    <%= render partial: "shared/interest", locals: { interest: interest } %>
+    <%= render partial: "interests/interest", locals: { interest: interest } %>
   <% end %>
 </table>

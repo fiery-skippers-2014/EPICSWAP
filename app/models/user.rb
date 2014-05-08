@@ -63,13 +63,14 @@ class User < ActiveRecord::Base
 
   def self.find_users_with_skills
     users_with_skills = []
-    User.all.each do |user|
+    self.all.each do |user|
+      # single_user = {name: user.name, latitude: user.latitude, longitude: user.longitude}
       users_with_skills << user if user.skills.length > 0
     end
     return users_with_skills.uniq
   end
 
   def with_skills
-    { user: self, skills: self.skills.map(&:name), category: self.skills.sample(1).first.category.name }
+    { user: {name: self.name, tagline: self.tagline, image: self.image, latitude: self.latitude, longitude: self.longitude}, skills: self.skills.map(&:name), category: self.skills.sample(1).first.category.name }
   end
 end
