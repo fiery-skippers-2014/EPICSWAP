@@ -1,5 +1,5 @@
 <%= form_for @user, remote: true do |f| %>
-  <table>
+  <table class="edit-user-profile-table">
     <tr>
       <td><span class="table_header"><%= f.label :street %></span></td>
       <td><%= f.text_field :street, required: true %></td>
