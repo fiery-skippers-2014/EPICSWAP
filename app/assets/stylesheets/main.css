@@ -78,14 +78,12 @@ td {
   font-weight: 300;
   padding-right: 2vw; }
 
-#epicswap_logo_top {
-  fill: #000000; }
-
-#epicswap_logo_bottom {
-  fill: #0085ef; }
-
 #logo.welcome {
   height: 10vh; }
+
+.logo {
+  height: 5vh;
+  padding: 0 2vw; }
 
 #site_intro_container, #login_container {
   text-align: center;
@@ -199,7 +197,9 @@ hr {
 
 .category {
   padding: 1vh 2vw;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 10vh;
+  line-height: 15vh; }
 
 #category_language a:link,
 #category_language a:visited,
@@ -364,12 +364,13 @@ ul {
   float: right; }
 
 #filter {
-  height: 4vh;
+  height: 6vh;
   position: fixed;
   bottom: 0vh;
-  font-size: 3.5vh;
+  font-size: 5vh;
   cursor: pointer;
-  cursor: hand; }
+  cursor: hand;
+  font-weight: 100; }
 
 #dropdown_menu {
   position: absolute;
@@ -379,9 +380,11 @@ ul {
   float: right;
   right: 1vw;
   text-align: center;
-  padding: 0.5vh 1vw;
+  padding: 0.5vh 3vw;
   font-size: 2.5vh;
   white-space: nowrap; }
+  #dropdown_menu li {
+    padding: 0.5vh 3vw; }
   #dropdown_menu li:hover {
     background-color: #444444; }
   #dropdown_menu li a {
@@ -394,7 +397,8 @@ ul {
   text-transform: uppercase;
   color: white;
   text-decoration: none;
-  font-size: 4vh; }
+  font-size: 4vh;
+  font-weight: 100; }
 
 #map_filter_menu {
   background-color: rgba(255, 255, 255, 0.8);

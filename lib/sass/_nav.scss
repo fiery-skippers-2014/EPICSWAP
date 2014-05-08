@@ -17,12 +17,13 @@
 }
 
 #filter {
-  height: 4vh;
+  height: 6vh;
   position: fixed;
   bottom: 0vh;
-  font-size: 3.5vh;
+  font-size: 5vh;
   cursor: pointer;
   cursor: hand;
+  font-weight: 100;
 }
 
 #dropdown_menu {
@@ -33,9 +34,13 @@
   float: right;
   right: 1vw;
   text-align: center;
-  padding: 0.5vh 1vw;
+  padding: 0.5vh 3vw;
   font-size: 2.5vh;
   white-space: nowrap;
+
+  li {
+    padding: 0.5vh 3vw;
+  }
 
   li:hover {
     background-color: #444444;
@@ -56,6 +61,7 @@
   color: white;
   text-decoration: none;
   font-size: 4vh;
+  font-weight: 100;
 }
 
 #map_filter_menu {
