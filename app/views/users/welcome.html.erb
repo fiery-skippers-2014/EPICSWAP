@@ -26,8 +26,8 @@
     <div id="login_container">
       <div id="login" class="stripe">
         <div id="login_text" class="heading">Login</div>
-        <%= link_to image_tag("fb.png", id: "facebook_button", class: "login_button"), "/auth/facebook" %>
-        <%= link_to image_tag("linkedin.png", id: "linkedin_button", class: "login_button"), "/auth/linkedin" %>
+        <%= link_to image_tag("fb.png", class: "login_button"), "/auth/facebook", id: "facebook_button" %>
+        <%= link_to image_tag("linkedin.png", class: "login_button"), "/auth/linkedin", id: "linkedin_button" %>
       </div>
     </div>
   </body>
