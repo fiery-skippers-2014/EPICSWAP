@@ -21,7 +21,7 @@ class SkillsController < ApplicationController
         render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
       else
         @user.skills << @skill
-        render partial: 'shared/skill', locals: { skill: @skill }
+        render partial: 'skills/skill', locals: { skill: @skill }
       end
     else
       @errors = 'Skill cannot be blank'

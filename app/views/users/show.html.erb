@@ -13,7 +13,7 @@
           <div id="delete-profile-link"><%= link_to "Delete Profile", user_path, confirm: "Are you sure you want to delete your profile?", method: :delete %></div>
 
           <div class='edit-user-form hidden'>
-            <%= render 'shared/edit_profile' %>
+            <%= render 'users/edit_profile' %>
           </div>
         <% end %>
 
@@ -22,27 +22,27 @@
 
           <div><%= mail_to @user.email, "Email", subject: "EpicSwap - Meetup Request" %></div>
 
-          <%= render '/shared/reputation' %>
+          <%= render '/users/reputation' %>
         <% end %>
       </div>
 
-    <%= render 'shared/user_skills' %>
+    <%= render 'users/user_skills' %>
 
     <%= link_to 'See all skills', skills_path%>
     <% if current_user == @user && @user.less_than_max? %>
       <%= link_to 'Add a Skill', '#', id: 'add_skill_link' %>
-      <%= render 'shared/skills_form' %>
+      <%= render 'skills/skills_form' %>
       <p class='max_skills' id='max_skills_dynamic'></p>
     <% elsif current_user == @user%>
       <p class='max_skills'>You can have a maximum of 3 skills</p>
     <% end %>
 
-    <%= render 'shared/user_interests' %>
+    <%= render 'users/user_interests' %>
 
     <%= link_to 'See all interests', interests_path%>
     <% if current_user == @user %>
       <%= link_to 'Add an Interest', '#', id: 'add_interest_link' %>
-      <%= render 'shared/interests_form' %>
+      <%= render 'interests/interests_form' %>
     <% end %>
 
     <%= button_to "Map", root_path, id: "map_button", method: :get %>

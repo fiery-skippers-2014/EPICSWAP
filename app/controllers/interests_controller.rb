@@ -13,7 +13,7 @@ class InterestsController < ApplicationController
         render partial: 'shared/errors', locals: {errors: @errors}, :status => :unproccessable_entity
       else
         @user.interests << @interest
-        render partial: 'shared/interest', locals: { interest: @interest }
+        render partial: 'interests/interest', locals: { interest: @interest }
       end
     else
       @errors = 'Interest cannot be blank'
