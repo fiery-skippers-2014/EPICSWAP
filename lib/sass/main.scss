@@ -25,13 +25,17 @@ $SITE_HEIGHT: 98vh;
 
 body {
   background-color: $BACKGROUND_COLOR;
-  font-family: $STANDARD_FONT;
   height: $SITE_HEIGHT;
   width: $SITE_WIDTH;
+  font-family: $STANDARD_FONT;
   color: $STANDARD_FONT_COLOR;
+  font-size: $STANDARD_FONT_SIZE;
   overflow: hidden;
   background-attachment: fixed;
-  font-size: $STANDARD_FONT_SIZE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
 }
 
 table {

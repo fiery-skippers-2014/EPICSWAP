@@ -1,10 +1,8 @@
 <div id="header">
-    <span class="ontop">
-      <%= link_to image_tag("epicswap.png", id: "logo", class: "header logo"), root_path %>
-    </span>
+  <%= link_to image_tag("epicswap.png", id:"header-logo", class: "header"), root_path %>
 
   <%= link_to current_user.name, user_path(current_user), id: 'header_user_name' if current_user %>
    <span id="menu_dropdown"><%= image_tag("menu.png", id: "menu", class: "header") %></span>
-    <%= render 'shared/dropdown_menu' %>
 
+  <%= render 'shared/dropdown_menu' %>
 </div>
