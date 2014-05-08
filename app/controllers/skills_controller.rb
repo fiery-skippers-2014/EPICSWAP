@@ -7,9 +7,8 @@ class SkillsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     skill_name = params[:skill][:name]
-    skill_name = skill_name.downcase unless skill_name.nil?
     category_id = params[:skill][:category_id]
-    @skill = Skill.find_or_create_by_name(skill_name)
+    @skill = Skill.find_or_create_by_name(skill_name.try(:downcase))
 
     if @skill.category_id.nil? && @skill.name != nil
       @skill.update_attribute("category_id", category_id)

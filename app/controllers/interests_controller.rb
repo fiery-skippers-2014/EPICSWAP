@@ -6,7 +6,8 @@ class InterestsController < ApplicationController
 
   def create
     @user = User.find(params[:user_id])
-    @interest = Interest.find_or_create_by_name(params[:interest][:name])
+    interest_name = params[:interest][:name]
+    @interest = Interest.find_or_create_by_name(interest_name.try(:downcase))
     if @interest.save
       if @user.already_interested_in?(@interest)
         @errors = "You already have #{@interest.name} in your interest list"
