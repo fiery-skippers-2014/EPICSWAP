@@ -494,6 +494,3 @@ span#menu_dropdown {
     margin-left: 1vw;
     margin: 0 auto;
     width: 90%; } }
-@media only screen and (max-device-width: 568px) {
-  body {
-    font-size: 3.3vh; } }
