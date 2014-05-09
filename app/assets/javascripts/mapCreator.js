@@ -12,7 +12,7 @@ MapCreator.prototype = {
   },
 
   buildMapBox_MAP: function(){
-    var map = L.mapbox.map('map', 'nathansass.i6i76330', {infoControl: false})
+    var map = L.mapbox.map('map', 'nathansass.i6i8acap', {infoControl: false})
                       .setView(L.latLng(this.START_LATITUDE, this.START_LONGITUDE),
                       this.INITIAL_ZOOM);
     return map
